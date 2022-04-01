@@ -9,6 +9,8 @@ let questions = {
                     answers: [2005, 2006, 2007, 2009],
                     correct: 2007,
                     askedBefore: false,
+                    level: 'easy',
+                    points: 10,
                 },
                 {
                     question:
@@ -21,6 +23,8 @@ let questions = {
                     ],
                     correct: 'Julia Gillard',
                     askedBefore: false,
+                    level: 'medium',
+                    points: 20,
                 },
                 {
                     question: 'When did WWII end?',
@@ -32,6 +36,8 @@ let questions = {
                     ],
                     correct: '2 September 1945',
                     askedBefore: false,
+                    level: 'hard',
+                    points: 30,
                 },
             ],
         },
