@@ -12,8 +12,8 @@ module.exports = {
             .setTitle('Welcome to Quizilla')
             .setDescription("User Guide")
             .addFields([
-                {name: 'Available commands', value: '/ping', inline: true},
-                {name: 'Add two numbers', value: '/add', inline: true}
+                {name: 'Create trivia', value: '/trivia create'},
+                {name: 'Close trivia', value: '/trivia close'}
             ])
 
         channel.send({embeds: [help]});
