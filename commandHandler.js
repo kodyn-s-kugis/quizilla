@@ -14,6 +14,9 @@ module.exports = () => {
 
   for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
+    console.log(file);
+    console.log(commandFiles);
+    console.log(command);
 
     // Set a new item in the Collection
     // With the key as the command name and the value as the exported module

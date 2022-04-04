@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
+const questionsMC = require("../services/questionsMC");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -15,6 +16,7 @@ module.exports = {
       await interaction.reply(
         `${interaction.user.username}, we are creating your trivia game now!`
       );
+      await interaction.followUp(await questionsMC());
     } else if (interaction.options.getSubcommand() === "close") {
       await interaction.reply(
         `${interaction.user.username}, we are closing your trivia game, hope you had a good time!`
