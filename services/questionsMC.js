@@ -1,9 +1,4 @@
-const {
-  MessageActionRow,
-  MessageButton,
-  MessageEmbed,
-  Channel,
-} = require("discord.js");
+const {MessageActionRow, MessageButton, MessageEmbed} = require("discord.js");
 const questions = require("./data/questionsData.js");
 const random = require("../utils/randomNum.js");
 
@@ -13,24 +8,37 @@ module.exports = function questionsMC() {
 
   const row = new MessageActionRow()
     .addComponents(
-      new MessageButton().setCustomId("a").setLabel("A").setStyle("PRIMARY")
+      new MessageButton()
+          .setCustomId("a")
+          .setLabel("A")
+          .setStyle("PRIMARY")
     )
     .addComponents(
-      new MessageButton().setCustomId("b").setLabel("B").setStyle("SECONDARY")
+      new MessageButton()
+          .setCustomId("b")
+          .setLabel("B")
+          .setStyle("SECONDARY")
     )
     .addComponents(
-      new MessageButton().setCustomId("c").setLabel("C").setStyle("SUCCESS")
+      new MessageButton()
+          .setCustomId("c")
+          .setLabel("C")
+          .setStyle("SUCCESS")
     )
     .addComponents(
-      new MessageButton().setCustomId("d").setLabel("D").setStyle("DANGER")
+      new MessageButton()
+          .setCustomId("d")
+          .setLabel("D")
+          .setStyle("DANGER")
     );
 
   const exampleEmbed = new MessageEmbed()
     .setColor("#0099ff")
-    .setTitle(`${question}`).setDescription(`A: ${answers[0]}
-    B: ${answers[1]}
-    C: ${answers[2]}
-    D: ${answers[3]}`);
+    .setTitle(`${question}`)
+      .setDescription(`A: ${answers[0]}
+                       B: ${answers[1]}
+                       C: ${answers[2]}
+                       D: ${answers[3]}`);
 
   return {
     components: [row],
