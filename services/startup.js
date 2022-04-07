@@ -1,25 +1,29 @@
 const {MessageButton, MessageActionRow, MessageEmbed} = require('discord.js');
 const mcquestions = require('../services/questionsmc.js');
-const singlePlayer = 'single_player';
-const multiPlayer = 'multi_player';
+const Client = require('../commandHandler.js');
+const singlePlayer = 'Solo';
+const multiPlayer = 'Multi';
 
 module.exports = async function startUp(interaction) {
 
     // declare variable that holds the user selection
-    var selectedGame = '';
+    let selectedGameMode = '';
+
+    // New instance of command handler to load additional commands
+    const client = Client();
 
     // Create buttons for user to select type of game
     const row = new MessageActionRow()
         .addComponents(
             new MessageButton()
                 .setCustomId(singlePlayer)
-                .setLabel('Single Player')
+                .setLabel(`${singlePlayer} Player`)
                 .setStyle('PRIMARY')
         )
         .addComponents(
             new MessageButton()
                 .setCustomId(multiPlayer)
-                .setLabel('Multi Player')
+                .setLabel(`${multiPlayer} Player`)
                 .setStyle('PRIMARY')
         );
 
@@ -44,23 +48,21 @@ module.exports = async function startUp(interaction) {
 
     // Collect customId from button as user selection
     collector.on('collect', (ButtonInteraction) => {
-        selectedGame = ButtonInteraction.customId;
+        selectedGameMode = ButtonInteraction.customId;
         ButtonInteraction.reply({
-                content: `You've selected ${selectedGame}`,
+                content: `You've selected ${selectedGameMode} Player mode.`,
             }
         )
     });
 
-    collector.on('end', collected => {
-        console.log(`Collected: ${collected.size} items\nCollected type: ${selectedGame}`);
-    });
-
-    if (selectedGame.toString().toLowerCase() === singlePlayer.toLowerCase()) {
+    if (selectedGameMode === 'Solo') {
         console.log('Single player selected.')
-        await interaction.reply(
-            mcquestions(interaction)
-        );
-    } else if (selectedGame.toString().toLowerCase() === multiPlayer.toLowerCase()) {
+
+    } else if (selectedGameMode === 'Multi') {
         console.log('Multi player selected.')
     }
+
+    collector.on('end', collected => {
+        console.log(`Collected: ${collected.size} items\nCollected type: ${selectedGameMode}`);
+    });
 }
