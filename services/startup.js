@@ -1,8 +1,14 @@
 const {MessageButton, MessageActionRow, MessageEmbed} = require('discord.js');
-const mcquestions = require('../services/questionsmc.js');
+const MCQuestions = require('../services/questionsmc.js');
 const Client = require('../commandHandler.js');
 const singlePlayer = 'Solo';
 const multiPlayer = 'Multi';
+
+async function executeFile(file, args) {
+    const fileName = require(file)
+    if (!fileName) throw new Error("Invalid file")
+    return fileName.execute(args);
+}
 
 module.exports = async function startUp(interaction) {
 
@@ -55,14 +61,17 @@ module.exports = async function startUp(interaction) {
         )
     });
 
-    if (selectedGameMode === 'Solo') {
-        console.log('Single player selected.')
-
-    } else if (selectedGameMode === 'Multi') {
-        console.log('Multi player selected.')
-    }
-
-    collector.on('end', collected => {
+    collector.on('end', async collected => {
         console.log(`Collected: ${collected.size} items\nCollected type: ${selectedGameMode}`);
+        if (selectedGameMode === 'Solo') {
+            console.log('Single player selected.')
+            await executeFile('./mcquestions.js', interaction);
+            // Code to call next command goes here.
+
+        } else if (selectedGameMode === 'Multi') {
+            console.log('Multi player selected.')
+
+            // Code to call next command goes here.
+        }
     });
 }
