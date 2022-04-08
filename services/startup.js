@@ -1,6 +1,5 @@
 const {MessageButton, MessageActionRow, MessageEmbed} = require('discord.js');
 const MCQuestions = require('../services/questionsmc.js');
-const Client = require('../commandHandler.js');
 const singlePlayer = 'Solo';
 const multiPlayer = 'Multi';
 
