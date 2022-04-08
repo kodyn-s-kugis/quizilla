@@ -16,7 +16,7 @@ let questions = {
                     question:
                         'Which Australian prime minister was preceded and succeeded by Kevin Rudd?',
                     answers: [
-                        'Scott morrison',
+                        'Scott Morrison',
                         'Tony Abbott',
                         'Julia Gillard',
                         'John Howard',
@@ -39,8 +39,212 @@ let questions = {
                     level: 'hard',
                     points: 30,
                 },
+                {
+                    question: 'Who was the first woman to win a Nobel Prize?',
+                    answers: [
+                        'Ada Yonath',
+                        'Rosalyn Yalow',
+                        'Sigrid Undset',
+                        'Marie Curie'
+                    ],
+                    correct: 'Marie Curie',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+                {
+                    question: 'Who was Australia’s first prime Minister?',
+                    answers: [
+                        'Edmund Barton',
+                        'Alfred Deakin',
+                        'Robert Menzies',
+                        'John Curtin'
+                    ],
+                    correct: 'Edmund Barton',
+                    askedBefore: false,
+                    level: 'hard',
+                    points: 30,
+                },
+                {
+                    question: 'What happened on 9th November 1989?',
+                    answers: [
+                        'End of Vietnam war',
+                        'Fall of the Berlin Wall',
+                        'Eruption of Mount Vesuvio',
+                        'Assassination of John F. Kennedy'
+                    ],
+                    correct: 'Fall of the Berlin Wall',
+                    askedBefore: false,
+                    level: 'hard',
+                    points: 30,
+                },
             ],
         },
+        {
+            geography: [
+                {
+                    question: 'What is the capital of Germany?',
+                    answers: [
+                        'Bonn',
+                        'Frankfurt',
+                        'Berlin',
+                        'Munich'
+                    ],
+                    correct: 'Berlin',
+                    askedBefore: false,
+                    level: 'easy',
+                    points: 10,
+                },
+                {
+                    question: 'Which countries is Mount Everest located in?',
+                    answers: [
+                        'India/Pakistan',
+                        'China/Nepal',
+                        'Nepal/Tibet',
+                        'China/North Korea'
+                    ],
+                    correct: 'China/Nepal',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+                {
+                    question: 'What is the capital of Canada?',
+                    answers: [
+                        'Ottawa',
+                        'Quebec City',
+                        'Vancouver',
+                        'Toronto'
+                    ],
+                    correct: 'Ottawa',
+                    askedBefore: false,
+                    level: 'easy',
+                    points: 10,
+                },
+                {
+                    question: 'What country has the most pyramids?',
+                    answers: [
+                        'Egypt',
+                        'Syria',
+                        'Iran',
+                        'Sudan'
+                    ],
+                    correct: 'Sudan',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+                {
+                    question: 'Where do you find the Elbrus Mountain?',
+                    answers: [
+                        'Ukraine',
+                        'Norway',
+                        'Finland',
+                        'Russia'
+                    ],
+                    correct: 'Russia',
+                    askedBefore: false,
+                    level: 'hard',
+                    points: 30,
+                },
+                {
+                    question: 'How high is Uluru?',
+                    answers: [
+                        '298m',
+                        '421m',
+                        '348m',
+                        '564m'
+                    ],
+                    correct: '348m',
+                    askedBefore: false,
+                    level: 'hard',
+                    points: 30,
+                },
+            ],
+        },
+        {
+            science: [
+                {
+                    question: 'Lightning strikes produce which substance?',
+                    answers: [
+                        'Oxygen',
+                        'Ozone',
+                        'Water',
+                        'Carbon-dioxide'
+                    ],
+                    correct: 'Ozone',
+                    askedBefore: false,
+                    level: 'easy',
+                    points: 10,
+                },
+                {
+                    question: 'Dry ice is a solid form of which substance?',
+                    answers: [
+                        'Carbon-dioxide',
+                        'Carbon-monoxide',
+                        'Water',
+                        'Hydrogen'
+                    ],
+                    correct: 'Carbon-dioxide',
+                    askedBefore: false,
+                    level: 'easy',
+                    points: 10,
+                },
+                {
+                    question: 'Which letter does NOT appear in the periodic table of elements?',
+                    answers: [
+                        'Y',
+                        'J',
+                        'H',
+                        'P'
+                    ],
+                    correct: 'J',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+                {
+                    question: 'Which planet in the solar system has the highest mountain?',
+                    answers: [
+                        'Earth',
+                        'Venus',
+                        'Mercury',
+                        'Mars'
+                    ],
+                    correct: 'Mars',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+                {
+                    question: 'Which planet in the solar system has is the hottest?',
+                    answers: [
+                        'Mercury',
+                        'Venus',
+                        'Earth',
+                        'Mars'
+                    ],
+                    correct: 'Venus',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+                {
+                    question: 'Which moon is the largest in the solar system?',
+                    answers: [
+                        'Earth’s moon',
+                        'Callisto',
+                        'Ganymede',
+                        'Triton'
+                    ],
+                    correct: 'Ganymede',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+            ],
+        },
+
     ],
 };
 
