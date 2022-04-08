@@ -78,6 +78,33 @@ let questions = {
                     level: 'hard',
                     points: 30,
                 },
+                {
+                    question: 'When did the Cold War end?',
+                    answers: [
+                        '1979',
+                        '1989',
+                        '1990',
+                        '1982'
+                    ],
+                    correct: '1989',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 20,
+                },
+                {
+                    question: 'According to Greek mythology, who was the first woman on earth?',
+                    answers: [
+                        'Chthonia',
+                        'Xerces',
+                        'Pandora',
+                        'Hypatia '
+                    ],
+                    correct: 'Pandora',
+                    askedBefore: false,
+                    level: 'hard',
+                    points: 30,
+
+                },
             ],
         },
         {
@@ -159,6 +186,71 @@ let questions = {
                     askedBefore: false,
                     level: 'hard',
                     points: 30,
+                },
+                {
+                    question: 'What is the smallest country in the world?',
+                    answers: [
+                        'Maldives',
+                        'Monaco',
+                        'Tuvalu',
+                        'Vatican City'
+                    ],
+                    correct: 'Vatican City',
+                    askedBefore: false,
+                    level: 'easy',
+                    points: 10,
+                },
+                {
+                    question: 'What is the name of the Earth’s largest ocean?',
+                    answers: [
+                        'The Southern Ocean',
+                        'The Atlantic Occan',
+                        'The Pacific Ocean',
+                        'The Indian Ocean'
+                    ],
+                    correct: 'The Pacific Ocean',
+                    askedBefore: false,
+                    level: 'easy',
+                    points: 10,
+                },
+                {
+                    question: 'What’s the most populous city in the United States?',
+                    answers: [
+                        'Los Angeles',
+                        'New York City',
+                        'San Francisco',
+                        'Chicago'
+                    ],
+                    correct: 'New York City',
+                    askedBefore: false,
+                    level: 'easy',
+                    points: 10,
+                },
+                {
+                    question: 'In which European city would you find Orly airport?',
+                    answers: [
+                        'Berlin',
+                        'Paris',
+                        'Milan',
+                        'Madrid'
+                    ],
+                    correct: 'Paris',
+                    askedBefore: false,
+                    level: 'medium',
+                    points: 10,
+                },
+                {
+                    question: 'Which African country was formerly known as Abyssinia?',
+                    answers: [
+                        'Ethiopia',
+                        'Cameroon',
+                        'Somalia',
+                        'Mozambique'
+                    ],
+                    correct: 'Ethiopia',
+                    askedBefore: false,
+                    level: 'hard',
+                    points: 10,
                 },
             ],
         },

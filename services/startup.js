@@ -65,7 +65,7 @@ module.exports = async function startUp(interaction) {
         console.log(`Collected: ${collected.size} items\nCollected type: ${selectedGameMode}`);
         if (selectedGameMode === 'Solo') {
             console.log('Single player selected.')
-            await executeFile('./mcquestions.js', interaction);
+
             // Code to call next command goes here.
 
         } else if (selectedGameMode === 'Multi') {
