@@ -67,11 +67,13 @@ module.exports = async function startUp(interaction) {
             console.log('Single player selected.')
 
             // Code to call next command goes here.
+            await interaction.followUp(MCQuestions());
 
         } else if (selectedGameMode === 'Multi') {
             console.log('Multi player selected.')
 
             // Code to call next command goes here.
+            await interaction.followUp(MCQuestions());
         }
     });
 }
