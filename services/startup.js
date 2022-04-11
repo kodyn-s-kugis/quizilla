@@ -1,21 +1,12 @@
-const {MessageButton, MessageActionRow, MessageEmbed} = require('discord.js');
+const {MessageButton, MessageActionRow, MessageEmbed, Guild} = require('discord.js');
 const MCQuestions = require('../services/questionsmc.js');
 const singlePlayer = 'Solo';
 const multiPlayer = 'Multi';
-
-async function executeFile(file, args) {
-    const fileName = require(file)
-    if (!fileName) throw new Error("Invalid file")
-    return fileName.execute(args);
-}
 
 module.exports = async function startUp(interaction) {
 
     // declare variable that holds the user selection
     let selectedGameMode = '';
-
-    // New instance of command handler to load additional commands
-    const client = Client();
 
     // Create buttons for user to select type of game
     const row = new MessageActionRow()
@@ -36,8 +27,9 @@ module.exports = async function startUp(interaction) {
     const startMessage = new MessageEmbed()
         .setColor('#0099ff')
         .setTitle('Welcome Players')
-        .setDescription('Quizilla is a trivia game bot. We can play in single user mode or multiple user mode. Please select an option below.\n' +
+        .setDescription('Quizilla let\'s you play in solo or multi player mode. Please select an option below.\n' +
             '(Multi Player will allow for 1 minute for players to join the game.)');
+
 
     // Send message and buttons to user channel to display
     await interaction.channel.send({
