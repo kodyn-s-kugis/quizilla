@@ -29,9 +29,8 @@ module.exports = {
             let difficulty = interaction.options.getString('difficulty');
             await interaction.reply(
                 `${interaction.user.username}, we are creating your trivia game in ${difficulty} difficulty!`,
-            ).then(
-                interaction.followUp(gameStartUp())
             );
+            await interaction.followUp(gameStartUp(interaction.channel));
 
 
         } else if (interaction.options.getSubcommand() === "close") {
