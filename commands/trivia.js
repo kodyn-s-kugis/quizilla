@@ -52,7 +52,7 @@ module.exports = {
             await interaction.reply(
                 `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty, as ${mode} player game!`,
             );
-            await interaction.followUp(mcquestions());
+            await interaction.followUp(mcquestions(theme, difficulty));
 
 
         } else if (interaction.options.getSubcommand() === "close") {

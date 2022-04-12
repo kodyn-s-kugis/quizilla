@@ -1,10 +1,11 @@
 const {MessageActionRow, MessageButton, MessageEmbed} = require("discord.js");
-const questions = require("./data/questionsData.js");
+const questions = require("../data/questions.js");
+const questions2 = require('./data/questionsData.js');
 const random = require("../utils/randomNum.js");
 
-module.exports = function questionsMC() {
+module.exports = function questionsMC(theme, difficulty) {
   let { question, answers, correct, askedBefore } =
-    questions.themes[random(0, 0)].history[random(0, 1)];
+    questions2.themes[random(0, 0)].history[random(0, 1)];
 
   const row = new MessageActionRow()
     .addComponents(
