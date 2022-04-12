@@ -1,5 +1,5 @@
 const {SlashCommandBuilder, channelMention} = require("@discordjs/builders");
-const gameStartUp = require("../services/startup.js");
+const mcquestions = require("../services/questionsMC.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -11,26 +11,48 @@ module.exports = {
                 .setDescription("Create a trivia game!")
                 .addStringOption((option) =>
                     option
-                        .setName("difficulty")
-                        .setDescription("Set question difficulty")
+                        .setName('theme')
+                        .setDescription('Set theme for questions')
                         .setRequired(true)
-                        .addChoice("Easy", "easy")
-                        .addChoice("Medium", "medium")
-                        .addChoice("Hard", "hard")
+                        .addChoice('History', 'history')
+                        .addChoice('Geography', 'geography')
+                        .addChoice('Science', 'science')
+                        .addChoice('Music', 'music')
+                )
+                .addStringOption((option) =>
+                    option
+                        .setName('difficulty')
+                        .setDescription('Set game difficulty.')
+                        .setRequired(true)
+                        .addChoice('Easy', 'easy')
+                        .addChoice('Medium', 'medium')
+                        .addChoice('Hard', 'hard')
+                )
+                .addStringOption((option) =>
+                    option
+                        .setName('mode')
+                        .setDescription('Set game mode.')
+                        .setRequired(true)
+                        .addChoice('Solo', 'solo')
+                        .addChoice('Team', 'team')
                 )
         )
+
         .addSubcommand((subcommand) =>
             subcommand
                 .setName("close")
                 .setDescription("Close your trivia game!")
         ),
+
     async execute(interaction) {
         if (interaction.options.getSubcommand() === "create") {
+            let theme = interaction.options.getString('theme');
             let difficulty = interaction.options.getString('difficulty');
+            let mode = interaction.options.getString('mode');
             await interaction.reply(
-                `${interaction.user.username}, we are creating your trivia game in ${difficulty} difficulty!`,
+                `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty, as ${mode} player game!`,
             );
-            await interaction.followUp(gameStartUp(interaction.channel));
+            await interaction.followUp(mcquestions());
 
 
         } else if (interaction.options.getSubcommand() === "close") {
@@ -40,5 +62,7 @@ module.exports = {
                 // Need a function that resets the game
             );
         }
-    },
-};
+    }
+    ,
+}
+;
