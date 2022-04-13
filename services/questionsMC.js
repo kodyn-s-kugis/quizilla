@@ -1,11 +1,19 @@
 const {MessageActionRow, MessageButton, MessageEmbed} = require("discord.js");
-const questions = require("../data/questions.js");
+const mcquestions = require("../data/questions.js");
 const questions2 = require('./data/questionsData.js');
 const random = require("../utils/randomNum.js");
 
 module.exports = function questionsMC(theme, difficulty) {
-  let { question, answers, correct, askedBefore } =
-    questions2.themes[random(0, 0)].history[random(0, 1)];
+
+  let questionTheme = theme;
+  let questionDifficulty = difficulty;
+
+  //console.log(mcquestions.theme[0][questionTheme][questionDifficulty].questions[1], questionTheme, questionDifficulty);
+  console.log(mcquestions.theme[0]['history']);
+  console.log(mcquestions.theme[0]['geography']);
+  console.log(mcquestions.theme[0]['science']);
+
+  let { question, answers, correct, askedBefore } = mcquestions.theme[0][questionTheme][questionDifficulty].questions[random(0,1)];
 
   const row = new MessageActionRow()
     .addComponents(
@@ -40,6 +48,7 @@ module.exports = function questionsMC(theme, difficulty) {
                        B: ${answers[1]}
                        C: ${answers[2]}
                        D: ${answers[3]}`);
+
 
   return {
     components: [row],

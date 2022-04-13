@@ -1,8 +1,7 @@
 // Collection of trivia questions
 
 module.exports = {
-    theme: [
-        {
+    theme: {
             history: {
                 easy: {
                     questions: [
@@ -176,28 +175,6 @@ module.exports = {
                             correct: 'New York City',
                             askedBefore: false,
                         },
-                        {
-                            question: 'Which River flows through Melbourne, Australia?',
-                            answers: [
-                                'Murray River',
-                                'Darling River',
-                                'Yarra River',
-                                'Douglas River'
-                            ],
-                            correct: 'Yarra River',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Where do you find the Acropolis?',
-                            answers: [
-                                'Thessaloniki',
-                                'Athens',
-                                'Heraklion',
-                                'Kalamata'
-                            ],
-                            correct: 'Athens',
-                            askedBefore: false,
-                        },
                     ],
                     points: 10,
                 },
@@ -236,18 +213,6 @@ module.exports = {
                             correct: 'Paris',
                             askedBefore: false,
                         },
-                        {
-                            question: 'Saskatchewan is a state/province of which country?',
-                            answers: [
-                                'Canada',
-                                'Russia',
-                                'France',
-                                'Pakistan'
-                            ],
-                            correct: 'Canada',
-                            askedBefore: false,
-                        },
-
                     ],
                     points: 20,
                 },
@@ -286,41 +251,6 @@ module.exports = {
                             correct: 'Ethiopia',
                             askedBefore: false,
                         },
-                        {
-                            question: 'Which is the largest continent by area?',
-                            answers: [
-                                'Asia',
-                                'Antarctica',
-                                'North America',
-                                'Africa'
-                            ],
-                            correct: 'Asia',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'How many countries sit along the equator?',
-                            answers: [
-                                '9',
-                                '11',
-                                '13',
-                                '15'
-                            ],
-                            correct: '13',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Brazil shares a border with every South American country but two. Can you name these two?',
-                            answers:
-                                [
-                                    'Ecuador and Peru',
-                                    'Guyana and Venezuela',
-                                    'Uruguay and Argentina',
-                                    'Chile and Ecuador'
-                                ],
-                            correct: 'Chile and Ecuador',
-                            askedBefore: false,
-                        },
-
                     ],
                     points: 30,
                 },
@@ -328,7 +258,17 @@ module.exports = {
             science: {
                 easy: {
                     questions: [
-
+                        {
+                            question: 'Lightning strikes produce which substance?',
+                            answers: [
+                                'Oxygen',
+                                'Ozone',
+                                'Water',
+                                'Carbon-dioxide'
+                            ],
+                            correct: 'Ozone',
+                            askedBefore: false,
+                        },
                         {
                             question: 'Dry ice is a solid form of which substance?',
                             answers: [
@@ -340,33 +280,9 @@ module.exports = {
                             correct: 'Carbon-dioxide',
                             askedBefore: false,
                         },
-                        {
-                            question: 'What is the only metal that is liquid at normal atmospheric pressure and temperature?',
-                            answers: [
-                                'Mercury',
-                                'Iron',
-                                'Francium',
-                                'Caesium'
-                            ],
-                            correct: 'Mercury',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What does WWW stand for?',
-                            answers: [
-                                'Weird Wonderful World',
-                                'World Wide Web',
-                                'Whole World Webserver',
-                                'Western Web Webbing'
-                            ],
-                            correct: 'World Wide Web',
-                            askedBefore: false,
-                        },
-
                     ],
                     points: 10,
-                }
-                ,
+                },
                 medium: {
                     questions: [
                         {
@@ -402,55 +318,11 @@ module.exports = {
                             correct: 'Ganymede',
                             askedBefore: false,
                         },
-                        {
-                            question: 'What is the tallest breed of dog in the world?',
-                            answers: [
-                                'Bernese Mountain Dog',
-                                'Black Russian Terrier',
-                                'The Great Dane',
-                                'German Shepherd'
-                            ],
-                            correct: 'The Great Dane',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'How many eyes does a bee have?',
-                            answers: [
-                                'three',
-                                'four',
-                                'five',
-                                'six'
-                            ],
-                            correct: 'five',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What is the smallest unit of memory?',
-                            answers: [
-                                'Kilobyte',
-                                'Megabyte',
-                                'Microbyte',
-                                'Gigabyte'
-                            ],
-                            correct: 'Microbyte',
-                            askedBefore: false,
-                        },
                     ],
                     points: 20,
                 },
                 hard: {
                     questions: [
-                        {
-                            question: 'Lightning strikes produce which substance?',
-                            answers: [
-                                'Oxygen',
-                                'Ozone',
-                                'Water',
-                                'Carbon-dioxide'
-                            ],
-                            correct: 'Ozone',
-                            askedBefore: false,
-                        },
                         {
                             question: 'Which planet in the solar system has is the hottest?',
                             answers: [
@@ -462,44 +334,9 @@ module.exports = {
                             correct: 'Venus',
                             askedBefore: false,
                         },
-                        {
-                            question: 'Makemake is what kind of celestial object?',
-                            answers: [
-                                'Dwarf Planet',
-                                'Asteroid',
-                                'Comet',
-                                'Planet'
-                            ],
-                            correct: 'Dwarf Planet',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'The only known monotremes in the animal kingdom are the echidna and which other creature?',
-                            answers: [
-                                'Aadrvark',
-                                'Quokka',
-                                'Platypus',
-                                'Jellyfish'
-                            ],
-                            correct: 'Platypus',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who is the founder of eBay?',
-                            answers: [
-                                'Steve Jobs',
-                                'Pierre Omidyar',
-                                'Brian Chesky',
-                                'Reed Hastings'
-                            ],
-                            correct: 'Pierre Omidyar',
-                            askedBefore: false,
-                        },
-
                     ],
                     points: 30,
                 },
             },
         },
-    ]
 };
