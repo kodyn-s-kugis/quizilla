@@ -198,6 +198,94 @@ module.exports = {
                             correct: 'Athens',
                             askedBefore: false,
                         },
+                        {
+                            question: 'What is the capital of France?',
+                            answers: [
+                                'Nice',
+                                'Nantes',
+                                'Marseille',
+                                'Paris'
+                            ],
+                            correct: 'Paris',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'California is geographically located where in the USA?',
+                            answers: [
+                                'North-West',
+                                'South-West',
+                                'North-East',
+                                'South-East'
+                            ],
+                            correct: 'South-West',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which ocean is New Zealand located in?',
+                            answers: [
+                                'Pacific',
+                                'Southern',
+                                'Indian',
+                                'Atlantic'
+                            ],
+                            correct: 'Pacific',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which continent is Ethiopia located in?',
+                            answers: [
+                                'Asia',
+                                'South America',
+                                'North America',
+                                'Africa'
+                            ],
+                            correct: 'Africa',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country has the largest area?',
+                            answers: [
+                                'Canada',
+                                'Russia',
+                                'China',
+                                'India'
+                            ],
+                            correct: 'Russia',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following is NOT in the Pacific Ocean?',
+                            answers: [
+                                'Fiji',
+                                'Sri Lanka',
+                                'Vanuatu',
+                                'Solomon Islands'
+                            ],
+                            correct: 'Sri Lanka',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country is said to be shaped like a boot?',
+                            answers: [
+                                'Morrocco',
+                                'Greece',
+                                'Italy',
+                                'France'
+                            ],
+                            correct: 'Italy',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Bolivia is located in which continent?',
+                            answers: [
+                                'South America',
+                                'Europe',
+                                'Africa',
+                                'Asia'
+                            ],
+                            correct: 'South America',
+                            askedBefore: false,
+                        },
                     ],
                     points: 10,
                 },
@@ -245,6 +333,61 @@ module.exports = {
                                 'Pakistan'
                             ],
                             correct: 'Canada',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Costa Rica and Colombia are bridged by which country?',
+                            answers: [
+                                'Venezuela',
+                                'Ecuador',
+                                'Panama',
+                                'Guatemala'
+                            ],
+                            correct: 'Panama',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'T Burj Khalifa is located in which city?',
+                            answers: [
+                                'Dubai',
+                                'Abu Dhabi',
+                                'Muscat',
+                                'Doha'
+                            ],
+                            correct: 'Dubai',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What two countries border directly north of Hungary?',
+                            answers: [
+                                'Slovakia and Ukraine',
+                                'Romania and Serbia',
+                                'Ukraine and Romania',
+                                'Slovakia and Austria'
+                            ],
+                            correct: 'Slovakia and Ukraine',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In what ocean is the Bermuda Triangle located?',
+                            answers: [
+                                'Pacific',
+                                'Southern',
+                                'Indian',
+                                'Atlantic'
+                            ],
+                            correct: 'Atlantic',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is known as the deepest point in Earth’s oceans?',
+                            answers: [
+                                'Mariana Trench',
+                                'Tonga Trench',
+                                'Kuril–Kamchatka Trench',
+                                'Farallon Trench',
+                            ],
+                            correct: 'Mariana Trench',
                             askedBefore: false,
                         },
 
@@ -320,7 +463,39 @@ module.exports = {
                             correct: 'Chile and Ecuador',
                             askedBefore: false,
                         },
-
+                        {
+                            question: 'Which country has the most islands?',
+                            answers: [
+                                'Sweden',
+                                'Phillippines',
+                                'Norway',
+                                'Indonesia'
+                            ],
+                            correct: 'Sweden',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In what city are the Spanish Steps located?',
+                            answers: [
+                                'Madrid',
+                                'Porto',
+                                'Rome',
+                                'Naples'
+                            ],
+                            correct: 'Rome',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which Australian city has the largest area?',
+                            answers: [
+                                'Sydney',
+                                'Brisbane',
+                                'Melbourne',
+                                'Perth'
+                            ],
+                            correct: 'Brisbane',
+                            askedBefore: false,
+                        },
                     ],
                     points: 30,
                 },
@@ -365,8 +540,7 @@ module.exports = {
 
                     ],
                     points: 10,
-                }
-                ,
+                },
                 medium: {
                     questions: [
                         {
