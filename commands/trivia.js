@@ -1,5 +1,5 @@
 const {SlashCommandBuilder, channelMention} = require("@discordjs/builders");
-const mcquestions = require("../services/questionsMC.js");
+const mcquestions = require("../services/mcquestions.js");
 
 module.exports = {
     data: new SlashCommandBuilder()
