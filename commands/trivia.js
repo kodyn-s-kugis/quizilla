@@ -1,5 +1,6 @@
 const {SlashCommandBuilder, channelMention} = require("@discordjs/builders");
-const mcquestions = require("../services/mcquestions.js");
+const mcquestions = require("../services/mcquestions");
+const answerInput = require('../services/buttonInteractionHandler');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -49,10 +50,12 @@ module.exports = {
             let theme = interaction.options.getString('theme');
             let difficulty = interaction.options.getString('difficulty');
             let mode = interaction.options.getString('mode');
+
             await interaction.reply(
                 `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty, as ${mode} player game!`,
+                await mcquestions(interaction, theme, difficulty),
             );
-            await interaction.followUp(mcquestions(theme, difficulty));
+
 
 
         } else if (interaction.options.getSubcommand() === "close") {

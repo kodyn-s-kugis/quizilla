@@ -26,6 +26,40 @@ module.exports = {
                             correct: '1969',
                             askedBefore: false,
                         },
+                        {
+                            question: 'What year did World War I start?',
+                            answers: [
+                                '1913',
+                                '1914',
+                                '1915',
+                                '1916'
+                            ],
+                            correct: '1914',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was the leader of the Nazi Party?',
+                            answers: [
+                                'Adolf Eichmann',
+                                'Jean Racine',
+                                'Reinhard Heydrich',
+                                'Adolf Hitler'
+                            ],
+                            correct: 'Adolf Hitler',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which year was Australia discovered?',
+                            answers: [
+                                '1606',
+                                '1492',
+                                '1886',
+                                '1642'
+                            ],
+                            correct: '1606',
+                            askedBefore: false,
+                        },
+
                     ],
                     points: 10,
                 },
@@ -63,6 +97,28 @@ module.exports = {
                                 '1982'
                             ],
                             correct: '1989',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was the first European to land in Australia?',
+                            answers: [
+                                'James Cook',
+                                'Willem Janszoon',
+                                'Christopher Columbus',
+                                'Abel Tasman'
+                            ],
+                            correct: 'Willem Janszoon',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country gifted the USA the Statue of Liberty?',
+                            answers: [
+                                'England',
+                                'France',
+                                'Hungary',
+                                'Denmark'
+                            ],
+                            correct: 'France',
                             askedBefore: false,
                         },
                     ],
@@ -112,6 +168,39 @@ module.exports = {
                                 'Hypatia '
                             ],
                             correct: 'Pandora',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What was the first city to reach a population of one million?',
+                            answers: [
+                                'London',
+                                'Athens',
+                                'Beijing',
+                                'Rome'
+                            ],
+                            correct: 'Rome',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The world\'s first postage stamp was introduced in what year?',
+                            answers: [
+                                '1840',
+                                '1880',
+                                '1900',
+                                '1910'
+                            ],
+                            correct: '1840',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which year were X-rays discovered?',
+                            answers: [
+                                '1884',
+                                '1914',
+                                '1895',
+                                '1875'
+                            ],
+                            correct: '1895',
                             askedBefore: false,
                         },
                     ],
@@ -390,7 +479,72 @@ module.exports = {
                             correct: 'Mariana Trench',
                             askedBefore: false,
                         },
-
+                        {
+                            question: 'What is the name of the world’s largest island?',
+                            answers: [
+                                'Barbados',
+                                'Socotra',
+                                'Greenland',
+                                'Madagascar'
+                            ],
+                            correct: 'Greenland',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Niagara falls is between which US state and Canadian province?',
+                            answers: [
+                                'Pennsylvania and Quebec',
+                                'Pennsylvania and Ontario',
+                                'New York and Quebec',
+                                'New York and Ontario'
+                            ],
+                            correct: 'New York and Ontario',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The Lord of The Rings trilogy was filmed in what country?',
+                            answers: [
+                                'Australia',
+                                'New Zealand',
+                                'England',
+                                'Ireland'
+                            ],
+                            correct: 'New Zealand',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which waterfall is the world\'s highest?',
+                            answers: [
+                                'Yumbilla Falls',
+                                'Tres Hermanas Falls',
+                                'Victoria Falls',
+                                'Angel Falls'
+                            ],
+                            correct: 'Angel Falls',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which mountain peak is the second-highest above sea level in the world?',
+                            answers: [
+                                'Mt. Everest',
+                                'K2',
+                                'Lhotse',
+                                'Kangchenjunga'
+                            ],
+                            correct: 'K2',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What country formerly ruled Iceland?',
+                            answers: [
+                                'Denmark',
+                                'Belgium',
+                                'Russia',
+                                'The Netherlands'
+                            ],
+                            correct: 'Denmark',
+                            askedBefore: false,
+                        },
                     ],
                     points: 20,
                 },
@@ -496,10 +650,77 @@ module.exports = {
                             correct: 'Brisbane',
                             askedBefore: false,
                         },
+                        {
+                            question: 'What place is known as the largest micro-continent?',
+                            answers: [
+                                'Barbados',
+                                'Kerguelen Plateau',
+                                'Greenland',
+                                'Madagascar'
+                            ],
+                            correct: 'Madagascar',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many countries are there in Africa?',
+                            answers: [
+                                '54',
+                                '55',
+                                '56',
+                                '57'
+                            ],
+                            correct: '54',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country is home to the most active volcanos?',
+                            answers: [
+                                'USA',
+                                'Japan',
+                                'Indonesia',
+                                'Chile'
+                            ],
+                            correct: 'Indonesia',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country is nicknamed "The cockpit of Europe?',
+                            answers: [
+                                'Netherlands',
+                                'Belgium',
+                                'Denmark',
+                                'Germany'
+                            ],
+                            correct: 'Belgium',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the only sea without any coasts?',
+                            answers: [
+                                'Tasman Sea',
+                                'Sargasso Sea',
+                                'Celebes Sea',
+                                'Mediterranean Sea'
+                            ],
+                            correct: 'Sargasso Sea',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the driest place on Earth?',
+                            answers: [
+                                'Atacama Desert',
+                                'Kufra, Libya',
+                                'McMurdo, Antactica',
+                                'Sahara Desert'
+                            ],
+                            correct: 'McMurdo, Antactica',
+                            askedBefore: false,
+                        },
+
                     ],
                     points: 30,
                 },
-            },
+            }, // full
             science: {
                 easy: {
                     questions: [
