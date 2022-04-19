@@ -17,6 +17,9 @@ let timer = require('./timer');
 module.exports = async function mcquestions(interaction, theme, difficulty) {
     console.log('MCQuestions have started.');
 
+    // Set value for time limit.
+    let timeLimit = 30;
+
     // Assign values from questions object to local variables
     let {question, answers, correct, points} = questions.theme[0][theme][difficulty].questions[random(0, 1)];
 
@@ -65,31 +68,7 @@ module.exports = async function mcquestions(interaction, theme, difficulty) {
         components: [row],
     })
 
-    // Set timer for answering MC question.
-    let timeLimit = 30;
-    let timerFunction = setInterval(async function () {
 
-        if (timeLimit === 30) {
-            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`);
-        }
-        timeLimit -= 1;
-
-        if (timeLimit === 10 || timeLimit === 15) {
-            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`)
-                .then((sentMessage) => sentMessage.delete(`Time remaining: ${timeLimit} seconds.`));
-            //await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`)
-        }
-        console.log(timeLimit);
-
-        if (timeLimit === 0) {
-            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`)
-                .then((sentMessage) => sentMessage.delete());
-            await interaction.channel.send(`Your time is up!`);
-            clearInterval(timerFunction);
-            timeLimit = 0;
-            console.log('Time limit reached.');
-        }
-    }, 1000);
 
 
     const filter = (btnInt) => {
@@ -114,10 +93,31 @@ module.exports = async function mcquestions(interaction, theme, difficulty) {
 
     collector.on('end', (collection) => {
         collection.forEach((click) => {
-            var userID = click.user.id;
-            var chosenAnswer = click.customId;
+            let userID = click.user.id;
+            let chosenAnswer = click.customId;
             console.log(`Chosen: ${chosenAnswer}, Correct: ${correct}`);
+            timeLimit = 0;
         })
     });
-}
-;
+
+    // Set timer for answering MC question.
+
+    let timerFunction = setInterval(async function () {
+
+        if (timeLimit === 30) {
+            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`);
+        }
+
+        if (timeLimit === 20 || timeLimit === 15 || timeLimit === 10 || timeLimit === 5) {
+            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`);
+        }
+
+        if (timeLimit === 0) {
+            await interaction.channel.send(`Your time is either up, or you've answered the question!`);
+            clearInterval(timerFunction);
+            console.log('Time limit reached.');
+        }
+        timeLimit -= 1;
+        console.log(timeLimit);
+    }, 1000);
+};
