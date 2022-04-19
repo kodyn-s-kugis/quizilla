@@ -12,109 +12,112 @@ store this value or continue working with it.
 const {MessageActionRow, MessageButton, MessageEmbed} = require("discord.js");
 const questions = require("../data/questions.js");
 const random = require("../utils/randomNum");
-const timer = require('./timer');
+let timer = require('./timer');
 
 module.exports = async function mcquestions(interaction, theme, difficulty) {
     console.log('MCQuestions have started.');
 
-        // Assign values from questions object to local variables
-        let {question, answers, correct, points} = questions.theme[0][theme][difficulty].questions[random(0, 1)];
+    // Assign values from questions object to local variables
+    let {question, answers, correct, points} = questions.theme[0][theme][difficulty].questions[random(0, 1)];
 
-        // Create buttons with A, B, C, D answer options
-        const row = new MessageActionRow()
-            .addComponents(
-                new MessageButton()
-                    .setCustomId(answers[0])
-                    .setLabel('A')
-                    .setStyle('SUCCESS')
-            )
-            .addComponents(
-                new MessageButton()
-                    .setCustomId(answers[1])
-                    .setLabel('B')
-                    .setStyle('DANGER')
-            )
-            .addComponents(
-                new MessageButton()
-                    .setCustomId(answers[2])
-                    .setLabel('C')
-                    .setStyle('PRIMARY')
-            )
-            .addComponents(
-                new MessageButton()
-                    .setCustomId(answers[3])
-                    .setLabel('D')
-                    .setStyle('SECONDARY')
-            )
-        console.log('Buttons created.');
+    // Create buttons with A, B, C, D answer options
+    const row = new MessageActionRow()
+        .addComponents(
+            new MessageButton()
+                .setCustomId(answers[0])
+                .setLabel('A')
+                .setStyle('SUCCESS')
+        )
+        .addComponents(
+            new MessageButton()
+                .setCustomId(answers[1])
+                .setLabel('B')
+                .setStyle('DANGER')
+        )
+        .addComponents(
+            new MessageButton()
+                .setCustomId(answers[2])
+                .setLabel('C')
+                .setStyle('PRIMARY')
+        )
+        .addComponents(
+            new MessageButton()
+                .setCustomId(answers[3])
+                .setLabel('D')
+                .setStyle('SECONDARY')
+        )
+    console.log('Buttons created.');
 
-        // Create embed with question and answers display
-        const questionDisplay = new MessageEmbed()
-            .setColor("#0099ff")
-            .setTitle(`${question}`)
-            .setDescription(`A: ${answers[0]}
+    // Create embed with question and answers display
+    const questionDisplay = new MessageEmbed()
+        .setColor("#0099ff")
+        .setTitle(`${question}`)
+        .setDescription(`A: ${answers[0]}
                          B: ${answers[1]}
                          C: ${answers[2]}
                          D: ${answers[3]}`);
-        console.log('Embed created.');
+    console.log('Embed created.');
 
 
-        // Display the embed and buttons to user
-        await interaction.channel.send({
-            embeds: [questionDisplay],
-            components: [row],
-        })
+    // Display the embed and buttons to user
+    await interaction.channel.send({
+        embeds: [questionDisplay],
+        components: [row],
+    })
 
-        /*let remainingTime = timeLimit;
-        let timeLimit = 5000;
-        let timerFunction = setInterval(function () {
-            timeLimit -= 1000;
-            remainingTime = timeLimit;
-            console.log(timeLimit);
+    // Set timer for answering MC question.
+    let timeLimit = 30;
+    let timerFunction = setInterval(async function () {
 
-            if (timeLimit === 0) {
-                clearInterval(timerFunction);
-                remainingTime = 0;
-            }
-        }, 1000);*/
+        if (timeLimit === 30) {
+            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`);
+        }
+        timeLimit -= 1;
+
+        if (timeLimit === 10 || timeLimit === 15) {
+            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`)
+                .then((sentMessage) => sentMessage.delete(`Time remaining: ${timeLimit} seconds.`));
+            //await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`)
+        }
+        console.log(timeLimit);
+
+        if (timeLimit === 0) {
+            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`)
+                .then((sentMessage) => sentMessage.delete());
+            await interaction.channel.send(`Your time is up!`);
+            clearInterval(timerFunction);
+            timeLimit = 0;
+            console.log('Time limit reached.');
+        }
+    }, 1000);
 
 
-        /* while (timeRemaining >= 0) {
-             let msg = await interaction.channel.send(timeRemaining);
-             msg.edit(timeRemaining);
-             const timeLeftDisplay = new MessageEmbed()
-                 .setColor('RED')
-                 .setTitle(`$(timeRemaining)seconds left.`)
+    const filter = (btnInt) => {
+        return interaction.user.id === btnInt.user.id;
+    };
 
-             await interaction.channel.send({
-                 embeds: [timeLeftDisplay],
-             })
-         }*/
+    // Create collector to collect button input with only one attempt and 30 sec wait.
+    const collector = interaction.channel.createMessageComponentCollector({
+        filter,
+        max: 1,
+        time: 1000 * 30,
+    });
 
-
-        const filter = (btnInt) => {
-            return interaction.user.id === btnInt.user.id;
-        };
-
-        // Create collector to collect button input with only one attempt and 30 sec wait.
-        const collector = interaction.channel.createMessageComponentCollector({
-            filter,
-            max: 1,
-            time: 1000 * 30,
-        });
-
-        console.log('Collector created.');
-        collector.on('collect', (ButtonInteraction) => {
+    console.log('Collector created.');
+    collector.on('collect', (ButtonInteraction) => {
             ButtonInteraction.reply({
                 content: `You've chosen ${ButtonInteraction.customId}`,
             })
-        });
+        }
+    )
+    ;
 
-        collector.on('end', (collection) => {
-            collection.forEach((click) => {
-                var userID = click.user.id;
-                var chosenAnswer = click.customId;
-                console.log(`Chosen: ${chosenAnswer}, Correct: ${correct}`);
-            })
-        });
-};
+    collector.on('end', (collection) => {
+        collection.forEach((click) => {
+            var userID = click.user.id;
+            var chosenAnswer = click.customId;
+            console.log(`Chosen: ${chosenAnswer}, Correct: ${correct}`);
+        })
+    });
+}
+;
