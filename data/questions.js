@@ -59,10 +59,119 @@ module.exports = {
                             correct: '1606',
                             askedBefore: false,
                         },
-
+                        {
+                            question: 'What year did George W. Bush invade Iraq?',
+                            answers: [
+                                '2002',
+                                '2003',
+                                '2004',
+                                '2005'
+                            ],
+                            correct: '2003',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who is considered the "Enlightener of Ireland?',
+                            answers: [
+                                'St. Patrick',
+                                'St. Andrew',
+                                'St. Geroge',
+                                'St. Peter'
+                            ],
+                            correct: ' St. Patrick ',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which famous ship was considered "unsinkable"?',
+                            answers: [
+                                'USS Arizona',
+                                'The Endeavour',
+                                'Santa Maria',
+                                'Titanic'
+                            ],
+                            correct: 'Titanic',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What year did the Titanic sink?',
+                            answers: [
+                                '1910',
+                                '1912',
+                                '1914',
+                                '1916'
+                            ],
+                            correct: '1912',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which ship did Captain Cook sail in during his first world Voyage?',
+                            answers: [
+                                'HMS Discovery',
+                                'HMS Resolution',
+                                'HMS Endeavour',
+                                'HMS Eagle'
+                            ],
+                            correct: 'HMS Endeavour',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The Falklands War was between Argentina and who?',
+                            answers: [
+                                'Ireland',
+                                'United Kingdom',
+                                'Russia',
+                                'USA'
+                            ],
+                            correct: 'United Kingdom',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In the US Civil War, what colour did the North wear?',
+                            answers: [
+                                'Navy Blue',
+                                'Grey',
+                                'Dark Green',
+                                'Burgundy'
+                            ],
+                            correct: 'Navy Blue',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Muhammad founded which world religion?',
+                            answers: [
+                                'Hindu',
+                                'Islam',
+                                'Buddhism',
+                                'Taoism'
+                            ],
+                            correct: 'Islam',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who is credited for having invented the telephone?',
+                            answers: [
+                                'Louis Braille',
+                                'Samuel Morse',
+                                'Alexander Graham Bell',
+                                'Thomas Edison'
+                            ],
+                            correct: 'Alexander Graham Bell',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following is NOT a theory for the extinction of the disnosaurs?',
+                            answers: [
+                                'Asteroid Impact',
+                                'Food Shortage',
+                                'Hunted by other animals',
+                                'Climate Change'
+                            ],
+                            correct: 'Hunted by other animals',
+                            askedBefore: false,
+                        },
                     ],
                     points: 10,
-                },
+                }, // full
                 medium: {
                     questions: [
                         {
@@ -121,6 +230,29 @@ module.exports = {
                             correct: 'France',
                             askedBefore: false,
                         },
+                        {
+                            question: 'Nelson Mandela was released from prison in what year?',
+                            answers: [
+                                '1988',
+                                '1989',
+                                '1990',
+                                '1991'
+                            ],
+                            correct: '1990',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which town was Jesus born?',
+                            answers: [
+                                'Jericho',
+                                'Bethlehem',
+                                'Damascus',
+                                'Nineveh'
+                            ],
+                            correct: 'Bethlehem',
+                            askedBefore: false,
+                        },
+
                     ],
                     points: 20,
                 },
@@ -377,7 +509,7 @@ module.exports = {
                         },
                     ],
                     points: 10,
-                },
+                }, // full
                 medium: {
                     questions: [
                         {
@@ -547,7 +679,7 @@ module.exports = {
                         },
                     ],
                     points: 20,
-                },
+                }, // full
                 hard: {
                     questions: [
                         {
@@ -719,7 +851,7 @@ module.exports = {
 
                     ],
                     points: 30,
-                },
+                }, // full
             }, // full
             science: {
                 easy: {
@@ -893,6 +1025,244 @@ module.exports = {
 
                     ],
                     points: 30,
+                },
+            },
+            sport: {
+              easy: {
+                  questions: [
+                      {
+                          question: 'Rafael Nadal is a renowned Tennis player that hails from which country?',
+                          answers: [
+                              'Spain',
+                              'France',
+                              'Italy',
+                              'USA'
+                          ],
+                          correct: 'Spain',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'What sport is dubbed “king of sports”? ',
+                          answers: [
+                              'Rugby',
+                              'Swimming',
+                              'Soccer',
+                              'Tennis'
+                          ],
+                          correct: 'Soccer',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'What is the name of the professional ice hockey team based in Toronto, Canada? ',
+                          answers: [
+                              'Toronro Canucks',
+                              'Toronto Oilers',
+                              'Toronto Maple Leafs',
+                              'Toronto Flames'
+                          ],
+                          correct: 'Toronto Maple Leafs',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'In Netball, the court is divided into how many parts?',
+                          answers: [
+                              '2',
+                              '3',
+                              '4',
+                              'not divided'
+                          ],
+                          correct: '3',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'In which sport will you use a "one wood"?',
+                          answers: [
+                              'Golf',
+                              'Baseball',
+                              'Softball',
+                              'Croquet'
+                          ],
+                          correct: 'Golf',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'How many batsmen are on the field at a time in cricket?',
+                          answers: [
+                              '1',
+                              '2',
+                              '3',
+                              '4'
+                          ],
+                          correct: '2',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'Which of the following is NOT a famous baseball player?',
+                          answers: [
+                              'Barry Bonds',
+                              'Ty Cobb',
+                              'Reggie White',
+                              'Babe Ruth'
+                          ],
+                          correct: 'Reggie White',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'In basketball, how many points is a free throw worth?',
+                          answers: [
+                              '1',
+                              '2',
+                              '3',
+                              '4'
+                          ],
+                          correct: '1',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'The 2004 summer Olympics were held where?',
+                          answers: [
+                              'Beijing',
+                              'London',
+                              'Athens',
+                              'Sydney'
+                          ],
+                          correct: 'Athens',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'In which of the following games is “love” a score?',
+                          answers: [
+                              'Softball',
+                              'Tennis',
+                              'Golf',
+                              'Cricket'
+                          ],
+                          correct: 'Tennis',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'Which sport uses a net, a racket, and a shuttlecock?',
+                          answers: [
+                              'Racquetball',
+                              'Squash',
+                              'Tennis',
+                              'Badminton'
+                          ],
+                          correct: 'Badminton',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'What type of race is the Tour de France?',
+                          answers: [
+                              'Rowing',
+                              'Car',
+                              'Bicycle',
+                              'Running'
+                          ],
+                          correct: 'Bicycle',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'Where did the first ancient Olympic games take place?',
+                          answers: [
+                              'Greece',
+                              'France',
+                              'USA',
+                              'China'
+                          ],
+                          correct: 'Greece',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'Which of the following is not a colour of the Olympic rings?',
+                          answers: [
+                              'Blue',
+                              'Black',
+                              'Green',
+                              'White'
+                          ],
+                          correct: 'White',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'How many holes are played in an average round of golf?',
+                          answers: [
+                              '9',
+                              '12',
+                              '18',
+                              '21'
+                          ],
+                          correct: '18',
+                          askedBefore: false,
+                      },
+                  ],
+              }, // full
+              medium: {
+                  questions: [],
+              },
+              hard: {
+                  questions: [
+                      {
+                          question: 'In what year were the first Air Jordan sneakers released?',
+                          answers: [
+                              '1987',
+                              '1993',
+                              '1991',
+                              '1984'
+                          ],
+                          correct: '1984',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'What is the minimum weight of a coxswain according to World Rowing?',
+                          answers: [
+                              '45 kg',
+                              '65 kg',
+                              '55 kg',
+                              '75 kg'
+                          ],
+                          correct: '55 kg',
+                          askedBefore: false,
+                      },
+                      {
+                          question: 'Which sport is featured in the Animated Series: Free!?',
+                          answers: [
+                              'Football (Soccer)',
+                              'Tennis',
+                              'Swimming',
+                              'Badminton'
+                          ],
+                          correct: 'Swimming',
+                          askedBefore: false,
+                          level: 'hard',
+                          points: 10,
+                      },
+                      {
+                          question: 'How many points did Michael Jordan score on his first NBA game?',
+                          answers: [
+                              '20 points',
+                              '10 points',
+                              '18 points',
+                              '16 points'
+                          ],
+                          correct: '16 points',
+                          askedBefore: false,
+                          level: 'hard',
+                          points: 10,
+                      },
+
+                  ],
+              },
+            },
+            musicartsfilm: {
+                easy: {
+                    questions: [],
+                },
+                medium: {
+                    questions: [],
+                },
+                hard: {
+                    questions: [],
                 },
             },
         },
