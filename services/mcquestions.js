@@ -100,39 +100,55 @@ module.exports = async function mcquestions(interaction, theme, difficulty) {
         })
     });
 
-    // Set timer for answering MC question.
+    // Call timer function
+    await timerFunction();
 
-    // A setInterval function will update every second to display a timer message to the user.
-    let timerFunction = setInterval(async function () {
+    // Definition of the timer function that displays the remaining time for answering the question to the user.
+    async function timerFunction() {
 
-        // Show initial time to user to start with.
-        if (timeLimit === 30) {
-            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`);
-        }
+        // Sending the initial time remaining to the channel the function is called from. Then, a setInterval function
+        // is called and updates the remaining time as needed.
+        await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`).then(timer => {
+                let countDown = setInterval(async function () {
 
-        // At time points 20s, 15s, 10s, 5s time will be displayed as well.
-        if (timeLimit === 20 || timeLimit === 15 || timeLimit === 10 || timeLimit === 5) {
-            await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`);
-        }
+                    // At time intervals 20, 15, 10 seconds, the message will be updated. The last 5 seconds will be
+                    // count down in 1 second intervals.
+                    if (timeLimit === 20 ||
+                        timeLimit === 10 ||
+                        timeLimit === 5 ||
+                        timeLimit === 4 ||
+                        timeLimit === 3 ||
+                        timeLimit === 2 ||
+                        timeLimit === 1) {
+                        timer.edit(`Time remaining: ${timeLimit} seconds.`);
+                    }
+                    // If timer reaches 0s, the function stops and the user is notified of time being up.
+                    if (timeLimit === 0) {
+                        timer.edit('Sorry, your time is up!');
+                        clearInterval(countDown);
+                        console.log('Time limit reached.');
+                    }
 
-        // If timer reaches 0s, the function stops and the user is notified of time being up.
-        if (timeLimit === 0) {
-            await interaction.channel.send('Sorry, your time is up!');
-            clearInterval(timerFunction);
-            console.log('Time limit reached.');
-        }
+                    // So that there is a difference between time running out and ending the timer when the user chooses
+                    // an answer, the button collector will set the value for timeLimit to -5, which will be checked here.
+                    // In this case, the user does not get any message as the question has been answered.
+                    if (timeLimit === -5) {
+                        timer.edit('You\'ve answered the question.');
+                        clearInterval(countDown);
+                        console.log('Question answered.');
+                    }
 
-        // So that there is a difference between time running out and ending the timer when the user chooses
-        // an answer, the button collector will set the value for timeLimit to -5, which will be checked here.
-        // In this case, the user does not get any message as the question has been answered.
-        if (timeLimit === -5) {
-            clearInterval(timerFunction);
-            console.log('Question answered.');
-        }
+                    // Here, the timerLimit variable is decreased by one every round the setInterval function runs.
+                    timeLimit -= 1;
+                    console.log(timeLimit);
+                }, 1000);
+            }
+        );
 
-        timeLimit -= 1;
-        console.log(timeLimit);
-    }, 1000);
+
+    };
+
+    // At time points 20s, 15s, 10s, 5s time will be displayed as well.
 
 
 };
