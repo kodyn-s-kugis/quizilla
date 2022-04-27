@@ -252,10 +252,97 @@ module.exports = {
                             correct: 'Bethlehem',
                             askedBefore: false,
                         },
-
+                        {
+                            question: 'How many years did the 100 years war last?',
+                            answers: [
+                                '100 years',
+                                '115 years',
+                                '116 years',
+                                '124 years'
+                            ],
+                            correct: '116 years ',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What was the name of the research ship Charles Darwin travelled with?',
+                            answers: [
+                                'The Beagle',
+                                'Santa Maria',
+                                'Discovery',
+                                'The Eagle',
+                            ],
+                            correct: 'The Beagle',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Greenland was a colony of which country until 1981?',
+                            answers: [
+                                'Norway',
+                                'Denmark',
+                                'Sweden',
+                                'Iceland'
+                            ],
+                            correct: 'Denmark',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many days in a week were there in ancient Roman times?',
+                            answers: [
+                                '5',
+                                '6',
+                                '7',
+                                '8',
+                            ],
+                            correct: '8',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many U.S. Presidents have been assassinated?',
+                            answers: [
+                                '2',
+                                '3',
+                                '4',
+                                '5',
+                            ],
+                            correct: '4',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which world leader is famous for his \"Little Red Book\"?',
+                            answers: [
+                                'Lenin',
+                                'Mao Tse-tung',
+                                'Che Guevara',
+                                'Franklin Roosevelt',
+                            ],
+                            correct: 'Mao Tse-tung',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which year did the first Space Shuttle go into space?',
+                            answers: [
+                                '1981',
+                                '1983',
+                                '1985',
+                                '1989',
+                            ],
+                            correct: '1981',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which Russian astronaut was the first man to conduct a spacewalk?',
+                            answers: [
+                                'Yuri Gagarin',
+                                'Alexey Leonov',
+                                'Pavel Popovich',
+                                'Anton Shkaplerov',
+                            ],
+                            correct: 'Alexey Leonov',
+                            askedBefore: false,
+                        },
                     ],
                     points: 20,
-                },
+                }, // full
                 hard: {
                     questions: [
                         {
@@ -856,7 +943,6 @@ module.exports = {
             science: {
                 easy: {
                     questions: [
-
                         {
                             question: 'Dry ice is a solid form of which substance?',
                             answers: [
@@ -890,10 +976,141 @@ module.exports = {
                             correct: 'World Wide Web',
                             askedBefore: false,
                         },
-
+                        {
+                            question: 'H2O is the chemical formula for what?',
+                            answers: [
+                                'Propane',
+                                'Ethane',
+                                'Methane',
+                                'Water'
+                            ],
+                            correct: 'Water',
+                            askedBefore: false,
+                        },
+                        {
+                            question: '100 degrees Celsius is what is Fahrenheit?',
+                            answers: [
+                                '200',
+                                '210',
+                                '212',
+                                '220'
+                            ],
+                            correct: '212',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of these units of memory is the largest?',
+                            answers: [
+                                'Megabyte',
+                                'Terabyte',
+                                'Kilobyte',
+                                'Gigabyte'
+                            ],
+                            correct: 'Terabyte',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the smallest planet in the Solar System?',
+                            answers: [
+                                'Mars',
+                                'Ceres',
+                                'Pluto',
+                                'Mercury'
+                            ],
+                            correct: 'Mercury',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the hardest known natural material?',
+                            answers: [
+                                'Steel',
+                                'Diamond',
+                                'Iron',
+                                'Titanium'
+                            ],
+                            correct: 'Diamond',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What tree do acorns come from?',
+                            answers: [
+                                'Oak',
+                                'Pine',
+                                'Redwood',
+                                'Banksia'
+                            ],
+                            correct: 'Oak',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following helps the body fight infection and disease?',
+                            answers: [
+                                'Plasma',
+                                'Red Blood Cell',
+                                'Platelets',
+                                'White Blood Cell'
+                            ],
+                            correct: 'White Blood Cell',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'An inch is how many centimetres?',
+                            answers: [
+                                '2',
+                                '2.45',
+                                '2.54',
+                                '2.5'
+                            ],
+                            correct: '2.54',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the boiling point of water?',
+                            answers: [
+                                '100 degrees celcius',
+                                '110 degrees celcius',
+                                '95 degrees celcius',
+                                '150 degrees celcius'
+                            ],
+                            correct: '100 degrees celcius',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Another way to write "13 cubed" would be what?',
+                            answers: [
+                                '13 x 13',
+                                '13 + 13 + 13',
+                                '13 x 13 x 13',
+                                '13 squared squared'
+                            ],
+                            correct: '13 x 13 x 13',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which company produced the Galaxy phones and tablets?',
+                            answers: [
+                                'Apple',
+                                'Samsung',
+                                'Motorolla',
+                                'Nokia'
+                            ],
+                            correct: 'Samsung',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The symbol for iron in the periodic table of elements is what?',
+                            answers: [
+                                'I',
+                                'Ir',
+                                'K',
+                                'Fe'
+                            ],
+                            correct: 'Fe',
+                            askedBefore: false,
+                        },
                     ],
                     points: 10,
-                },
+                }, // full
                 medium: {
                     questions: [
                         {
@@ -962,6 +1179,40 @@ module.exports = {
                             correct: 'Microbyte',
                             askedBefore: false,
                         },
+                        {
+                            question: 'How many elements are there in the periodic table?',
+                            answers: [
+                                '92',
+                                '104',
+                                '118',
+                                '126'
+                            ],
+                            correct: '118',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'At which temperature does water have its highest density at normal pressure?',
+                            answers: [
+                                '0 degrees',
+                                '4 degrees',
+                                '20 degrees',
+                                '100 degrees'
+                            ],
+                            correct: '4 degrees',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which PH describes an acidic solution?',
+                            answers: [
+                                '4.5',
+                                '7.0',
+                                '7.5',
+                                '8.0'
+                            ],
+                            correct: '4.5',
+                            askedBefore: false,
+                        },
+
                     ],
                     points: 20,
                 },
@@ -1022,249 +1273,312 @@ module.exports = {
                             correct: 'Pierre Omidyar',
                             askedBefore: false,
                         },
-
+                        {
+                            question: 'What is the rarest blood type?',
+                            answers: [
+                                'AB Positive',
+                                'A Postitive',
+                                'AB Negative',
+                                'O Negative'
+                            ],
+                            correct: 'AB Negative',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How long does a human red blood cell survive?',
+                            answers: [
+                                '60 Days',
+                                '80 Days',
+                                '100 Days',
+                                '120 Days'
+                            ],
+                            correct: '120 Days',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is a quark?',
+                            answers: [
+                                'Subatomic Particle',
+                                'A Neutron',
+                                'A Proton',
+                                'An Electron'
+                            ],
+                            correct: 'Subatomic Particle',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is a the charge of a neutron?',
+                            answers: [
+                                'positive',
+                                'negative',
+                                'no charge',
+                                'both positive and negative'
+                            ],
+                            correct: 'no charge',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the symbol for the Full Planck Constant?',
+                            answers: [
+                                'p',
+                                'h',
+                                'x',
+                                'v'
+                            ],
+                            correct: 'h',
+                            askedBefore: false,
+                        },
                     ],
                     points: 30,
                 },
             },
             sport: {
-              easy: {
-                  questions: [
-                      {
-                          question: 'Rafael Nadal is a renowned Tennis player that hails from which country?',
-                          answers: [
-                              'Spain',
-                              'France',
-                              'Italy',
-                              'USA'
-                          ],
-                          correct: 'Spain',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'What sport is dubbed “king of sports”? ',
-                          answers: [
-                              'Rugby',
-                              'Swimming',
-                              'Soccer',
-                              'Tennis'
-                          ],
-                          correct: 'Soccer',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'What is the name of the professional ice hockey team based in Toronto, Canada? ',
-                          answers: [
-                              'Toronro Canucks',
-                              'Toronto Oilers',
-                              'Toronto Maple Leafs',
-                              'Toronto Flames'
-                          ],
-                          correct: 'Toronto Maple Leafs',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'In Netball, the court is divided into how many parts?',
-                          answers: [
-                              '2',
-                              '3',
-                              '4',
-                              'not divided'
-                          ],
-                          correct: '3',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'In which sport will you use a "one wood"?',
-                          answers: [
-                              'Golf',
-                              'Baseball',
-                              'Softball',
-                              'Croquet'
-                          ],
-                          correct: 'Golf',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'How many batsmen are on the field at a time in cricket?',
-                          answers: [
-                              '1',
-                              '2',
-                              '3',
-                              '4'
-                          ],
-                          correct: '2',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'Which of the following is NOT a famous baseball player?',
-                          answers: [
-                              'Barry Bonds',
-                              'Ty Cobb',
-                              'Reggie White',
-                              'Babe Ruth'
-                          ],
-                          correct: 'Reggie White',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'In basketball, how many points is a free throw worth?',
-                          answers: [
-                              '1',
-                              '2',
-                              '3',
-                              '4'
-                          ],
-                          correct: '1',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'The 2004 summer Olympics were held where?',
-                          answers: [
-                              'Beijing',
-                              'London',
-                              'Athens',
-                              'Sydney'
-                          ],
-                          correct: 'Athens',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'In which of the following games is “love” a score?',
-                          answers: [
-                              'Softball',
-                              'Tennis',
-                              'Golf',
-                              'Cricket'
-                          ],
-                          correct: 'Tennis',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'Which sport uses a net, a racket, and a shuttlecock?',
-                          answers: [
-                              'Racquetball',
-                              'Squash',
-                              'Tennis',
-                              'Badminton'
-                          ],
-                          correct: 'Badminton',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'What type of race is the Tour de France?',
-                          answers: [
-                              'Rowing',
-                              'Car',
-                              'Bicycle',
-                              'Running'
-                          ],
-                          correct: 'Bicycle',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'Where did the first ancient Olympic games take place?',
-                          answers: [
-                              'Greece',
-                              'France',
-                              'USA',
-                              'China'
-                          ],
-                          correct: 'Greece',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'Which of the following is not a colour of the Olympic rings?',
-                          answers: [
-                              'Blue',
-                              'Black',
-                              'Green',
-                              'White'
-                          ],
-                          correct: 'White',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'How many holes are played in an average round of golf?',
-                          answers: [
-                              '9',
-                              '12',
-                              '18',
-                              '21'
-                          ],
-                          correct: '18',
-                          askedBefore: false,
-                      },
-                  ],
-              }, // full
-              medium: {
-                  questions: [],
-              },
-              hard: {
-                  questions: [
-                      {
-                          question: 'In what year were the first Air Jordan sneakers released?',
-                          answers: [
-                              '1987',
-                              '1993',
-                              '1991',
-                              '1984'
-                          ],
-                          correct: '1984',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'What is the minimum weight of a coxswain according to World Rowing?',
-                          answers: [
-                              '45 kg',
-                              '65 kg',
-                              '55 kg',
-                              '75 kg'
-                          ],
-                          correct: '55 kg',
-                          askedBefore: false,
-                      },
-                      {
-                          question: 'Which sport is featured in the Animated Series: Free!?',
-                          answers: [
-                              'Football (Soccer)',
-                              'Tennis',
-                              'Swimming',
-                              'Badminton'
-                          ],
-                          correct: 'Swimming',
-                          askedBefore: false,
-                          level: 'hard',
-                          points: 10,
-                      },
-                      {
-                          question: 'How many points did Michael Jordan score on his first NBA game?',
-                          answers: [
-                              '20 points',
-                              '10 points',
-                              '18 points',
-                              '16 points'
-                          ],
-                          correct: '16 points',
-                          askedBefore: false,
-                          level: 'hard',
-                          points: 10,
-                      },
+                easy: {
+                    questions: [
+                        {
+                            question: 'Rafael Nadal is a renowned Tennis player that hails from which country?',
+                            answers: [
+                                'Spain',
+                                'France',
+                                'Italy',
+                                'USA'
+                            ],
+                            correct: 'Spain',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What sport is dubbed “king of sports”? ',
+                            answers: [
+                                'Rugby',
+                                'Swimming',
+                                'Soccer',
+                                'Tennis'
+                            ],
+                            correct: 'Soccer',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the name of the professional ice hockey team based in Toronto, Canada? ',
+                            answers: [
+                                'Toronro Canucks',
+                                'Toronto Oilers',
+                                'Toronto Maple Leafs',
+                                'Toronto Flames'
+                            ],
+                            correct: 'Toronto Maple Leafs',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In Netball, the court is divided into how many parts?',
+                            answers: [
+                                '2',
+                                '3',
+                                '4',
+                                'not divided'
+                            ],
+                            correct: '3',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which sport will you use a "one wood"?',
+                            answers: [
+                                'Golf',
+                                'Baseball',
+                                'Softball',
+                                'Croquet'
+                            ],
+                            correct: 'Golf',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many batsmen are on the field at a time in cricket?',
+                            answers: [
+                                '1',
+                                '2',
+                                '3',
+                                '4'
+                            ],
+                            correct: '2',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following is NOT a famous baseball player?',
+                            answers: [
+                                'Barry Bonds',
+                                'Ty Cobb',
+                                'Reggie White',
+                                'Babe Ruth'
+                            ],
+                            correct: 'Reggie White',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In basketball, how many points is a free throw worth?',
+                            answers: [
+                                '1',
+                                '2',
+                                '3',
+                                '4'
+                            ],
+                            correct: '1',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The 2004 summer Olympics were held where?',
+                            answers: [
+                                'Beijing',
+                                'London',
+                                'Athens',
+                                'Sydney'
+                            ],
+                            correct: 'Athens',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which of the following games is “love” a score?',
+                            answers: [
+                                'Softball',
+                                'Tennis',
+                                'Golf',
+                                'Cricket'
+                            ],
+                            correct: 'Tennis',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which sport uses a net, a racket, and a shuttlecock?',
+                            answers: [
+                                'Racquetball',
+                                'Squash',
+                                'Tennis',
+                                'Badminton'
+                            ],
+                            correct: 'Badminton',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What type of race is the Tour de France?',
+                            answers: [
+                                'Rowing',
+                                'Car',
+                                'Bicycle',
+                                'Running'
+                            ],
+                            correct: 'Bicycle',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Where did the first ancient Olympic games take place?',
+                            answers: [
+                                'Greece',
+                                'France',
+                                'USA',
+                                'China'
+                            ],
+                            correct: 'Greece',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following is not a colour of the Olympic rings?',
+                            answers: [
+                                'Blue',
+                                'Black',
+                                'Green',
+                                'White'
+                            ],
+                            correct: 'White',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many holes are played in an average round of golf?',
+                            answers: [
+                                '9',
+                                '12',
+                                '18',
+                                '21'
+                            ],
+                            correct: '18',
+                            askedBefore: false,
+                        },
+                    ],
+                }
+                , // full
+                medium: {
+                    questions: [],
+                }
+                ,
+                hard: {
+                    questions: [
+                        {
+                            question: 'In what year were the first Air Jordan sneakers released?',
+                            answers: [
+                                '1987',
+                                '1993',
+                                '1991',
+                                '1984'
+                            ],
+                            correct: '1984',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the minimum weight of a coxswain according to World Rowing?',
+                            answers: [
+                                '45 kg',
+                                '65 kg',
+                                '55 kg',
+                                '75 kg'
+                            ],
+                            correct: '55 kg',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which sport is featured in the Animated Series: Free!?',
+                            answers: [
+                                'Football (Soccer)',
+                                'Tennis',
+                                'Swimming',
+                                'Badminton'
+                            ],
+                            correct: 'Swimming',
+                            askedBefore: false,
+                            level: 'hard',
+                            points: 10,
+                        },
+                        {
+                            question: 'How many points did Michael Jordan score on his first NBA game?',
+                            answers: [
+                                '20 points',
+                                '10 points',
+                                '18 points',
+                                '16 points'
+                            ],
+                            correct: '16 points',
+                            askedBefore: false,
+                            level: 'hard',
+                            points: 10,
+                        },
 
-                  ],
-              },
-            },
+                    ],
+                }
+                ,
+            }
+            ,
             musicartsfilm: {
                 easy: {
                     questions: [],
-                },
+                }
+                ,
                 medium: {
                     questions: [],
-                },
+                }
+                ,
                 hard: {
                     questions: [],
-                },
-            },
+                }
+                ,
+            }
+            ,
         },
     ]
-};
+}
+;
