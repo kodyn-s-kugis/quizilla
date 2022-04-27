@@ -12,42 +12,56 @@ store this value or continue working with it.
 const {MessageActionRow, MessageButton, MessageEmbed} = require("discord.js");
 const questions = require("../data/questions.js");
 const random = require("../utils/randomNum");
-let timer = require('./timer');
+const {time} = require("@discordjs/builders");
 
-module.exports = async function mcquestions(interaction, theme, difficulty) {
-
-
-    console.log('MCQuestions have started.');
-
-    // Set value for time limit.
-    let timeLimit = 30;
-
+async function askQuestion(interaction, theme, difficulty, randomIndex, timeLimit, chosenAnswer, questionCount, newQuestion, newAnswers) {
     // Assign values from questions object to local variables
-    let {question, answers, correct, points} = questions.theme[0][theme][difficulty].questions[random(0, 1)];
+    let {
+        question,
+        answers,
+        correct,
+        askedBefore,
+        points
+    } = questions.theme[0][theme][difficulty].questions[randomIndex];
+
+    if (askedBefore == true) {
+        let {
+            question,
+            answers,
+            correct,
+            askedBefore,
+            points
+        } = questions.theme[0][theme][difficulty].questions[randomIndex];
+        newQuestion = question;
+        newAnswers = answers;
+    } else {
+        newQuestion = question;
+        newAnswers = answers;
+    }
 
     // Create buttons with A, B, C, D answer options
     const row = new MessageActionRow()
         .addComponents(
             new MessageButton()
-                .setCustomId(answers[0])
+                .setCustomId(newAnswers[0])
                 .setLabel('A')
                 .setStyle('SUCCESS')
         )
         .addComponents(
             new MessageButton()
-                .setCustomId(answers[1])
+                .setCustomId(newAnswers[1])
                 .setLabel('B')
                 .setStyle('DANGER')
         )
         .addComponents(
             new MessageButton()
-                .setCustomId(answers[2])
+                .setCustomId(newAnswers[2])
                 .setLabel('C')
                 .setStyle('PRIMARY')
         )
         .addComponents(
             new MessageButton()
-                .setCustomId(answers[3])
+                .setCustomId(newAnswers[3])
                 .setLabel('D')
                 .setStyle('SECONDARY')
         )
@@ -56,11 +70,11 @@ module.exports = async function mcquestions(interaction, theme, difficulty) {
     // Create embed with question and answers display
     const questionDisplay = new MessageEmbed()
         .setColor("#0099ff")
-        .setTitle(`${question}`)
-        .setDescription(`A: ${answers[0]}
-                         B: ${answers[1]}
-                         C: ${answers[2]}
-                         D: ${answers[3]}`);
+        .setTitle(`${newQuestion}`)
+        .setDescription(`A: ${newAnswers[0]}
+                         B: ${newAnswers[1]}
+                         C: ${newAnswers[2]}
+                         D: ${newAnswers[3]}`);
     console.log('Embed created.');
 
 
@@ -92,12 +106,14 @@ module.exports = async function mcquestions(interaction, theme, difficulty) {
     ;
 
     collector.on('end', (collection) => {
+
         collection.forEach((click) => {
             let userID = click.user.id;
-            let chosenAnswer = click.customId;
+            chosenAnswer = click.customId;
             console.log(`Chosen: ${chosenAnswer}, Correct: ${correct}`);
             timeLimit = -5;
         })
+
     });
 
     // Call timer function
@@ -122,6 +138,7 @@ module.exports = async function mcquestions(interaction, theme, difficulty) {
                         timeLimit === 1) {
                         timer.edit(`Time remaining: ${timeLimit} seconds.`);
                     }
+
                     // If timer reaches 0s, the function stops and the user is notified of time being up.
                     if (timeLimit === 0) {
                         timer.edit('Sorry, your time is up!');
@@ -141,14 +158,31 @@ module.exports = async function mcquestions(interaction, theme, difficulty) {
                     // Here, the timerLimit variable is decreased by one every round the setInterval function runs.
                     timeLimit -= 1;
                     console.log(timeLimit);
+
                 }, 1000);
             }
         );
+    }
+}
 
+module.exports = async function mcquestions(interaction, theme, difficulty) {
 
-    };
+    console.log('MCQuestions have started.');
 
-    // At time points 20s, 15s, 10s, 5s time will be displayed as well.
+    // Set value for time limit.
+    let timeLimit = 30;
+    let chosenAnswer;
+    let questionCount = 0;
+    let newQuestion;
+    let newAnswers = [];
+    let randomIndex = random(0, 1);
 
+    await askQuestion(interaction, theme, difficulty, randomIndex, timeLimit, chosenAnswer, questionCount, newQuestion, newAnswers);
+
+    questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore = true;
+    let answeredBefore = questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
+    console.log(answeredBefore);
+    questionCount++;
+    console.log(questionCount);
 
 };

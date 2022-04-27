@@ -57,7 +57,6 @@ module.exports = {
             );
 
 
-
         } else if (interaction.options.getSubcommand() === "close") {
             await interaction.reply(
                 `${interaction.user.username}, we are closing your trivia game, hope you had a good time!`
