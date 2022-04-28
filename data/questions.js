@@ -1212,10 +1212,75 @@ module.exports = {
                             correct: '4.5',
                             askedBefore: false,
                         },
-
+                        {
+                            question: 'How many ribs are in a human body?',
+                            answers: [
+                                '24',
+                                '26',
+                                '28',
+                                '30',
+                            ],
+                            correct: '24',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which bone are babies born without?',
+                            answers: [
+                                'Sternum',
+                                'Knee Cap',
+                                'Ethmoid Bone',
+                                'Parietal Bone',
+                            ],
+                            correct: 'Knee Cap',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many hearts does an octopus have?',
+                            answers: [
+                                '1',
+                                '2',
+                                '3',
+                                '5',
+                            ],
+                            correct: '3',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What planets literally rain diamonds?',
+                            answers: [
+                                'Neptune and Uranus',
+                                'Venus and Saturn',
+                                'Saturn and Jupiter',
+                                'Jupiter and Venus',
+                            ],
+                            correct: 'Saturn and Jupiter',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What’s the brightest star in the night sky?',
+                            answers: [
+                                'Rigel',
+                                'Sirius',
+                                'Canopus',
+                                'Arcturus',
+                            ],
+                            correct: 'Sirius',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Carrots are a good source of which vitamin?',
+                            answers: [
+                                'Vitamin A',
+                                'Vitamin B12',
+                                'Vitamin E',
+                                'Vitamin C',
+                            ],
+                            correct: 'Vitamin A',
+                            askedBefore: false,
+                        },
                     ],
                     points: 20,
-                },
+                }, // full
                 hard: {
                     questions: [
                         {
@@ -1328,10 +1393,66 @@ module.exports = {
                             correct: 'h',
                             askedBefore: false,
                         },
+                        {
+                            question: 'Lateral Epicondylitis is a condition commonly known by what name?',
+                            answers: [
+                                'Runner\'s Knee',
+                                'Jumper\'s Knee',
+                                'Golfer\'s Elbow',
+                                'Tennis Elbow',
+                            ],
+                            correct: 'Tennis Elbow',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Besides chimpanzees and gorillas, what other non-human animal has human-like fingerprints?',
+                            answers: [
+                                'Koalas',
+                                'Echidnas',
+                                'Aadvarks',
+                                'Racoons',
+                            ],
+                            correct: 'Koalas',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What does a Scoville unit measure?',
+                            answers: [
+                                'Strength',
+                                'Saltiness',
+                                'Pain',
+                                'Spiciness',
+                            ],
+                            correct: 'Spiciness',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What are the bones in the fingers called?',
+                            answers: [
+                                'Sacrum',
+                                'Platine',
+                                'Maxilla',
+                                'Phalanges',
+                            ],
+                            correct: 'Phalanges',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What element does not freeze by being cooled to absolute zero?',
+                            answers: [
+                                'Helium ',
+                                'Hydrogen',
+                                'Oxygen',
+                                'Nitrogen',
+                            ],
+                            correct: 'Helium',
+                            askedBefore: false,
+                        },
+
                     ],
                     points: 30,
-                },
-            },
+                }, // full
+            }, // full
             sport: {
                 easy: {
                     questions: [
@@ -1503,7 +1624,65 @@ module.exports = {
                     ],
                 }, // full
                 medium: {
-                    questions: [],
+                    questions: [
+                        {
+                            question: 'How many World Drivers Championships has Sebastian Vettel won?',
+                            answers: [
+                                '3',
+                                '4',
+                                '5',
+                                '6',
+                            ],
+                            correct: '4',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which two countries have not missed one of the modern-day Olympics?',
+                            answers: [
+                                'Greece and Australia',
+                                'Greece and United Kingdom',
+                                'Germany and United Kingdo',
+                                'Greece and Germany',
+                            ],
+                            correct: 'Greece and Australia',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Tennis star Serena Williams won which major tournament while pregnant with her first child?',
+                            answers: [
+                                'Eastbourne International',
+                                'The Australian Open',
+                                'Wimbledon',
+                                'US Open',
+                            ],
+                            correct: 'The Australian Open',
+                            askedBefore: false,
+                            level: 'medium',
+                            points: 10,
+                        },
+                        {
+                            question: 'What country won the very first FIFA World Cup in 1930?',
+                            answers: [
+                                'Brazil',
+                                'England',
+                                'Argentina',
+                                'Uruguay',
+                            ],
+                            correct: 'Uruguay',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was said to “float like a butterfly and sting like a bee”?',
+                            answers: [
+                                'Mike Tyson',
+                                'Muhammed Ali',
+                                'Lionel Rose',
+                                'Sugar Ray Robinson',
+                            ],
+                            correct: 'Muhammed Ali',
+                            askedBefore: false,
+                        },
+                    ],
                 },
                 hard: {
                     questions: [
@@ -1513,7 +1692,7 @@ module.exports = {
                                 '1987',
                                 '1993',
                                 '1991',
-                                '1984'
+                                '1984',
                             ],
                             correct: '1984',
                             askedBefore: false,
@@ -1524,7 +1703,7 @@ module.exports = {
                                 '45 kg',
                                 '65 kg',
                                 '55 kg',
-                                '75 kg'
+                                '75 kg',
                             ],
                             correct: '55 kg',
                             askedBefore: false,
@@ -1535,7 +1714,7 @@ module.exports = {
                                 'Football (Soccer)',
                                 'Tennis',
                                 'Swimming',
-                                'Badminton'
+                                'Badminton',
                             ],
                             correct: 'Swimming',
                             askedBefore: false,
@@ -1548,34 +1727,389 @@ module.exports = {
                                 '20 points',
                                 '10 points',
                                 '18 points',
-                                '16 points'
+                                '16 points',
                             ],
                             correct: '16 points',
                             askedBefore: false,
                             level: 'hard',
                             points: 10,
                         },
+                        {
+                            question: 'In what year was the first-ever Wimbledon Championship held?',
+                            answers: [
+                                '1894',
+                                '1901',
+                                '1877',
+                                '1882',
+                            ],
+                            correct: '1877',
+                            askedBefore: false,
+                        },
 
                     ],
                 }
                 ,
-            }
-            ,
-            musicartsfilm: {
+            },
+            maf: {
                 easy: {
-                    questions: [],
-                }
-                ,
+                    questions: [
+                        {
+                            question: 'What is the name of Batman’s butler?',
+                            answers: [
+                                'Vincent',
+                                'Charles',
+                                'Alfred',
+                                'Winston',
+                            ],
+                            correct: 'Alfred',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who painted the Mona Lisa?',
+                            answers: [
+                                'Vincent van Gogh',
+                                'Leonardo Da Vinci',
+                                'Michelangelo',
+                                'Giovanni Bellini',
+                            ],
+                            correct: 'Leonardo Da Vinci',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who wrote the play Hamlet, A Midsummer Night\'s Dream and MacBeth?',
+                            answers: [
+                                'WIlliam Shakespeare',
+                                'Jean Racine',
+                                'Aphra Behn',
+                                'Christopher Marlowe',
+                            ],
+                            correct: 'WIlliam Shakespeare',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who sang “We will rock you!”?',
+                            answers: [
+                                'Metallica',
+                                'AC/DC',
+                                'Queen',
+                                'Meat Loaf',
+                            ],
+                            correct: 'Queen',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Nirvana\'s "Nevermind" album was released in what year?',
+                            answers: [
+                                '1990',
+                                '1991',
+                                '1992',
+                                '1993',
+                            ],
+                            correct: '1991',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Michael Jackson\'s "Thriller" album was released in what year? ',
+                            answers: [
+                                '1980',
+                                '1981',
+                                '1982',
+                                '1983',
+                            ],
+                            correct: '1982',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Jim Morrison performed in which band?',
+                            answers: [
+                                'The Beatles',
+                                'MC5',
+                                'The Doors',
+                                'The Kinks'
+                            ],
+                            correct: 'The Doors',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which British girl group had a member by the name of Mel B?',
+                            answers: [
+                                'All Saints',
+                                'Atomic Kitten',
+                                'Sugababes',
+                                'Spice Girls'
+                            ],
+                            correct: 'Spice Girls',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Spiderman is the superhero identity of who?',
+                            answers: [
+                                'Barry Allen',
+                                'Clark Kent',
+                                'Tony Stark',
+                                'Peter Parker',
+                            ],
+                            correct: 'Peter Parker',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'MC Hammer is known for "U Can\'t _____"? (fill the blank)',
+                            answers: [
+                                'Play Me',
+                                'Stop Me',
+                                'Touch This',
+                                'Break This'
+                            ],
+                            correct: 'Touch This',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Famous for painting a soup can is which pop artist?',
+                            answers: [
+                                'Keith Haring',
+                                'Tom Wesselmann',
+                                'Roy Lichtenstein',
+                                'Andy Warhol'
+                            ],
+                            correct: 'Andy Warhol',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who painted "The Starry Night"?',
+                            answers: [
+                                'Pablo Picasso',
+                                'Vincent van Gogh',
+                                'Claude Monet',
+                                'Andy Warhol'
+                            ],
+                            correct: 'Vincent van Gogh',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Finish this song line by Britney Spears: "Hit me baby _______" (fill in the blank)',
+                            answers: [
+                                'One more time',
+                                'Just like that',
+                                'Like yo momma',
+                                'Like no other'
+                            ],
+                            correct: 'One more time',
+                            askedBefore: false,
+                        },
+                        {
+                            question: '"Peaches", "Lump", and "Mach 5" are performed by which band?',
+                            answers: [
+                                'The Cranberries',
+                                'Presidents of the United States of America',
+                                'Butthole Surfers',
+                                'Weezer'
+                            ],
+                            correct: 'Presidents of the United States of America',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Slash played guitar for which of the following?',
+                            answers: [
+                                'Metallica',
+                                'Anthrax',
+                                'Iron maiden',
+                                'Guns N Roses'
+                            ],
+                            correct: 'Guns N Roses',
+                            askedBefore: false,
+                        },
+                    ],
+                }, // full
                 medium: {
-                    questions: [],
-                }
-                ,
+                    questions: [
+                        {
+                            question: 'Which year did Elvis Presley die?',
+                            answers: [
+                                '1973',
+                                '1975',
+                                '1977',
+                                '1979',
+                            ],
+                            correct: '1977',
+                            askedBefore: false,
+                            level: 'medium',
+                            points: 10,
+                        },
+                        {
+                            question: 'Which author wrote the ‘Winnie-the-Pooh’ books?',
+                            answers: [
+                                'A.A. Milne',
+                                'R.O. Malley',
+                                'J.K. Rowling',
+                                'Michael Morpurgo',
+                            ],
+                            correct: 'A.A. Milne',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'A Song of Ice and Fire is a Fantasy Series written by the author?',
+                            answers: [
+                                'J.K Rowling',
+                                'G.R.R Martin',
+                                'C.S Lewis',
+                                'J.R.R Tolkien',
+                            ],
+                            correct: 'G.R.R Martin',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What book starts with the line “Call me Ishmael.”?',
+                            answers: [
+                                'Moby Dick',
+                                'The Catcher in the Rye',
+                                'The Great Gatsby',
+                                'Ulysses'
+                            ],
+                            correct: 'Moby Dick',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which year did George Michael release his debut album “Faith”?',
+                            answers: [
+                                '1992',
+                                '1981',
+                                '1987',
+                                '1989'
+                            ],
+                            correct: '1987',
+                            askedBefore: false,
+                        },
+                        {
+                            question: '“Memories” by Maroon 5 is based on the tune of which classical piece?',
+                            answers: [
+                                'Midnight Sonata by Ludwig Beethoven',
+                                'Caprice No. 24 by Nicolo Paganini',
+                                'Johann Pachelbel’s Canon in D',
+                                'Eine Kleine Nachtmusik, K. 525 by Wolfgang Amadeus Mozart'
+                            ],
+                            correct: 'Johann Pachelbel’s Canon in D',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'After the Sex Pistols, Johnny Rotton formed which band?',
+                            answers: [
+                                'Joy Division',
+                                'XTC',
+                                'Public Image Ltd.',
+                                'The Buzzcocks'
+                            ],
+                            correct: 'Public Image Ltd.',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which band was NOT based in Seattle?',
+                            answers: [
+                                'Alice in Chains',
+                                'Soundgarden',
+                                'Stone Temple Pilots',
+                                'TAD'
+                            ],
+                            correct: 'Stone Temple Pilots',
+                            askedBefore: false,
+                        },
+                    ],
+                },
                 hard: {
-                    questions: [],
-                }
-                ,
-            }
-            ,
+                    questions: [
+                        {
+                            question: 'In what year did the first South Park episode air?',
+                            answers: [
+                                '1994',
+                                '1997',
+                                '2000',
+                                '2003',
+                            ],
+                            correct: '1997',
+                            askedBefore: false,
+                        },
+                        {
+                            question: ' In which year did AC/DC form?',
+                            answers: [
+                                '1973',
+                                '1979',
+                                '1984',
+                                '1967',
+                            ],
+                            correct: '1973',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which singer\'s real name is Stefani Joanne Angelina Germanotta?',
+                            answers: [
+                                'Lady Gaga',
+                                'Beyonce',
+                                'Rhianna',
+                                'Jewel',
+                            ],
+                            correct: 'Lady Gaga',
+                            askedBefore: false,
+                            level: 'hard',
+                            points: 10,
+                        },
+                        {
+                            question: 'Which of these poems are not the work of Edgar Allan Poe?',
+                            answers: [
+                                'The Raven',
+                                'To Helen',
+                                'The Tell-Tale Heart ',
+                                'I Drift In and Out of People’s Lives',
+                            ],
+                            correct: 'I Drift In and Out of People’s Lives',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Kingston, Zuma, and Apollo are the sons of which female pop star?',
+                            answers: [
+                                'Gwen Stefani',
+                                'Lady Gaga',
+                                'Baby Spice',
+                                'Taylor Swift',
+                            ],
+                            correct: 'Gwen Stefani',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which Dutch artist painted “Girl with a Pearl Earring”?',
+                            answers: [
+                                'Rembrandt',
+                                'Piet Mondrian',
+                                'Johannes Vermeer',
+                                'Vincent van Gogh',
+                            ],
+                            correct: 'Johannes Vermeer',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Before the Beatles were formed, which band were John Lennon, Paul McCartney, and George Harrison all members of?',
+                            answers: [
+                                'The Quarrymen',
+                                'The Les Stewart Quartet',
+                                'The Vipers Skiffle Group',
+                                'The Yardbirds',
+                            ],
+                            correct: 'The Quarrymen',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who is the youngest person to appear on a Billboard Chart?',
+                            answers: [
+                                'Aaron Carter',
+                                'Blue Ivy Carter',
+                                'Annabella Lwin',
+                                'Bow Wow',
+                            ],
+                            correct: 'Blue Ivy Carter',
+                            askedBefore: false,
+                        },
+
+                    ],
+                },
+            },
         },
     ]
 }

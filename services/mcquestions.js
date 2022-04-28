@@ -18,7 +18,7 @@ async function askQuestion(interaction, theme, difficulty) {
     let timeLimit = 30;
     let chosenAnswer = '';
     let questionCount = 0;
-    let randomIndex = random(0,2);
+    let randomIndex = random(0, 2);
     let newQuestion;
     let newAnswers = [];
 
@@ -171,23 +171,20 @@ async function askQuestion(interaction, theme, difficulty) {
         );
     }
 
-    questionCount++;
-
     questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore = true;
     let answeredBefore = questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
     console.log(answeredBefore);
-
-    return questionCount;
 }
 
 module.exports = async function mcQuestions(interaction, theme, difficulty) {
 
     console.log('MCQuestions have started.');
-    let questionCount;
+    let questionCount = 0;
+    for (let i = 0; i < 15; i++) {
+        await interaction.followUp(askQuestion(interaction, theme, difficulty));
+        questionCount++;
+        console.log(questionCount);
+    }
 
-    questionCount = await askQuestion(interaction, theme, difficulty)
-        .then(interaction.followUp(await askQuestion(interaction, theme, difficulty)));
-
-    console.log(questionCount);
 
 };
