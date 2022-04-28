@@ -1501,12 +1501,10 @@ module.exports = {
                             askedBefore: false,
                         },
                     ],
-                }
-                , // full
+                }, // full
                 medium: {
                     questions: [],
-                }
-                ,
+                },
                 hard: {
                     questions: [
                         {

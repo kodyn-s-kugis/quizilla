@@ -14,7 +14,14 @@ const questions = require("../data/questions.js");
 const random = require("../utils/randomNum");
 const {time} = require("@discordjs/builders");
 
-async function askQuestion(interaction, theme, difficulty, randomIndex, timeLimit, chosenAnswer, questionCount, newQuestion, newAnswers) {
+async function askQuestion(interaction, theme, difficulty) {
+    let timeLimit = 30;
+    let chosenAnswer = '';
+    let questionCount = 0;
+    let randomIndex = random(0,2);
+    let newQuestion;
+    let newAnswers = [];
+
     // Assign values from questions object to local variables
     let {
         question,
@@ -24,7 +31,7 @@ async function askQuestion(interaction, theme, difficulty, randomIndex, timeLimi
         points
     } = questions.theme[0][theme][difficulty].questions[randomIndex];
 
-    if (askedBefore == true) {
+    if (askedBefore === true) {
         let {
             question,
             answers,
@@ -97,13 +104,13 @@ async function askQuestion(interaction, theme, difficulty, randomIndex, timeLimi
     });
 
     console.log('Collector created.');
+
     collector.on('collect', (ButtonInteraction) => {
             ButtonInteraction.reply({
                 content: `You've chosen ${ButtonInteraction.customId}`,
             })
         }
-    )
-    ;
+    );
 
     collector.on('end', (collection) => {
 
@@ -163,26 +170,24 @@ async function askQuestion(interaction, theme, difficulty, randomIndex, timeLimi
             }
         );
     }
-}
 
-module.exports = async function mcquestions(interaction, theme, difficulty) {
-
-    console.log('MCQuestions have started.');
-
-    // Set value for time limit.
-    let timeLimit = 30;
-    let chosenAnswer;
-    let questionCount = 0;
-    let newQuestion;
-    let newAnswers = [];
-    let randomIndex = random(0, 1);
-
-    await askQuestion(interaction, theme, difficulty, randomIndex, timeLimit, chosenAnswer, questionCount, newQuestion, newAnswers);
+    questionCount++;
 
     questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore = true;
     let answeredBefore = questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
     console.log(answeredBefore);
-    questionCount++;
+
+    return questionCount;
+}
+
+module.exports = async function mcQuestions(interaction, theme, difficulty) {
+
+    console.log('MCQuestions have started.');
+    let questionCount;
+
+    questionCount = await askQuestion(interaction, theme, difficulty)
+        .then(interaction.followUp(await askQuestion(interaction, theme, difficulty)));
+
     console.log(questionCount);
 
 };

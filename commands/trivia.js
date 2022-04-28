@@ -1,5 +1,5 @@
 const {SlashCommandBuilder, channelMention} = require("@discordjs/builders");
-const mcquestions = require("../services/mcquestions");
+const mcQuestions = require("../services/mcquestions");
 const answerInput = require('../services/buttonInteractionHandler');
 
 module.exports = {
@@ -53,7 +53,7 @@ module.exports = {
 
             await interaction.reply(
                 `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty, as ${mode} player game!`,
-                await mcquestions(interaction, theme, difficulty),
+                await mcQuestions(interaction, theme, difficulty),
             );
 
 
