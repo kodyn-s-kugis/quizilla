@@ -15,30 +15,35 @@ const random = require("../utils/randomNum");
 const {time} = require("@discordjs/builders");
 
 async function askQuestion(interaction, theme, difficulty) {
+
+    // Declaring all necessary variables
     let timeLimit = 30;
     let chosenAnswer = '';
-    let questionCount = 0;
-    let randomIndex = random(0, 2);
+    let randomIndex = random(0, 5);
     let newQuestion;
     let newAnswers = [];
+    let points = questions.array.theme[0][theme][difficulty].points;
 
     // Assign values from questions object to local variables
     let {
         question,
         answers,
         correct,
-        askedBefore,
-        points
-    } = questions.theme[0][theme][difficulty].questions[randomIndex];
+        askedBefore
+    } = questions.array.theme[0][theme][difficulty].questions[randomIndex];
 
+
+    // Each question has an askedBefore attribute to avoid double questions. Here, the program checks if this attribute
+    // has been set to true. If this is the case, a new question will be selected via the random index.
     if (askedBefore === true) {
+        randomIndex = random(0, 5);
         let {
             question,
             answers,
             correct,
             askedBefore,
             points
-        } = questions.theme[0][theme][difficulty].questions[randomIndex];
+        } = questions.array.theme[0][theme][difficulty].questions[randomIndex];
         newQuestion = question;
         newAnswers = answers;
     } else {
@@ -46,7 +51,8 @@ async function askQuestion(interaction, theme, difficulty) {
         newAnswers = answers;
     }
 
-    // Create buttons with A, B, C, D answer options
+    // Create buttons with A, B, C, D answer options and assign the values from the newAnswers array to each button's
+    // custom ID attribute. This way, it is possible to check if the chosen answer was correct.
     const row = new MessageActionRow()
         .addComponents(
             new MessageButton()
@@ -104,11 +110,18 @@ async function askQuestion(interaction, theme, difficulty) {
     });
 
     console.log('Collector created.');
+    console.log(`Correct: ${correct}`);
 
     collector.on('collect', (ButtonInteraction) => {
-            ButtonInteraction.reply({
-                content: `You've chosen ${ButtonInteraction.customId}`,
-            })
+            if (ButtonInteraction.customId === correct) {
+                ButtonInteraction.reply({
+                    content: `You've chosen ${ButtonInteraction.customId}, that is correct, ${points} points to you!`,
+                })
+            } else {
+                ButtonInteraction.reply({
+                    content: `You've chosen ${ButtonInteraction.customId}, sorry, you're wrong, no points!`,
+                })
+            }
         }
     );
 
@@ -171,20 +184,27 @@ async function askQuestion(interaction, theme, difficulty) {
         );
     }
 
-    questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore = true;
-    let answeredBefore = questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
+    console.log(askedBefore);
+   /* questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore = true;
+    let answeredBefore = questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore;*/
+    questions.modifyAskedBefore(true, theme, difficulty, randomIndex);
+    let answeredBefore = questions.array.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
     console.log(answeredBefore);
+
 }
 
 module.exports = async function mcQuestions(interaction, theme, difficulty) {
 
     console.log('MCQuestions have started.');
     let questionCount = 0;
-    for (let i = 0; i < 15; i++) {
-        await interaction.followUp(askQuestion(interaction, theme, difficulty));
-        questionCount++;
-        console.log(questionCount);
-    }
+    //for (let i = 0; i < 3; i++) {
+
+    await askQuestion(interaction, theme, difficulty);
+
+
+    questionCount++;
+    console.log(questionCount);
+    //}
 
 
 };

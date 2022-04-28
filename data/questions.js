@@ -1,6 +1,7 @@
 // Collection of trivia questions
 
-module.exports = {
+
+let questions = {
     theme: [
         {
             history: {
@@ -2112,5 +2113,10 @@ module.exports = {
             },
         },
     ]
-}
-;
+};
+
+module.exports.array = questions;
+module.exports.modifyAskedBefore =
+    function (setValue, theme, difficulty, randomIndex) {
+        questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore = setValue;
+    }
