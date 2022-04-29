@@ -4,429 +4,6 @@
 let questions = {
     theme: [
         {
-            history: {
-                easy: {
-                    questions: [
-                        {
-                            question: 'What year was the first iPhone released?',
-                            answers: [
-                                '2005',
-                                '2006',
-                                '2007',
-                                '2009'],
-                            correct: '2007',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which year was the first moon landing?',
-                            answers: [
-                                '1958',
-                                '1971',
-                                '1969',
-                                '1959'],
-                            correct: '1969',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What year did World War I start?',
-                            answers: [
-                                '1913',
-                                '1914',
-                                '1915',
-                                '1916'
-                            ],
-                            correct: '1914',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who was the leader of the Nazi Party?',
-                            answers: [
-                                'Adolf Eichmann',
-                                'Jean Racine',
-                                'Reinhard Heydrich',
-                                'Adolf Hitler'
-                            ],
-                            correct: 'Adolf Hitler',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In which year was Australia discovered?',
-                            answers: [
-                                '1606',
-                                '1492',
-                                '1886',
-                                '1642'
-                            ],
-                            correct: '1606',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What year did George W. Bush invade Iraq?',
-                            answers: [
-                                '2002',
-                                '2003',
-                                '2004',
-                                '2005'
-                            ],
-                            correct: '2003',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who is considered the "Enlightener of Ireland?',
-                            answers: [
-                                'St. Patrick',
-                                'St. Andrew',
-                                'St. Geroge',
-                                'St. Peter'
-                            ],
-                            correct: ' St. Patrick ',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which famous ship was considered "unsinkable"?',
-                            answers: [
-                                'USS Arizona',
-                                'The Endeavour',
-                                'Santa Maria',
-                                'Titanic'
-                            ],
-                            correct: 'Titanic',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What year did the Titanic sink?',
-                            answers: [
-                                '1910',
-                                '1912',
-                                '1914',
-                                '1916'
-                            ],
-                            correct: '1912',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which ship did Captain Cook sail in during his first world Voyage?',
-                            answers: [
-                                'HMS Discovery',
-                                'HMS Resolution',
-                                'HMS Endeavour',
-                                'HMS Eagle'
-                            ],
-                            correct: 'HMS Endeavour',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'The Falklands War was between Argentina and who?',
-                            answers: [
-                                'Ireland',
-                                'United Kingdom',
-                                'Russia',
-                                'USA'
-                            ],
-                            correct: 'United Kingdom',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In the US Civil War, what colour did the North wear?',
-                            answers: [
-                                'Navy Blue',
-                                'Grey',
-                                'Dark Green',
-                                'Burgundy'
-                            ],
-                            correct: 'Navy Blue',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Muhammad founded which world religion?',
-                            answers: [
-                                'Hindu',
-                                'Islam',
-                                'Buddhism',
-                                'Taoism'
-                            ],
-                            correct: 'Islam',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who is credited for having invented the telephone?',
-                            answers: [
-                                'Louis Braille',
-                                'Samuel Morse',
-                                'Alexander Graham Bell',
-                                'Thomas Edison'
-                            ],
-                            correct: 'Alexander Graham Bell',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which of the following is NOT a theory for the extinction of the disnosaurs?',
-                            answers: [
-                                'Asteroid Impact',
-                                'Food Shortage',
-                                'Hunted by other animals',
-                                'Climate Change'
-                            ],
-                            correct: 'Hunted by other animals',
-                            askedBefore: false,
-                        },
-                    ],
-                    points: 10,
-                }, // full
-                medium: {
-                    questions: [
-                        {
-                            question:
-                                'Which Australian prime minister was preceded and succeeded by Kevin Rudd?',
-                            answers: [
-                                'Scott Morrison',
-                                'Tony Abbott',
-                                'Julia Gillard',
-                                'John Howard',
-                            ],
-                            correct: 'Julia Gillard',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who was the first woman to win a Nobel Prize?',
-                            answers: [
-                                'Ada Yonath',
-                                'Rosalyn Yalow',
-                                'Sigrid Undset',
-                                'Marie Curie'
-                            ],
-                            correct: 'Marie Curie',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'When did the Cold War end?',
-                            answers: [
-                                '1979',
-                                '1989',
-                                '1990',
-                                '1982'
-                            ],
-                            correct: '1989',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who was the first European to land in Australia?',
-                            answers: [
-                                'James Cook',
-                                'Willem Janszoon',
-                                'Christopher Columbus',
-                                'Abel Tasman'
-                            ],
-                            correct: 'Willem Janszoon',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which country gifted the USA the Statue of Liberty?',
-                            answers: [
-                                'England',
-                                'France',
-                                'Hungary',
-                                'Denmark'
-                            ],
-                            correct: 'France',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Nelson Mandela was released from prison in what year?',
-                            answers: [
-                                '1988',
-                                '1989',
-                                '1990',
-                                '1991'
-                            ],
-                            correct: '1990',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In which town was Jesus born?',
-                            answers: [
-                                'Jericho',
-                                'Bethlehem',
-                                'Damascus',
-                                'Nineveh'
-                            ],
-                            correct: 'Bethlehem',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'How many years did the 100 years war last?',
-                            answers: [
-                                '100 years',
-                                '115 years',
-                                '116 years',
-                                '124 years'
-                            ],
-                            correct: '116 years ',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What was the name of the research ship Charles Darwin travelled with?',
-                            answers: [
-                                'The Beagle',
-                                'Santa Maria',
-                                'Discovery',
-                                'The Eagle',
-                            ],
-                            correct: 'The Beagle',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Greenland was a colony of which country until 1981?',
-                            answers: [
-                                'Norway',
-                                'Denmark',
-                                'Sweden',
-                                'Iceland'
-                            ],
-                            correct: 'Denmark',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'How many days in a week were there in ancient Roman times?',
-                            answers: [
-                                '5',
-                                '6',
-                                '7',
-                                '8',
-                            ],
-                            correct: '8',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'How many U.S. Presidents have been assassinated?',
-                            answers: [
-                                '2',
-                                '3',
-                                '4',
-                                '5',
-                            ],
-                            correct: '4',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which world leader is famous for his \"Little Red Book\"?',
-                            answers: [
-                                'Lenin',
-                                'Mao Tse-tung',
-                                'Che Guevara',
-                                'Franklin Roosevelt',
-                            ],
-                            correct: 'Mao Tse-tung',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which year did the first Space Shuttle go into space?',
-                            answers: [
-                                '1981',
-                                '1983',
-                                '1985',
-                                '1989',
-                            ],
-                            correct: '1981',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which Russian astronaut was the first man to conduct a spacewalk?',
-                            answers: [
-                                'Yuri Gagarin',
-                                'Alexey Leonov',
-                                'Pavel Popovich',
-                                'Anton Shkaplerov',
-                            ],
-                            correct: 'Alexey Leonov',
-                            askedBefore: false,
-                        },
-                    ],
-                    points: 20,
-                }, // full
-                hard: {
-                    questions: [
-                        {
-                            question: 'When did WWII end?',
-                            answers: [
-                                '2 September 1945',
-                                '1 July 1945',
-                                '23 December 1945',
-                                '31 January 1945'
-                            ],
-                            correct: '2 September 1945',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who was Australia’s first prime Minister?',
-                            answers: [
-                                'Edmund Barton',
-                                'Alfred Deakin',
-                                'Robert Menzies',
-                                'John Curtin'
-                            ],
-                            correct: 'Edmund Barton',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What happened on 9th November 1989?',
-                            answers: [
-                                'End of Vietnam war',
-                                'Fall of the Berlin Wall',
-                                'Eruption of Mount Vesuvio',
-                                'Assassination of John F. Kennedy'
-                            ],
-                            correct: 'Fall of the Berlin Wall',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'According to Greek mythology, who was the first woman on earth?',
-                            answers: [
-                                'Chthonia',
-                                'Xerces',
-                                'Pandora',
-                                'Hypatia '
-                            ],
-                            correct: 'Pandora',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What was the first city to reach a population of one million?',
-                            answers: [
-                                'London',
-                                'Athens',
-                                'Beijing',
-                                'Rome'
-                            ],
-                            correct: 'Rome',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'The world\'s first postage stamp was introduced in what year?',
-                            answers: [
-                                '1840',
-                                '1880',
-                                '1900',
-                                '1910'
-                            ],
-                            correct: '1840',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In which year were X-rays discovered?',
-                            answers: [
-                                '1884',
-                                '1914',
-                                '1895',
-                                '1875'
-                            ],
-                            correct: '1895',
-                            askedBefore: false,
-                        },
-                    ],
-                    points: 30,
-                },
-            },
             geography: {
                 easy: {
                     questions: [
@@ -597,7 +174,7 @@ let questions = {
                         },
                     ],
                     points: 10,
-                }, // full
+                }, // full no points in questions
                 medium: {
                     questions: [
                         {
@@ -767,7 +344,7 @@ let questions = {
                         },
                     ],
                     points: 20,
-                }, // full
+                }, // full no points in questions
                 hard: {
                     questions: [
                         {
@@ -939,7 +516,1454 @@ let questions = {
 
                     ],
                     points: 30,
-                }, // full
+                }, // full no points in questions
+            }, // full no points in questions
+            history: {
+                easy: {
+                    questions: [
+                        {
+                            question: 'What year was the first iPhone released?',
+                            answers: [
+                                '2005',
+                                '2006',
+                                '2007',
+                                '2009'],
+                            correct: '2007',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which year was the first moon landing?',
+                            answers: [
+                                '1958',
+                                '1971',
+                                '1969',
+                                '1959'],
+                            correct: '1969',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What year did World War I start?',
+                            answers: [
+                                '1913',
+                                '1914',
+                                '1915',
+                                '1916'
+                            ],
+                            correct: '1914',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was the leader of the Nazi Party?',
+                            answers: [
+                                'Adolf Eichmann',
+                                'Jean Racine',
+                                'Reinhard Heydrich',
+                                'Adolf Hitler'
+                            ],
+                            correct: 'Adolf Hitler',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which year was Australia discovered?',
+                            answers: [
+                                '1606',
+                                '1492',
+                                '1886',
+                                '1642'
+                            ],
+                            correct: '1606',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What year did George W. Bush invade Iraq?',
+                            answers: [
+                                '2002',
+                                '2003',
+                                '2004',
+                                '2005'
+                            ],
+                            correct: '2003',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who is considered the "Enlightener of Ireland?',
+                            answers: [
+                                'St. Patrick',
+                                'St. Andrew',
+                                'St. Geroge',
+                                'St. Peter'
+                            ],
+                            correct: ' St. Patrick ',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which famous ship was considered "unsinkable"?',
+                            answers: [
+                                'USS Arizona',
+                                'The Endeavour',
+                                'Santa Maria',
+                                'Titanic'
+                            ],
+                            correct: 'Titanic',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What year did the Titanic sink?',
+                            answers: [
+                                '1910',
+                                '1912',
+                                '1914',
+                                '1916'
+                            ],
+                            correct: '1912',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which ship did Captain Cook sail in during his first world Voyage?',
+                            answers: [
+                                'HMS Discovery',
+                                'HMS Resolution',
+                                'HMS Endeavour',
+                                'HMS Eagle'
+                            ],
+                            correct: 'HMS Endeavour',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The Falklands War was between Argentina and who?',
+                            answers: [
+                                'Ireland',
+                                'United Kingdom',
+                                'Russia',
+                                'USA'
+                            ],
+                            correct: 'United Kingdom',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In the US Civil War, what colour did the North wear?',
+                            answers: [
+                                'Navy Blue',
+                                'Grey',
+                                'Dark Green',
+                                'Burgundy'
+                            ],
+                            correct: 'Navy Blue',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Muhammad founded which world religion?',
+                            answers: [
+                                'Hindu',
+                                'Islam',
+                                'Buddhism',
+                                'Taoism'
+                            ],
+                            correct: 'Islam',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who is credited for having invented the telephone?',
+                            answers: [
+                                'Louis Braille',
+                                'Samuel Morse',
+                                'Alexander Graham Bell',
+                                'Thomas Edison'
+                            ],
+                            correct: 'Alexander Graham Bell',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following is NOT a theory for the extinction of the disnosaurs?',
+                            answers: [
+                                'Asteroid Impact',
+                                'Food Shortage',
+                                'Hunted by other animals',
+                                'Climate Change'
+                            ],
+                            correct: 'Hunted by other animals',
+                            askedBefore: false,
+                        },
+                    ],
+                    points: 10,
+                }, // full no points in questions
+                medium: {
+                    questions: [
+                        {
+                            question:
+                                'Which Australian prime minister was preceded and succeeded by Kevin Rudd?',
+                            answers: [
+                                'Scott Morrison',
+                                'Tony Abbott',
+                                'Julia Gillard',
+                                'John Howard',
+                            ],
+                            correct: 'Julia Gillard',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was the first woman to win a Nobel Prize?',
+                            answers: [
+                                'Ada Yonath',
+                                'Rosalyn Yalow',
+                                'Sigrid Undset',
+                                'Marie Curie'
+                            ],
+                            correct: 'Marie Curie',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'When did the Cold War end?',
+                            answers: [
+                                '1979',
+                                '1989',
+                                '1990',
+                                '1982'
+                            ],
+                            correct: '1989',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was the first European to land in Australia?',
+                            answers: [
+                                'James Cook',
+                                'Willem Janszoon',
+                                'Christopher Columbus',
+                                'Abel Tasman'
+                            ],
+                            correct: 'Willem Janszoon',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country gifted the USA the Statue of Liberty?',
+                            answers: [
+                                'England',
+                                'France',
+                                'Hungary',
+                                'Denmark'
+                            ],
+                            correct: 'France',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Nelson Mandela was released from prison in what year?',
+                            answers: [
+                                '1988',
+                                '1989',
+                                '1990',
+                                '1991'
+                            ],
+                            correct: '1990',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which town was Jesus born?',
+                            answers: [
+                                'Jericho',
+                                'Bethlehem',
+                                'Damascus',
+                                'Nineveh'
+                            ],
+                            correct: 'Bethlehem',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many years did the 100 years war last?',
+                            answers: [
+                                '100 years',
+                                '115 years',
+                                '116 years',
+                                '124 years'
+                            ],
+                            correct: '116 years ',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What was the name of the research ship Charles Darwin travelled with?',
+                            answers: [
+                                'The Beagle',
+                                'Santa Maria',
+                                'Discovery',
+                                'The Eagle',
+                            ],
+                            correct: 'The Beagle',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Greenland was a colony of which country until 1981?',
+                            answers: [
+                                'Norway',
+                                'Denmark',
+                                'Sweden',
+                                'Iceland'
+                            ],
+                            correct: 'Denmark',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many days in a week were there in ancient Roman times?',
+                            answers: [
+                                '5',
+                                '6',
+                                '7',
+                                '8',
+                            ],
+                            correct: '8',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many U.S. Presidents have been assassinated?',
+                            answers: [
+                                '2',
+                                '3',
+                                '4',
+                                '5',
+                            ],
+                            correct: '4',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which world leader is famous for his \"Little Red Book\"?',
+                            answers: [
+                                'Josef Stalin',
+                                'Mao Tse-tung',
+                                'Che Guevara',
+                                'Franklin Roosevelt',
+                            ],
+                            correct: 'Mao Tse-tung',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which year did the first Space Shuttle go into space?',
+                            answers: [
+                                '1981',
+                                '1983',
+                                '1985',
+                                '1989',
+                            ],
+                            correct: '1981',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which Russian astronaut was the first man to conduct a spacewalk?',
+                            answers: [
+                                'Yuri Gagarin',
+                                'Alexey Leonov',
+                                'Pavel Popovich',
+                                'Anton Shkaplerov',
+                            ],
+                            correct: 'Alexey Leonov',
+                            askedBefore: false,
+                        },
+                    ],
+                    points: 20,
+                }, // full no points in questions
+                hard: {
+                    questions: [
+                        {
+                            question: 'When did WWII end?',
+                            answers: [
+                                '2 September 1945',
+                                '1 July 1945',
+                                '23 December 1945',
+                                '31 January 1945'
+                            ],
+                            correct: '2 September 1945',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was Australia’s first prime Minister?',
+                            answers: [
+                                'Edmund Barton',
+                                'Alfred Deakin',
+                                'Robert Menzies',
+                                'John Curtin'
+                            ],
+                            correct: 'Edmund Barton',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What happened on 9th November 1989?',
+                            answers: [
+                                'End of Vietnam war',
+                                'Fall of the Berlin Wall',
+                                'Eruption of Mount Vesuvio',
+                                'Assassination of John F. Kennedy'
+                            ],
+                            correct: 'Fall of the Berlin Wall',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'According to Greek mythology, who was the first woman on earth?',
+                            answers: [
+                                'Chthonia',
+                                'Xerces',
+                                'Pandora',
+                                'Hypatia '
+                            ],
+                            correct: 'Pandora',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What was the first city to reach a population of one million?',
+                            answers: [
+                                'London',
+                                'Athens',
+                                'Beijing',
+                                'Rome'
+                            ],
+                            correct: 'Rome',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The world\'s first postage stamp was introduced in what year?',
+                            answers: [
+                                '1840',
+                                '1880',
+                                '1900',
+                                '1910'
+                            ],
+                            correct: '1840',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which year were X-rays discovered?',
+                            answers: [
+                                '1884',
+                                '1914',
+                                '1895',
+                                '1875'
+                            ],
+                            correct: '1895',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'When did Mao Tse-tung come to power?',
+                            answers: [
+                                '1948',
+                                '1950',
+                                '1942',
+                                '1949',
+                            ],
+                            correct: '1949',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which Greek historian is known as the “Father of History”?',
+                            answers: [
+                                'Herodotus',
+                                'Socrates',
+                                'Plato',
+                                'Aristotle',
+                            ],
+                            correct: 'Herodotus',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In what year did humans put the first satellite into orbit?',
+                            answers: [
+                                '1961',
+                                '1956',
+                                '1957',
+                                '1960',
+                            ],
+                            correct: '1957',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Rome was founded in which year?',
+                            answers: [
+                                '790 BC',
+                                '753 BC',
+                                '654 BC',
+                                '689 BC',
+                            ],
+                            correct: '753 BC',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country was the first to allow women to vote?',
+                            answers: [
+                                'New Zealand',
+                                'Austria',
+                                'The Netherlands',
+                                'Australia',
+                            ],
+                            correct: 'New Zealand',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The Incan Empire is located in which modern-day country?',
+                            answers: [
+                                'Chile',
+                                'Peru',
+                                'Columbia',
+                                'Bolivia',
+                            ],
+                            correct: 'Peru',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What year was the United States Declaration of Independence signed?',
+                            answers: [
+                                '1778',
+                                '1776',
+                                '1781',
+                                '1769',
+                            ],
+                            correct: '1776',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which country was Josef Stalin born in?',
+                            answers: [
+                                'Russia',
+                                'Georgia',
+                                'Ukraine',
+                                'Belarus',
+                            ],
+                            correct: 'Georgia',
+                            askedBefore: false,
+                        },
+
+                    ],
+                    points: 30,
+                }, // full no points in questions
+            }, // full no points in questions
+            maf: {
+                easy: {
+                    questions: [
+                        {
+                            question: 'What is the name of Batman’s butler?',
+                            answers: [
+                                'Vincent',
+                                'Charles',
+                                'Alfred',
+                                'Winston',
+                            ],
+                            correct: 'Alfred',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who painted the Mona Lisa?',
+                            answers: [
+                                'Vincent van Gogh',
+                                'Leonardo Da Vinci',
+                                'Michelangelo',
+                                'Giovanni Bellini',
+                            ],
+                            correct: 'Leonardo Da Vinci',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who wrote the play Hamlet, A Midsummer Night\'s Dream and MacBeth?',
+                            answers: [
+                                'WIlliam Shakespeare',
+                                'Jean Racine',
+                                'Aphra Behn',
+                                'Christopher Marlowe',
+                            ],
+                            correct: 'WIlliam Shakespeare',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who sang “We will rock you!”?',
+                            answers: [
+                                'Metallica',
+                                'AC/DC',
+                                'Queen',
+                                'Meat Loaf',
+                            ],
+                            correct: 'Queen',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Nirvana\'s "Nevermind" album was released in what year?',
+                            answers: [
+                                '1990',
+                                '1991',
+                                '1992',
+                                '1993',
+                            ],
+                            correct: '1991',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Michael Jackson\'s "Thriller" album was released in what year? ',
+                            answers: [
+                                '1980',
+                                '1981',
+                                '1982',
+                                '1983',
+                            ],
+                            correct: '1982',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Jim Morrison performed in which band?',
+                            answers: [
+                                'The Beatles',
+                                'MC5',
+                                'The Doors',
+                                'The Kinks'
+                            ],
+                            correct: 'The Doors',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which British girl group had a member by the name of Mel B?',
+                            answers: [
+                                'All Saints',
+                                'Atomic Kitten',
+                                'Sugababes',
+                                'Spice Girls'
+                            ],
+                            correct: 'Spice Girls',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Spiderman is the superhero identity of who?',
+                            answers: [
+                                'Barry Allen',
+                                'Clark Kent',
+                                'Tony Stark',
+                                'Peter Parker',
+                            ],
+                            correct: 'Peter Parker',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'MC Hammer is known for "U Can\'t _____"? (fill the blank)',
+                            answers: [
+                                'Play Me',
+                                'Stop Me',
+                                'Touch This',
+                                'Break This'
+                            ],
+                            correct: 'Touch This',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Famous for painting a soup can is which pop artist?',
+                            answers: [
+                                'Keith Haring',
+                                'Tom Wesselmann',
+                                'Roy Lichtenstein',
+                                'Andy Warhol'
+                            ],
+                            correct: 'Andy Warhol',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who painted "The Starry Night"?',
+                            answers: [
+                                'Pablo Picasso',
+                                'Vincent van Gogh',
+                                'Claude Monet',
+                                'Andy Warhol'
+                            ],
+                            correct: 'Vincent van Gogh',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Finish this song line by Britney Spears: "Hit me baby _______" (fill in the blank)',
+                            answers: [
+                                'One more time',
+                                'Just like that',
+                                'Like yo momma',
+                                'Like no other'
+                            ],
+                            correct: 'One more time',
+                            askedBefore: false,
+                        },
+                        {
+                            question: '"Peaches", "Lump", and "Mach 5" are performed by which band?',
+                            answers: [
+                                'The Cranberries',
+                                'Presidents of the United States of America',
+                                'Butthole Surfers',
+                                'Weezer'
+                            ],
+                            correct: 'Presidents of the United States of America',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Slash played guitar for which of the following?',
+                            answers: [
+                                'Metallica',
+                                'Anthrax',
+                                'Iron maiden',
+                                'Guns N Roses'
+                            ],
+                            correct: 'Guns N Roses',
+                            askedBefore: false,
+                        },
+                    ],
+                    points: 10,
+                }, // full no points in questions
+                medium: {
+                    questions: [
+                        {
+                            question: 'Which year did Elvis Presley die?',
+                            answers: [
+                                '1973',
+                                '1975',
+                                '1977',
+                                '1979',
+                            ],
+                            correct: '1977',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which author wrote the ‘Winnie-the-Pooh’ books?',
+                            answers: [
+                                'A.A. Milne',
+                                'R.O. Malley',
+                                'J.K. Rowling',
+                                'Michael Morpurgo',
+                            ],
+                            correct: 'A.A. Milne',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'A Song of Ice and Fire is a Fantasy Series written by the author?',
+                            answers: [
+                                'J.K Rowling',
+                                'G.R.R Martin',
+                                'C.S Lewis',
+                                'J.R.R Tolkien',
+                            ],
+                            correct: 'G.R.R Martin',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What book starts with the line “Call me Ishmael.”?',
+                            answers: [
+                                'Moby Dick',
+                                'The Catcher in the Rye',
+                                'The Great Gatsby',
+                                'Ulysses'
+                            ],
+                            correct: 'Moby Dick',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which year did George Michael release his debut album “Faith”?',
+                            answers: [
+                                '1992',
+                                '1981',
+                                '1987',
+                                '1989'
+                            ],
+                            correct: '1987',
+                            askedBefore: false,
+                        },
+                        {
+                            question: '“Memories” by Maroon 5 is based on the tune of which classical piece?',
+                            answers: [
+                                'Midnight Sonata by Ludwig Beethoven',
+                                'Caprice No. 24 by Nicolo Paganini',
+                                'Johann Pachelbel’s Canon in D',
+                                'Eine Kleine Nachtmusik, K. 525 by Wolfgang Amadeus Mozart'
+                            ],
+                            correct: 'Johann Pachelbel’s Canon in D',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'After the Sex Pistols, Johnny Rotton formed which band?',
+                            answers: [
+                                'Joy Division',
+                                'XTC',
+                                'Public Image Ltd.',
+                                'The Buzzcocks'
+                            ],
+                            correct: 'Public Image Ltd.',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which band was NOT based in Seattle?',
+                            answers: [
+                                'Alice in Chains',
+                                'Soundgarden',
+                                'Stone Temple Pilots',
+                                'TAD'
+                            ],
+                            correct: 'Stone Temple Pilots',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many films did Sean Connery play James Bond in?',
+                            answers: [
+                                '3',
+                                '5',
+                                '7',
+                                '9'
+                            ],
+                            correct: '7',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Where did Heineken beer originate?',
+                            answers: [
+                                'Denmark',
+                                'Latvia',
+                                'Switzerland',
+                                'The Netherlands',
+                            ],
+                            correct: 'The Netherlands',
+                            askedBefore: false,
+                            level: 'medium',
+                            points: 10,
+                        },
+                        {
+                            question: 'How many times has the Mona Lisa been stolen?',
+                            answers: [
+                                '1',
+                                '2',
+                                '3',
+                                '4',
+                            ],
+                            correct: '1',
+                            askedBefore: false,
+                        },
+
+
+                    ],
+                    points: 20,
+                },
+                hard: {
+                    questions: [
+                        {
+                            question: 'In what year did the first South Park episode air?',
+                            answers: [
+                                '1994',
+                                '1997',
+                                '2000',
+                                '2003',
+                            ],
+                            correct: '1997',
+                            askedBefore: false,
+                        },
+                        {
+                            question: ' In which year did AC/DC form?',
+                            answers: [
+                                '1973',
+                                '1979',
+                                '1984',
+                                '1967',
+                            ],
+                            correct: '1973',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which singer\'s real name is Stefani Joanne Angelina Germanotta?',
+                            answers: [
+                                'Lady Gaga',
+                                'Beyonce',
+                                'Rhianna',
+                                'Jewel',
+                            ],
+                            correct: 'Lady Gaga',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of these poems are not the work of Edgar Allan Poe?',
+                            answers: [
+                                'The Raven',
+                                'To Helen',
+                                'The Tell-Tale Heart ',
+                                'I Drift In and Out of People’s Lives',
+                            ],
+                            correct: 'I Drift In and Out of People’s Lives',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Kingston, Zuma, and Apollo are the sons of which female pop star?',
+                            answers: [
+                                'Gwen Stefani',
+                                'Lady Gaga',
+                                'Baby Spice',
+                                'Taylor Swift',
+                            ],
+                            correct: 'Gwen Stefani',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which Dutch artist painted “Girl with a Pearl Earring”?',
+                            answers: [
+                                'Rembrandt',
+                                'Piet Mondrian',
+                                'Johannes Vermeer',
+                                'Vincent van Gogh',
+                            ],
+                            correct: 'Johannes Vermeer',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Before the Beatles were formed, which band were John Lennon, Paul McCartney, and George Harrison all members of?',
+                            answers: [
+                                'The Quarrymen',
+                                'The Les Stewart Quartet',
+                                'The Vipers Skiffle Group',
+                                'The Yardbirds',
+                            ],
+                            correct: 'The Quarrymen',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who is the youngest person to appear on a Billboard Chart?',
+                            answers: [
+                                'Aaron Carter',
+                                'Blue Ivy Carter',
+                                'Annabella Lwin',
+                                'Bow Wow',
+                            ],
+                            correct: 'Blue Ivy Carter',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many of Snow White’s seven dwarfs have names ending in the letter Y?',
+                            answers: [
+                                '6',
+                                '7',
+                                '3',
+                                '5',
+                            ],
+                            correct: '5',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What was the first toy to be advertised on television?',
+                            answers: [
+                                'Mr. Potato Head',
+                                'Barbie',
+                                'Lite-Brite',
+                                'Matchbox Cars',
+                            ],
+                            correct: 'Mr. Potato Head',
+                            askedBefore: false,
+                        },
+
+
+
+                    ],
+                    points: 30,
+                },
+            },
+            sport: {
+                easy: {
+                    questions: [
+                        {
+                            question: 'Rafael Nadal is a renowned Tennis player that hails from which country?',
+                            answers: [
+                                'Spain',
+                                'France',
+                                'Italy',
+                                'USA'
+                            ],
+                            correct: 'Spain',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What sport is dubbed “king of sports”? ',
+                            answers: [
+                                'Rugby',
+                                'Swimming',
+                                'Soccer',
+                                'Tennis'
+                            ],
+                            correct: 'Soccer',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the name of the professional ice hockey team based in Toronto, Canada? ',
+                            answers: [
+                                'Toronro Canucks',
+                                'Toronto Oilers',
+                                'Toronto Maple Leafs',
+                                'Toronto Flames'
+                            ],
+                            correct: 'Toronto Maple Leafs',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In Netball, the court is divided into how many parts?',
+                            answers: [
+                                '2',
+                                '3',
+                                '4',
+                                'not divided'
+                            ],
+                            correct: '3',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which sport will you use a "one wood"?',
+                            answers: [
+                                'Golf',
+                                'Baseball',
+                                'Softball',
+                                'Croquet'
+                            ],
+                            correct: 'Golf',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many batsmen are on the field at a time in cricket?',
+                            answers: [
+                                '1',
+                                '2',
+                                '3',
+                                '4'
+                            ],
+                            correct: '2',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following is NOT a famous baseball player?',
+                            answers: [
+                                'Barry Bonds',
+                                'Ty Cobb',
+                                'Reggie White',
+                                'Babe Ruth'
+                            ],
+                            correct: 'Reggie White',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In basketball, how many points is a free throw worth?',
+                            answers: [
+                                '1',
+                                '2',
+                                '3',
+                                '4'
+                            ],
+                            correct: '1',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'The 2004 summer Olympics were held where?',
+                            answers: [
+                                'Beijing',
+                                'London',
+                                'Athens',
+                                'Sydney'
+                            ],
+                            correct: 'Athens',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which of the following games is “love” a score?',
+                            answers: [
+                                'Softball',
+                                'Tennis',
+                                'Golf',
+                                'Cricket'
+                            ],
+                            correct: 'Tennis',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which sport uses a net, a racket, and a shuttlecock?',
+                            answers: [
+                                'Racquetball',
+                                'Squash',
+                                'Tennis',
+                                'Badminton'
+                            ],
+                            correct: 'Badminton',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What type of race is the Tour de France?',
+                            answers: [
+                                'Rowing',
+                                'Car',
+                                'Bicycle',
+                                'Running'
+                            ],
+                            correct: 'Bicycle',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Where did the first ancient Olympic games take place?',
+                            answers: [
+                                'Greece',
+                                'France',
+                                'USA',
+                                'China'
+                            ],
+                            correct: 'Greece',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which of the following is not a colour of the Olympic rings?',
+                            answers: [
+                                'Blue',
+                                'Black',
+                                'Green',
+                                'White'
+                            ],
+                            correct: 'White',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many holes are played in an average round of golf?',
+                            answers: [
+                                '9',
+                                '12',
+                                '18',
+                                '21'
+                            ],
+                            correct: '18',
+                            askedBefore: false,
+                        },
+                    ],
+                    points: 10,
+                }, // full no points in questions
+                medium: {
+                    questions: [
+                        {
+                            question: 'How many World Drivers Championships has Sebastian Vettel won?',
+                            answers: [
+                                '3',
+                                '4',
+                                '5',
+                                '6',
+                            ],
+                            correct: '4',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which two countries have not missed one of the modern-day Olympics?',
+                            answers: [
+                                'Greece and Australia',
+                                'Greece and United Kingdom',
+                                'Germany and United Kingdo',
+                                'Greece and Germany',
+                            ],
+                            correct: 'Greece and Australia',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Tennis star Serena Williams won which major tournament while pregnant with her first child?',
+                            answers: [
+                                'Eastbourne International',
+                                'The Australian Open',
+                                'Wimbledon',
+                                'US Open',
+                            ],
+                            correct: 'The Australian Open',
+                            askedBefore: false,
+                            level: 'medium',
+                            points: 10,
+                        },
+                        {
+                            question: 'What country won the very first FIFA World Cup in 1930?',
+                            answers: [
+                                'Brazil',
+                                'England',
+                                'Argentina',
+                                'Uruguay',
+                            ],
+                            correct: 'Uruguay',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was said to “float like a butterfly and sting like a bee”?',
+                            answers: [
+                                'Mike Tyson',
+                                'Muhammed Ali',
+                                'Lionel Rose',
+                                'Sugar Ray Robinson',
+                            ],
+                            correct: 'Muhammed Ali',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many medals did China win at the Beijing Olympics?',
+                            answers: [
+                                '90',
+                                '96',
+                                '100',
+                                '102',
+                            ],
+                            correct: '100',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How long is a marathon in miles?',
+                            answers: [
+                                '15.4',
+                                '30',
+                                '25.4',
+                                '26.2',
+                            ],
+                            correct: '26.2',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the only sport to be played on the moon?',
+                            answers: [
+                                'Baseball',
+                                'Golf',
+                                'Soccer',
+                                'American Football',
+                            ],
+                            correct: 'Golf',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How old was Tiger Woods when he won the Masters?',
+                            answers: [
+                                '21',
+                                '25',
+                                '28',
+                                '32',
+                            ],
+                            correct: '21',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which NFL team has the record of scoring the most points in a single Super Bowl?',
+                            answers: [
+                                'The San Francisco 49ers',
+                                'New England Patriots',
+                                'Seattle Seahawks',
+                                'Green Bay Packers',
+                            ],
+                            correct: 'The San Francisco 49ers',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In soccer, which country won the first women’s World Cup?',
+                            answers: [
+                                'Cameroon',
+                                'The United States',
+                                'England',
+                                'Brazil',
+                            ],
+                            correct: 'The United States',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the only country to have played in every single soccer World Cup?',
+                            answers: [
+                                'Brazil',
+                                'England',
+                                'Germany',
+                                'France',
+                            ],
+                            correct: 'Brazil',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In baseball, what is the most stolen base?',
+                            answers: [
+                                'First',
+                                'Second',
+                                'Third',
+                                'None',
+                            ],
+                            correct: 'Second',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which NBA team owns the longest winning streak in NBA history?',
+                            answers: [
+                                'Boston Celtics',
+                                'Charlotte Hornets',
+                                'Los Angeles Lakers',
+                                'Chicago Bulls',
+                            ],
+                            correct: 'Los Angeles Lakers',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How long is the free skate in figure skating for women?',
+                            answers: [
+                                '4 minutes',
+                                '4.5 minutes',
+                                '3 minutes',
+                                '5 minutes',
+                            ],
+                            correct: '4 minutes',
+                            askedBefore: false,
+                        },
+
+                    ],
+                    points: 20,
+                }, // full no points in questions
+                hard: {
+                    questions: [
+                        {
+                            question: 'In what year were the first Air Jordan sneakers released?',
+                            answers: [
+                                '1987',
+                                '1993',
+                                '1991',
+                                '1984',
+                            ],
+                            correct: '1984',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What is the minimum weight of a coxswain according to World Rowing?',
+                            answers: [
+                                '45 kg',
+                                '65 kg',
+                                '55 kg',
+                                '75 kg',
+                            ],
+                            correct: '55 kg',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which sport is featured in the Animated Series: Free!?',
+                            answers: [
+                                'Football (Soccer)',
+                                'Tennis',
+                                'Swimming',
+                                'Badminton',
+                            ],
+                            correct: 'Swimming',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many points did Michael Jordan score on his first NBA game?',
+                            answers: [
+                                '20 points',
+                                '10 points',
+                                '18 points',
+                                '16 points',
+                            ],
+                            correct: '16 points',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In what year was the first-ever Wimbledon Championship held?',
+                            answers: [
+                                '1894',
+                                '1901',
+                                '1877',
+                                '1882',
+                            ],
+                            correct: '1877',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What country has competed the most times in the Summer Olympics yet hasn’t won a gold medal?',
+                            answers: [
+                                'The Philippines',
+                                'Cambodia',
+                                'Pakistan',
+                                'Nigeria',
+                            ],
+                            correct: 'The Philippines',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Who was the first US president to throw the ceremonial first pitch at a Major League Baseball game?',
+                            answers: [
+                                'John F. Kennedy',
+                                'Ronald Reagan',
+                                'Richard Nixon',
+                                'William Howard Taft',
+                            ],
+                            correct: 'William Howard Taft',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'Which boxer fought against Muhammad Ali and won?',
+                            answers: [
+                                'Floyd Patterson',
+                                'Joe Frazier',
+                                'Sonny Liston',
+                                'Cassius Clay',
+                            ],
+                            correct: 'Joe Frazier',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What was the fastest goal in World Cup history?',
+                            answers: [
+                                '30.1 Seconds',
+                                '1 minute',
+                                '10.8 Seconds',
+                                '18.8 Seconds',
+                            ],
+                            correct: '10.8 Seconds',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In baseball, what female pitcher once struck out Babe Ruth and Lou Gehrig?',
+                            answers: [
+                                'Toni Stone',
+                                'Lizzie Murphey',
+                                'Maud Nelson',
+                                'Jackie Mitchell',
+                            ],
+                            correct: 'Jackie Mitchell',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What material was first used to cover baseballs?',
+                            answers: [
+                                'Cowhide',
+                                'Pig Skin',
+                                'Rubber',
+                                'Dog Skin',
+                            ],
+                            correct: 'Cowhide',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'In which winter sport are the terms “stale fish” and “mule kick” used?',
+                            answers: [
+                                'Skiing',
+                                'Snowboarding',
+                                'Ice Hockey',
+                                'Curling',
+                            ],
+                            correct: 'Snowboarding',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'How many minutes was the longest recorded point in the history of tennis?',
+                            answers: [
+                                '25',
+                                '10',
+                                '29',
+                                '19',
+                            ],
+                            correct: '29',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'What sport is Bela Karolyi known for coaching?',
+                            answers: [
+                                'Gymnastics',
+                                'Figure Skating',
+                                'Diving',
+                                'Running',
+                            ],
+                            correct: 'Gymnastics',
+                            askedBefore: false,
+                        },
+                        {
+                            question: 'At the 1976 Olympic Games in Montreal, gymnast Nadia Comaneci became the first gymnast to score a perfect 10. Which country was she representing?',
+                            answers: [
+                                'Norway',
+                                'France',
+                                'Latvia',
+                                'Romania',
+                            ],
+                            correct: 'Romania',
+                            askedBefore: false,
+                        }
+                    ],
+                    points: 30,
+                }, // full no points in questions
             }, // full
             science: {
                 easy: {
@@ -1111,7 +2135,7 @@ let questions = {
                         },
                     ],
                     points: 10,
-                }, // full
+                }, // full no points in questions
                 medium: {
                     questions: [
                         {
@@ -1281,7 +2305,7 @@ let questions = {
                         },
                     ],
                     points: 20,
-                }, // full
+                }, // full no points in questions
                 hard: {
                     questions: [
                         {
@@ -1452,665 +2476,8 @@ let questions = {
 
                     ],
                     points: 30,
-                }, // full
-            }, // full
-            sport: {
-                easy: {
-                    questions: [
-                        {
-                            question: 'Rafael Nadal is a renowned Tennis player that hails from which country?',
-                            answers: [
-                                'Spain',
-                                'France',
-                                'Italy',
-                                'USA'
-                            ],
-                            correct: 'Spain',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What sport is dubbed “king of sports”? ',
-                            answers: [
-                                'Rugby',
-                                'Swimming',
-                                'Soccer',
-                                'Tennis'
-                            ],
-                            correct: 'Soccer',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What is the name of the professional ice hockey team based in Toronto, Canada? ',
-                            answers: [
-                                'Toronro Canucks',
-                                'Toronto Oilers',
-                                'Toronto Maple Leafs',
-                                'Toronto Flames'
-                            ],
-                            correct: 'Toronto Maple Leafs',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In Netball, the court is divided into how many parts?',
-                            answers: [
-                                '2',
-                                '3',
-                                '4',
-                                'not divided'
-                            ],
-                            correct: '3',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In which sport will you use a "one wood"?',
-                            answers: [
-                                'Golf',
-                                'Baseball',
-                                'Softball',
-                                'Croquet'
-                            ],
-                            correct: 'Golf',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'How many batsmen are on the field at a time in cricket?',
-                            answers: [
-                                '1',
-                                '2',
-                                '3',
-                                '4'
-                            ],
-                            correct: '2',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which of the following is NOT a famous baseball player?',
-                            answers: [
-                                'Barry Bonds',
-                                'Ty Cobb',
-                                'Reggie White',
-                                'Babe Ruth'
-                            ],
-                            correct: 'Reggie White',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In basketball, how many points is a free throw worth?',
-                            answers: [
-                                '1',
-                                '2',
-                                '3',
-                                '4'
-                            ],
-                            correct: '1',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'The 2004 summer Olympics were held where?',
-                            answers: [
-                                'Beijing',
-                                'London',
-                                'Athens',
-                                'Sydney'
-                            ],
-                            correct: 'Athens',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'In which of the following games is “love” a score?',
-                            answers: [
-                                'Softball',
-                                'Tennis',
-                                'Golf',
-                                'Cricket'
-                            ],
-                            correct: 'Tennis',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which sport uses a net, a racket, and a shuttlecock?',
-                            answers: [
-                                'Racquetball',
-                                'Squash',
-                                'Tennis',
-                                'Badminton'
-                            ],
-                            correct: 'Badminton',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What type of race is the Tour de France?',
-                            answers: [
-                                'Rowing',
-                                'Car',
-                                'Bicycle',
-                                'Running'
-                            ],
-                            correct: 'Bicycle',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Where did the first ancient Olympic games take place?',
-                            answers: [
-                                'Greece',
-                                'France',
-                                'USA',
-                                'China'
-                            ],
-                            correct: 'Greece',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which of the following is not a colour of the Olympic rings?',
-                            answers: [
-                                'Blue',
-                                'Black',
-                                'Green',
-                                'White'
-                            ],
-                            correct: 'White',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'How many holes are played in an average round of golf?',
-                            answers: [
-                                '9',
-                                '12',
-                                '18',
-                                '21'
-                            ],
-                            correct: '18',
-                            askedBefore: false,
-                        },
-                    ],
-                }, // full
-                medium: {
-                    questions: [
-                        {
-                            question: 'How many World Drivers Championships has Sebastian Vettel won?',
-                            answers: [
-                                '3',
-                                '4',
-                                '5',
-                                '6',
-                            ],
-                            correct: '4',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which two countries have not missed one of the modern-day Olympics?',
-                            answers: [
-                                'Greece and Australia',
-                                'Greece and United Kingdom',
-                                'Germany and United Kingdo',
-                                'Greece and Germany',
-                            ],
-                            correct: 'Greece and Australia',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Tennis star Serena Williams won which major tournament while pregnant with her first child?',
-                            answers: [
-                                'Eastbourne International',
-                                'The Australian Open',
-                                'Wimbledon',
-                                'US Open',
-                            ],
-                            correct: 'The Australian Open',
-                            askedBefore: false,
-                            level: 'medium',
-                            points: 10,
-                        },
-                        {
-                            question: 'What country won the very first FIFA World Cup in 1930?',
-                            answers: [
-                                'Brazil',
-                                'England',
-                                'Argentina',
-                                'Uruguay',
-                            ],
-                            correct: 'Uruguay',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who was said to “float like a butterfly and sting like a bee”?',
-                            answers: [
-                                'Mike Tyson',
-                                'Muhammed Ali',
-                                'Lionel Rose',
-                                'Sugar Ray Robinson',
-                            ],
-                            correct: 'Muhammed Ali',
-                            askedBefore: false,
-                        },
-                    ],
-                },
-                hard: {
-                    questions: [
-                        {
-                            question: 'In what year were the first Air Jordan sneakers released?',
-                            answers: [
-                                '1987',
-                                '1993',
-                                '1991',
-                                '1984',
-                            ],
-                            correct: '1984',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What is the minimum weight of a coxswain according to World Rowing?',
-                            answers: [
-                                '45 kg',
-                                '65 kg',
-                                '55 kg',
-                                '75 kg',
-                            ],
-                            correct: '55 kg',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which sport is featured in the Animated Series: Free!?',
-                            answers: [
-                                'Football (Soccer)',
-                                'Tennis',
-                                'Swimming',
-                                'Badminton',
-                            ],
-                            correct: 'Swimming',
-                            askedBefore: false,
-                            level: 'hard',
-                            points: 10,
-                        },
-                        {
-                            question: 'How many points did Michael Jordan score on his first NBA game?',
-                            answers: [
-                                '20 points',
-                                '10 points',
-                                '18 points',
-                                '16 points',
-                            ],
-                            correct: '16 points',
-                            askedBefore: false,
-                            level: 'hard',
-                            points: 10,
-                        },
-                        {
-                            question: 'In what year was the first-ever Wimbledon Championship held?',
-                            answers: [
-                                '1894',
-                                '1901',
-                                '1877',
-                                '1882',
-                            ],
-                            correct: '1877',
-                            askedBefore: false,
-                        },
-
-                    ],
-                }
-                ,
-            },
-            maf: {
-                easy: {
-                    questions: [
-                        {
-                            question: 'What is the name of Batman’s butler?',
-                            answers: [
-                                'Vincent',
-                                'Charles',
-                                'Alfred',
-                                'Winston',
-                            ],
-                            correct: 'Alfred',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who painted the Mona Lisa?',
-                            answers: [
-                                'Vincent van Gogh',
-                                'Leonardo Da Vinci',
-                                'Michelangelo',
-                                'Giovanni Bellini',
-                            ],
-                            correct: 'Leonardo Da Vinci',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who wrote the play Hamlet, A Midsummer Night\'s Dream and MacBeth?',
-                            answers: [
-                                'WIlliam Shakespeare',
-                                'Jean Racine',
-                                'Aphra Behn',
-                                'Christopher Marlowe',
-                            ],
-                            correct: 'WIlliam Shakespeare',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who sang “We will rock you!”?',
-                            answers: [
-                                'Metallica',
-                                'AC/DC',
-                                'Queen',
-                                'Meat Loaf',
-                            ],
-                            correct: 'Queen',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Nirvana\'s "Nevermind" album was released in what year?',
-                            answers: [
-                                '1990',
-                                '1991',
-                                '1992',
-                                '1993',
-                            ],
-                            correct: '1991',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Michael Jackson\'s "Thriller" album was released in what year? ',
-                            answers: [
-                                '1980',
-                                '1981',
-                                '1982',
-                                '1983',
-                            ],
-                            correct: '1982',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Jim Morrison performed in which band?',
-                            answers: [
-                                'The Beatles',
-                                'MC5',
-                                'The Doors',
-                                'The Kinks'
-                            ],
-                            correct: 'The Doors',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which British girl group had a member by the name of Mel B?',
-                            answers: [
-                                'All Saints',
-                                'Atomic Kitten',
-                                'Sugababes',
-                                'Spice Girls'
-                            ],
-                            correct: 'Spice Girls',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Spiderman is the superhero identity of who?',
-                            answers: [
-                                'Barry Allen',
-                                'Clark Kent',
-                                'Tony Stark',
-                                'Peter Parker',
-                            ],
-                            correct: 'Peter Parker',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'MC Hammer is known for "U Can\'t _____"? (fill the blank)',
-                            answers: [
-                                'Play Me',
-                                'Stop Me',
-                                'Touch This',
-                                'Break This'
-                            ],
-                            correct: 'Touch This',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Famous for painting a soup can is which pop artist?',
-                            answers: [
-                                'Keith Haring',
-                                'Tom Wesselmann',
-                                'Roy Lichtenstein',
-                                'Andy Warhol'
-                            ],
-                            correct: 'Andy Warhol',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who painted "The Starry Night"?',
-                            answers: [
-                                'Pablo Picasso',
-                                'Vincent van Gogh',
-                                'Claude Monet',
-                                'Andy Warhol'
-                            ],
-                            correct: 'Vincent van Gogh',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Finish this song line by Britney Spears: "Hit me baby _______" (fill in the blank)',
-                            answers: [
-                                'One more time',
-                                'Just like that',
-                                'Like yo momma',
-                                'Like no other'
-                            ],
-                            correct: 'One more time',
-                            askedBefore: false,
-                        },
-                        {
-                            question: '"Peaches", "Lump", and "Mach 5" are performed by which band?',
-                            answers: [
-                                'The Cranberries',
-                                'Presidents of the United States of America',
-                                'Butthole Surfers',
-                                'Weezer'
-                            ],
-                            correct: 'Presidents of the United States of America',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Slash played guitar for which of the following?',
-                            answers: [
-                                'Metallica',
-                                'Anthrax',
-                                'Iron maiden',
-                                'Guns N Roses'
-                            ],
-                            correct: 'Guns N Roses',
-                            askedBefore: false,
-                        },
-                    ],
-                }, // full
-                medium: {
-                    questions: [
-                        {
-                            question: 'Which year did Elvis Presley die?',
-                            answers: [
-                                '1973',
-                                '1975',
-                                '1977',
-                                '1979',
-                            ],
-                            correct: '1977',
-                            askedBefore: false,
-                            level: 'medium',
-                            points: 10,
-                        },
-                        {
-                            question: 'Which author wrote the ‘Winnie-the-Pooh’ books?',
-                            answers: [
-                                'A.A. Milne',
-                                'R.O. Malley',
-                                'J.K. Rowling',
-                                'Michael Morpurgo',
-                            ],
-                            correct: 'A.A. Milne',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'A Song of Ice and Fire is a Fantasy Series written by the author?',
-                            answers: [
-                                'J.K Rowling',
-                                'G.R.R Martin',
-                                'C.S Lewis',
-                                'J.R.R Tolkien',
-                            ],
-                            correct: 'G.R.R Martin',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'What book starts with the line “Call me Ishmael.”?',
-                            answers: [
-                                'Moby Dick',
-                                'The Catcher in the Rye',
-                                'The Great Gatsby',
-                                'Ulysses'
-                            ],
-                            correct: 'Moby Dick',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which year did George Michael release his debut album “Faith”?',
-                            answers: [
-                                '1992',
-                                '1981',
-                                '1987',
-                                '1989'
-                            ],
-                            correct: '1987',
-                            askedBefore: false,
-                        },
-                        {
-                            question: '“Memories” by Maroon 5 is based on the tune of which classical piece?',
-                            answers: [
-                                'Midnight Sonata by Ludwig Beethoven',
-                                'Caprice No. 24 by Nicolo Paganini',
-                                'Johann Pachelbel’s Canon in D',
-                                'Eine Kleine Nachtmusik, K. 525 by Wolfgang Amadeus Mozart'
-                            ],
-                            correct: 'Johann Pachelbel’s Canon in D',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'After the Sex Pistols, Johnny Rotton formed which band?',
-                            answers: [
-                                'Joy Division',
-                                'XTC',
-                                'Public Image Ltd.',
-                                'The Buzzcocks'
-                            ],
-                            correct: 'Public Image Ltd.',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which band was NOT based in Seattle?',
-                            answers: [
-                                'Alice in Chains',
-                                'Soundgarden',
-                                'Stone Temple Pilots',
-                                'TAD'
-                            ],
-                            correct: 'Stone Temple Pilots',
-                            askedBefore: false,
-                        },
-                    ],
-                },
-                hard: {
-                    questions: [
-                        {
-                            question: 'In what year did the first South Park episode air?',
-                            answers: [
-                                '1994',
-                                '1997',
-                                '2000',
-                                '2003',
-                            ],
-                            correct: '1997',
-                            askedBefore: false,
-                        },
-                        {
-                            question: ' In which year did AC/DC form?',
-                            answers: [
-                                '1973',
-                                '1979',
-                                '1984',
-                                '1967',
-                            ],
-                            correct: '1973',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which singer\'s real name is Stefani Joanne Angelina Germanotta?',
-                            answers: [
-                                'Lady Gaga',
-                                'Beyonce',
-                                'Rhianna',
-                                'Jewel',
-                            ],
-                            correct: 'Lady Gaga',
-                            askedBefore: false,
-                            level: 'hard',
-                            points: 10,
-                        },
-                        {
-                            question: 'Which of these poems are not the work of Edgar Allan Poe?',
-                            answers: [
-                                'The Raven',
-                                'To Helen',
-                                'The Tell-Tale Heart ',
-                                'I Drift In and Out of People’s Lives',
-                            ],
-                            correct: 'I Drift In and Out of People’s Lives',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Kingston, Zuma, and Apollo are the sons of which female pop star?',
-                            answers: [
-                                'Gwen Stefani',
-                                'Lady Gaga',
-                                'Baby Spice',
-                                'Taylor Swift',
-                            ],
-                            correct: 'Gwen Stefani',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Which Dutch artist painted “Girl with a Pearl Earring”?',
-                            answers: [
-                                'Rembrandt',
-                                'Piet Mondrian',
-                                'Johannes Vermeer',
-                                'Vincent van Gogh',
-                            ],
-                            correct: 'Johannes Vermeer',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Before the Beatles were formed, which band were John Lennon, Paul McCartney, and George Harrison all members of?',
-                            answers: [
-                                'The Quarrymen',
-                                'The Les Stewart Quartet',
-                                'The Vipers Skiffle Group',
-                                'The Yardbirds',
-                            ],
-                            correct: 'The Quarrymen',
-                            askedBefore: false,
-                        },
-                        {
-                            question: 'Who is the youngest person to appear on a Billboard Chart?',
-                            answers: [
-                                'Aaron Carter',
-                                'Blue Ivy Carter',
-                                'Annabella Lwin',
-                                'Bow Wow',
-                            ],
-                            correct: 'Blue Ivy Carter',
-                            askedBefore: false,
-                        },
-
-                    ],
-                },
-            },
+                }, // full no points in questions
+            }, // full no points in questions
         },
     ]
 };
