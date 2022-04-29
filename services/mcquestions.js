@@ -21,7 +21,7 @@ async function askQuestion(interaction, theme, difficulty) {
         let timeLimit = 30;
         let chosenAnswer;
         let replied = false;
-        let randomIndex = random(0, 5);
+        let randomIndex = random(0, 15);
         let newQuestion;
         let newAnswers = [];
         let points = questions.array.theme[0][theme][difficulty].points;
