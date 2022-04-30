@@ -15,7 +15,9 @@ const random = require("../utils/randomNum");
 const {time} = require("@discordjs/builders");
 
 async function askQuestion(interaction, theme, difficulty) {
-    return new Promise(async resolve => {
+    return new Promise(async (resolve, reject) => {
+
+        let checkCondition = false;
         console.log('MCQuestions have started.');
         // Declaring all necessary variables
         let timeLimit = 30;
@@ -39,7 +41,7 @@ async function askQuestion(interaction, theme, difficulty) {
         // Each question has an askedBefore attribute to avoid double questions. Here, the program checks if this attribute
         // has been set to true. If this is the case, a new question will be selected via the random index.
         if (askedBefore === true) {
-            randomIndex = random(0, 5);
+            randomIndex = random(0, 15);
             let {
                 question,
                 answers,
@@ -170,6 +172,12 @@ async function askQuestion(interaction, theme, difficulty) {
                         if (timeLimit === 0) {
                             timer.edit('Sorry, your time is up!');
                             clearInterval(countDown);
+                            checkCondition = true;
+                            if (checkCondition === true) {
+                                resolve('The question has been either answered or the time ran out.')
+                            } else {
+                                reject('Something did not go to plan');
+                            }
                             console.log('Time limit reached.');
                         }
 
@@ -179,6 +187,12 @@ async function askQuestion(interaction, theme, difficulty) {
                         if (timeLimit === -5) {
                             timer.edit('You\'ve answered the question.');
                             clearInterval(countDown);
+                            checkCondition = true;
+                            if (checkCondition === true) {
+                                resolve('The question has been either answered or the time ran out.')
+                            } else {
+                                reject('Something did not go to plan');
+                            }
                             console.log('Question answered.');
                         }
 
@@ -197,7 +211,6 @@ async function askQuestion(interaction, theme, difficulty) {
         questions.modifyAskedBefore(true, theme, difficulty, randomIndex);
         let answeredBefore = questions.array.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
         console.log(answeredBefore);
-
     });
 }
 
@@ -212,16 +225,12 @@ module.exports = async function mcQuestions(interaction, theme, difficulty) {
 
     console.log('Entering loop.');
 
-    //for (let i = 0; i < 3; i++) {
-    //new Promise( async (resolve) => {
-    await interaction.channel.send(askQuestion(interaction, theme, difficulty)).then(async () => {
-            await interaction.channel.send(askQuestion(interaction, theme, difficulty))
-        }
-    );
-    //});
-    /*new Promise( async (resolve) => {
-        await askQuestion(interaction, theme, difficulty);
-    });*/
+    await askQuestion(interaction, theme, difficulty).then(async () => {
+        console.log('First question asked.');
+    }).catch((message) =>{
+        //await interaction.channel.send(message);
+        console.log(message);
+    });
 
 
     //console.log(questions.array.theme[0].history.valueOf());
