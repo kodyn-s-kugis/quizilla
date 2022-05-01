@@ -20,7 +20,7 @@ module.exports = {
                         .addChoice('Science', 'science')
                         .addChoice('Music, Arts & Film', 'maf')
                         .addChoice('Sport', 'sport')
-                        .addChoice('Random', 'random')
+                        .addChoice('Random', 'themeRandom')
                 )
                 .addStringOption((option) =>
                     option
@@ -30,7 +30,7 @@ module.exports = {
                         .addChoice('Easy', 'easy')
                         .addChoice('Medium', 'medium')
                         .addChoice('Hard', 'hard')
-                        .addChoice('Random', 'random')
+                        .addChoice('Random', 'difficultyRandom')
                 )
                 /*.addStringOption((option) =>
                     option

@@ -15,12 +15,14 @@ const random = require("../utils/randomNum");
 const {time} = require("@discordjs/builders");
 
 async function askQuestion(interaction, theme, difficulty) {
-    return new Promise(async (resolve, reject) => {
 
+    return new Promise(async (resolve, reject) => {
         let checkCondition = false;
         console.log('MCQuestions have started.');
         // Declaring all necessary variables
         let timeLimit = 30;
+        let timerResult;
+        let timeOutId;
         let chosenAnswer;
         let replied = false;
         let randomIndex = random(0, 15);
@@ -143,14 +145,14 @@ async function askQuestion(interaction, theme, difficulty) {
             })
 
         });
-        console.log(`Chosen answer: ${chosenAnswer}`);
 
         // Call timer function
-        await timerFunction();
+        timerResult = timerFunction();
+        //await checkTimerFinished(timerResult);
 
         // Definition of the timer function that displays the remaining time for answering the question to the user.
         async function timerFunction() {
-
+            let timerFinished = false;
             // Sending the initial time remaining to the channel the function is called from. Then, a setInterval function
             // is called and updates the remaining time as needed.
             await interaction.channel.send(`Time remaining: ${timeLimit} seconds.`).then(timer => {
@@ -172,7 +174,8 @@ async function askQuestion(interaction, theme, difficulty) {
                         if (timeLimit === 0) {
                             timer.edit('Sorry, your time is up!');
                             clearInterval(countDown);
-                            checkCondition = true;
+                            timerFinished = true;
+                            await checkTimerFinished(timerFinished);
                             console.log('Time limit reached.');
                         }
 
@@ -182,7 +185,8 @@ async function askQuestion(interaction, theme, difficulty) {
                         if (timeLimit === -5) {
                             timer.edit('You\'ve answered the question.');
                             clearInterval(countDown);
-                            checkCondition = true;
+                            timerFinished = true;
+                            await checkTimerFinished(timerFinished);
                             console.log('Question answered.');
                         }
 
@@ -193,37 +197,74 @@ async function askQuestion(interaction, theme, difficulty) {
                     }, 1000);
                 }
             );
+            return timerFinished;
         }
 
+
+        // Checking for timer to be finished to return either resolved or reject for Promise.
+        async function checkTimerFinished(timerResult) {
+
+            //const timeOutId = setTimeout(() => {
+            if (timerResult === true) {
+                resolve('The question has been either answered or the time ran out.')
+            } else if (timerResult === false) {
+                reject('Something did not go to plan');
+            }
+            //}, 30000);
+        }
+
+
         console.log(askedBefore);
-        /* questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore = true;
-         let answeredBefore = questions.theme[0][theme][difficulty].questions[randomIndex].askedBefore;*/
         questions.modifyAskedBefore(true, theme, difficulty, randomIndex);
         let answeredBefore = questions.array.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
         console.log(answeredBefore);
-
-        if (replied === true) {
-            resolve('The question has been either answered or the time ran out.')
-        } else {
-            reject('Something did not go to plan');
-        }
-
     });
-}
-
-function setDelay(index) {
-    setTimeout(function () {
-        console.log(`Reached timeout at index: ${index}`);
-    }, 30000);
 }
 
 module.exports = async function mcQuestions(interaction, theme, difficulty) {
 
-
-    console.log('Entering loop.');
-
     await askQuestion(interaction, theme, difficulty).then(async () => {
         console.log('First question asked.');
+        await askQuestion(interaction, theme, difficulty)
+    }).then(async () => {
+        console.log('Second question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Third question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Fourth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Fifth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Sixth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Seventh question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Eighth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Ninth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Tenth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Eleventh question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Twelfth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Thirteenth question asked.');
+        await askQuestion(interaction, theme, difficulty);
+    }).then(async () => {
+        console.log('Fourteenth question asked.');
+        await askQuestion(interaction, theme, difficulty);
     }).catch(async (message) => {
         await interaction.channel.send(message);
         console.log(message);
