@@ -18,7 +18,9 @@ module.exports = {
                         .addChoice('History', 'history')
                         .addChoice('Geography', 'geography')
                         .addChoice('Science', 'science')
-                        .addChoice('Music', 'music')
+                        .addChoice('Music, Arts & Film', 'maf')
+                        .addChoice('Sport', 'sport')
+                        .addChoice('Random', 'random')
                 )
                 .addStringOption((option) =>
                     option
@@ -28,15 +30,16 @@ module.exports = {
                         .addChoice('Easy', 'easy')
                         .addChoice('Medium', 'medium')
                         .addChoice('Hard', 'hard')
+                        .addChoice('Random', 'random')
                 )
-                .addStringOption((option) =>
+                /*.addStringOption((option) =>
                     option
                         .setName('mode')
                         .setDescription('Set game mode.')
                         .setRequired(true)
                         .addChoice('Solo', 'solo')
                         .addChoice('Team', 'team')
-                )
+                )*/
         )
 
         .addSubcommand((subcommand) =>
@@ -49,10 +52,10 @@ module.exports = {
         if (interaction.options.getSubcommand() === "create") {
             let theme = interaction.options.getString('theme');
             let difficulty = interaction.options.getString('difficulty');
-            let mode = interaction.options.getString('mode');
+            //let mode = interaction.options.getString('mode');
 
             await interaction.reply(
-                `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty, as ${mode} player game!`,
+                `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty!`,
                 await mcQuestions(interaction, theme, difficulty),
             );
 

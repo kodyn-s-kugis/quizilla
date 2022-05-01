@@ -102,6 +102,7 @@ async function askQuestion(interaction, theme, difficulty) {
             components: [row],
         })
 
+        // End display part -------------------------------------------------------------------------------------------
 
         const filter = (btnInt) => {
             return interaction.user.id === btnInt.user.id;
@@ -115,7 +116,6 @@ async function askQuestion(interaction, theme, difficulty) {
         });
 
         console.log('Collector created.');
-        console.log(`Correct: ${correct}`);
 
         collector.on('collect', (ButtonInteraction) => {
                 if (ButtonInteraction.customId === correct) {
@@ -173,11 +173,6 @@ async function askQuestion(interaction, theme, difficulty) {
                             timer.edit('Sorry, your time is up!');
                             clearInterval(countDown);
                             checkCondition = true;
-                            if (checkCondition === true) {
-                                resolve('The question has been either answered or the time ran out.')
-                            } else {
-                                reject('Something did not go to plan');
-                            }
                             console.log('Time limit reached.');
                         }
 
@@ -188,11 +183,6 @@ async function askQuestion(interaction, theme, difficulty) {
                             timer.edit('You\'ve answered the question.');
                             clearInterval(countDown);
                             checkCondition = true;
-                            if (checkCondition === true) {
-                                resolve('The question has been either answered or the time ran out.')
-                            } else {
-                                reject('Something did not go to plan');
-                            }
                             console.log('Question answered.');
                         }
 
@@ -211,6 +201,13 @@ async function askQuestion(interaction, theme, difficulty) {
         questions.modifyAskedBefore(true, theme, difficulty, randomIndex);
         let answeredBefore = questions.array.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
         console.log(answeredBefore);
+
+        if (replied === true) {
+            resolve('The question has been either answered or the time ran out.')
+        } else {
+            reject('Something did not go to plan');
+        }
+
     });
 }
 
@@ -227,8 +224,8 @@ module.exports = async function mcQuestions(interaction, theme, difficulty) {
 
     await askQuestion(interaction, theme, difficulty).then(async () => {
         console.log('First question asked.');
-    }).catch((message) =>{
-        //await interaction.channel.send(message);
+    }).catch(async (message) => {
+        await interaction.channel.send(message);
         console.log(message);
     });
 
