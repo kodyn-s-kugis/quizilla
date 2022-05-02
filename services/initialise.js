@@ -3,8 +3,8 @@ const playerSignUp = require("./playerSignUp");
 
 module.exports = async function initialise(interaction) {
   // Create Category & Channels
-  await initialChannels(interaction);
+  const game = await initialChannels(interaction);
 
   // Player Sign-up Message
-  await playerSignUp(interaction);
+  await playerSignUp(interaction, game);
 };
