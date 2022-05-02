@@ -1,3 +1,6 @@
 const game = {
-  players: {},
+  channels: {},
+  players: [],
 };
+
+module.exports = game;
