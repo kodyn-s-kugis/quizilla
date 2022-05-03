@@ -7,39 +7,39 @@ module.exports = {
         .setName("trivia")
         .setDescription("Manage your trivia games")
         .addSubcommand((subcommand) =>
-            subcommand
-                .setName("create")
-                .setDescription("Create a trivia game!")
-                .addStringOption((option) =>
-                    option
-                        .setName('theme')
-                        .setDescription('Set theme for questions')
-                        .setRequired(true)
-                        .addChoice('History', 'history')
-                        .addChoice('Geography', 'geography')
-                        .addChoice('Science', 'science')
-                        .addChoice('Music, Arts & Film', 'maf')
-                        .addChoice('Sport', 'sport')
-                        .addChoice('Random', 'themeRandom')
-                )
-                .addStringOption((option) =>
-                    option
-                        .setName('difficulty')
-                        .setDescription('Set game difficulty.')
-                        .setRequired(true)
-                        .addChoice('Easy', 'easy')
-                        .addChoice('Medium', 'medium')
-                        .addChoice('Hard', 'hard')
-                        .addChoice('Random', 'difficultyRandom')
-                )
-                /*.addStringOption((option) =>
-                    option
-                        .setName('mode')
-                        .setDescription('Set game mode.')
-                        .setRequired(true)
-                        .addChoice('Solo', 'solo')
-                        .addChoice('Team', 'team')
-                )*/
+                subcommand
+                    .setName("create")
+                    .setDescription("Create a trivia game!")
+                    .addStringOption((option) =>
+                        option
+                            .setName('theme')
+                            .setDescription('Set theme for questions')
+                            .setRequired(true)
+                            .addChoice('History', 'history')
+                            .addChoice('Geography', 'geography')
+                            .addChoice('Science', 'science')
+                            .addChoice('Music, Arts & Film', 'maf')
+                            .addChoice('Sport', 'sport')
+                            .addChoice('Random', 'random')
+                    )
+                    .addStringOption((option) =>
+                        option
+                            .setName('difficulty')
+                            .setDescription('Set game difficulty.')
+                            .setRequired(true)
+                            .addChoice('Easy', 'easy')
+                            .addChoice('Medium', 'medium')
+                            .addChoice('Hard', 'hard')
+                            .addChoice('Random', 'random')
+                    )
+            /*.addStringOption((option) =>
+                option
+                    .setName('mode')
+                    .setDescription('Set game mode.')
+                    .setRequired(true)
+                    .addChoice('Solo', 'solo')
+                    .addChoice('Team', 'team')
+            )*/
         )
 
         .addSubcommand((subcommand) =>
@@ -57,17 +57,8 @@ module.exports = {
             let difficulty = interaction.options.getString('difficulty');
             //let mode = interaction.options.getString('mode');
 
-            if (theme === 'themeRandom') {
-                chosenTheme = 'random';
-            } else if (difficulty === 'difficultyRandom') {
-                chosenDifficulty = 'random';
-            } else {
-                chosenTheme = theme;
-                chosenDifficulty = difficulty;
-            }
-
             await interaction.reply(
-                `${interaction.user.username}, we are creating your trivia game with a ${chosenTheme} theme in ${chosenDifficulty} difficulty!`,
+                `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty!`,
                 await mcQuestions(interaction, theme, difficulty),
             );
 

@@ -17,12 +17,37 @@ const {time} = require("@discordjs/builders");
 async function askQuestion(interaction, theme, difficulty) {
 
     return new Promise(async (resolve, reject) => {
-        let checkCondition = false;
+
+
+        /*
+        * When timer runs out, bot crashes with:
+
+        /Users/karstenbeck/Documents/WebStorm Projects/quizilla/services/mcquestions.js:44
+        let points = questions.array.theme[0][theme][difficulty].points;
+                                                    ^
+
+        TypeError: Cannot read properties of undefined (reading 'hard')
+        */
+
         console.log('MCQuestions have started.');
+
+        // Define two arrays that hold all theme and difficulty values for random selection
+        let themes = ['history', 'geography', 'science', 'maf', 'sport'];
+        let difficulties = ['easy', 'medium', 'hard'];
+        let pickIndex1;
+        let pickIndex2;
+
+        if (theme === 'random') {
+            pickIndex1 = random(0, 5);
+            theme = themes[pickIndex1];
+        } else if (difficulty === 'random') {
+            pickIndex2 = random(0, 3);
+            difficulty = difficulties[pickIndex2];
+        }
+
         // Declaring all necessary variables
         let timeLimit = 30;
         let timerResult;
-        let timeOutId;
         let chosenAnswer;
         let replied = false;
         let randomIndex = random(0, 15);
