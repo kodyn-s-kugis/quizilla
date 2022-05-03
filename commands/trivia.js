@@ -50,12 +50,24 @@ module.exports = {
 
     async execute(interaction) {
         if (interaction.options.getSubcommand() === "create") {
+            let chosenTheme;
+            let chosenDifficulty;
+
             let theme = interaction.options.getString('theme');
             let difficulty = interaction.options.getString('difficulty');
             //let mode = interaction.options.getString('mode');
 
+            if (theme === 'themeRandom') {
+                chosenTheme = 'random';
+            } else if (difficulty === 'difficultyRandom') {
+                chosenDifficulty = 'random';
+            } else {
+                chosenTheme = theme;
+                chosenDifficulty = difficulty;
+            }
+
             await interaction.reply(
-                `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty!`,
+                `${interaction.user.username}, we are creating your trivia game with a ${chosenTheme} theme in ${chosenDifficulty} difficulty!`,
                 await mcQuestions(interaction, theme, difficulty),
             );
 
