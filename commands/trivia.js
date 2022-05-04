@@ -50,8 +50,6 @@ module.exports = {
 
     async execute(interaction) {
         if (interaction.options.getSubcommand() === "create") {
-            let chosenTheme;
-            let chosenDifficulty;
 
             let theme = interaction.options.getString('theme');
             let difficulty = interaction.options.getString('difficulty');

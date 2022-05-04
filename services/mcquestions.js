@@ -20,13 +20,9 @@ async function askQuestion(interaction, theme, difficulty) {
 
 
         /*
-        * When timer runs out, bot crashes with:
-
-        /Users/karstenbeck/Documents/WebStorm Projects/quizilla/services/mcquestions.js:44
-        let points = questions.array.theme[0][theme][difficulty].points;
-                                                    ^
-
-        TypeError: Cannot read properties of undefined (reading 'hard')
+        * When questions are finished, the following error occurs:
+        * DiscordAPIError: Unknown interaction
+          in trivia.js 58:13
         */
 
         console.log('MCQuestions have started.');
@@ -34,26 +30,30 @@ async function askQuestion(interaction, theme, difficulty) {
         // Define two arrays that hold all theme and difficulty values for random selection
         let themes = ['history', 'geography', 'science', 'maf', 'sport'];
         let difficulties = ['easy', 'medium', 'hard'];
-        let pickIndex1;
-        let pickIndex2;
+        let randomIndex1;
+        let randomIndex2;
 
+        // If the module receives either random for theme or random for difficulty, or both, theme and difficulty will
+        // be picked randomly from the above arrays. Otherwise, the passed in values are used.
         if (theme === 'random') {
-            pickIndex1 = random(0, 5);
-            theme = themes[pickIndex1];
+            randomIndex1 = random(0, 5);
+            theme = themes[randomIndex1];
         } else if (difficulty === 'random') {
-            pickIndex2 = random(0, 3);
-            difficulty = difficulties[pickIndex2];
+            randomIndex2 = random(0, 3);
+            difficulty = difficulties[randomIndex2];
         }
 
         // Declaring all necessary variables
         let timeLimit = 30;
         let timerResult;
         let chosenAnswer;
-        let replied = false;
         let randomIndex = random(0, 15);
         let newQuestion;
         let newAnswers = [];
+        let newCorrect;
         let points = questions.array.theme[0][theme][difficulty].points;
+        let pointsCollected;
+        let pointsCollector = {};
 
 
         // Assign values from questions object to local variables
@@ -72,16 +72,17 @@ async function askQuestion(interaction, theme, difficulty) {
             let {
                 question,
                 answers,
-                correct,
-                askedBefore,
-                points
+                correct
             } = questions.array.theme[0][theme][difficulty].questions[randomIndex];
             newQuestion = question;
             newAnswers = answers;
+            newCorrect = correct;
         } else {
             newQuestion = question;
             newAnswers = answers;
+            newCorrect = correct;
         }
+
 
         // Create buttons with A, B, C, D answer options and assign the values from the newAnswers array to each button's
         // custom ID attribute. This way, it is possible to check if the chosen answer was correct.
@@ -110,7 +111,6 @@ async function askQuestion(interaction, theme, difficulty) {
                     .setLabel('D')
                     .setStyle('SECONDARY')
             )
-        console.log('Buttons created.');
 
         // Create embed with question and answers display
         const questionDisplay = new MessageEmbed()
@@ -142,19 +142,15 @@ async function askQuestion(interaction, theme, difficulty) {
             time: 1000 * 30,
         });
 
-        console.log('Collector created.');
-
         collector.on('collect', (ButtonInteraction) => {
-                if (ButtonInteraction.customId === correct) {
+                if (ButtonInteraction.customId === newCorrect) {
                     ButtonInteraction.reply({
                         content: `You've chosen ${ButtonInteraction.customId}, that is correct, ${points} points to you!`,
                     })
-                    replied = true;
                 } else {
                     ButtonInteraction.reply({
-                        content: `You've chosen ${ButtonInteraction.customId}, sorry, you're wrong, no points!\nThe correct answer is ${correct}`,
+                        content: `You've chosen ${ButtonInteraction.customId}, sorry, you're wrong, no points!\nThe correct answer is ${newCorrect}`,
                     })
-                    replied = true;
                 }
             }
         );
@@ -165,15 +161,20 @@ async function askQuestion(interaction, theme, difficulty) {
                 let userID = click.user.id;
                 chosenAnswer = click.customId;
 
-                console.log(`Chosen: ${chosenAnswer}, Correct: ${correct}`);
-                timeLimit = -5;
+
+                pointsCollected += points;
+                pointsCollector.userid = userID;
+                pointsCollector.pointsQuantity = pointsCollected;
+                //pointsPerUser.push(pointsCollector);
+
+                console.log(`Chosen: ${chosenAnswer}, Correct: ${newCorrect}, by user: ${userID}`);
+                timeLimit = -2;
             })
 
         });
 
         // Call timer function
         timerResult = timerFunction();
-        //await checkTimerFinished(timerResult);
 
         // Definition of the timer function that displays the remaining time for answering the question to the user.
         async function timerFunction() {
@@ -222,20 +223,24 @@ async function askQuestion(interaction, theme, difficulty) {
                     }, 1000);
                 }
             );
-            return timerFinished;
         }
 
 
         // Checking for timer to be finished to return either resolved or reject for Promise.
         async function checkTimerFinished(timerResult) {
 
-            //const timeOutId = setTimeout(() => {
+            // When the timer finishes by either an answered question, or because the time is up, the timerResult will
+            // be true and a promise resolve is returned from the timer function. Otherwise, a promise reject will be
+            // returned. This promise result is then used to either carry on with the questions, or catch an error.
             if (timerResult === true) {
                 resolve('The question has been either answered or the time ran out.')
             } else if (timerResult === false) {
                 reject('Something did not go to plan');
             }
-            //}, 30000);
+        }
+
+        for (let key in pointsCollector) {
+            console.log(key + " => " + pointsCollector[key]);
         }
 
 
@@ -243,15 +248,17 @@ async function askQuestion(interaction, theme, difficulty) {
         questions.modifyAskedBefore(true, theme, difficulty, randomIndex);
         let answeredBefore = questions.array.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
         console.log(answeredBefore);
+        //console.log(questions.array.theme[0][theme][difficulty].questions.valueOf());
     });
 }
 
 module.exports = async function mcQuestions(interaction, theme, difficulty) {
 
+
     await askQuestion(interaction, theme, difficulty).then(async () => {
         console.log('First question asked.');
         await askQuestion(interaction, theme, difficulty)
-    }).then(async () => {
+    })/*.then(async () => {
         console.log('Second question asked.');
         await askQuestion(interaction, theme, difficulty);
     }).then(async () => {
@@ -290,12 +297,13 @@ module.exports = async function mcQuestions(interaction, theme, difficulty) {
     }).then(async () => {
         console.log('Fourteenth question asked.');
         await askQuestion(interaction, theme, difficulty);
+    })*/.then(async () => {
+        console.log('End of game.');
+        await interaction.channel.send('That\'s it! 15 questions asked.');
     }).catch(async (message) => {
         await interaction.channel.send(message);
         console.log(message);
     });
 
-
-    //console.log(questions.array.theme[0].history.valueOf());
-    //}
+    return interaction;
 };

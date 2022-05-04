@@ -13,7 +13,7 @@ let questions = {
                                     'Bonn',
                                     'Frankfurt',
                                     'Berlin',
-                                    'Munich'
+                                    'Munich',
                                 ],
                                 correct: 'Berlin',
                                 askedBefore: false,
@@ -24,7 +24,7 @@ let questions = {
                                     'Ottawa',
                                     'Quebec City',
                                     'Vancouver',
-                                    'Toronto'
+                                    'Toronto',
                                 ],
                                 correct: 'Ottawa',
                                 askedBefore: false,
@@ -35,7 +35,7 @@ let questions = {
                                     'Maldives',
                                     'Monaco',
                                     'Tuvalu',
-                                    'Vatican City'
+                                    'Vatican City',
                                 ],
                                 correct: 'Vatican City',
                                 askedBefore: false,
@@ -46,7 +46,7 @@ let questions = {
                                     'The Southern Ocean',
                                     'The Atlantic Occan',
                                     'The Pacific Ocean',
-                                    'The Indian Ocean'
+                                    'The Indian Ocean',
                                 ],
                                 correct: 'The Pacific Ocean',
                                 askedBefore: false,
@@ -57,7 +57,7 @@ let questions = {
                                     'Los Angeles',
                                     'New York City',
                                     'San Francisco',
-                                    'Chicago'
+                                    'Chicago',
                                 ],
                                 correct: 'New York City',
                                 askedBefore: false,
@@ -68,7 +68,7 @@ let questions = {
                                     'Murray River',
                                     'Darling River',
                                     'Yarra River',
-                                    'Douglas River'
+                                    'Douglas River',
                                 ],
                                 correct: 'Yarra River',
                                 askedBefore: false,
@@ -79,7 +79,7 @@ let questions = {
                                     'Thessaloniki',
                                     'Athens',
                                     'Heraklion',
-                                    'Kalamata'
+                                    'Kalamata',
                                 ],
                                 correct: 'Athens',
                                 askedBefore: false,
@@ -90,7 +90,7 @@ let questions = {
                                     'Nice',
                                     'Nantes',
                                     'Marseille',
-                                    'Paris'
+                                    'Paris',
                                 ],
                                 correct: 'Paris',
                                 askedBefore: false,
@@ -101,7 +101,7 @@ let questions = {
                                     'North-West',
                                     'South-West',
                                     'North-East',
-                                    'South-East'
+                                    'South-East',
                                 ],
                                 correct: 'South-West',
                                 askedBefore: false,
@@ -112,7 +112,7 @@ let questions = {
                                     'Pacific',
                                     'Southern',
                                     'Indian',
-                                    'Atlantic'
+                                    'Atlantic',
                                 ],
                                 correct: 'Pacific',
                                 askedBefore: false,
@@ -123,7 +123,7 @@ let questions = {
                                     'Asia',
                                     'South America',
                                     'North America',
-                                    'Africa'
+                                    'Africa',
                                 ],
                                 correct: 'Africa',
                                 askedBefore: false,
@@ -134,7 +134,7 @@ let questions = {
                                     'Canada',
                                     'Russia',
                                     'China',
-                                    'India'
+                                    'India',
                                 ],
                                 correct: 'Russia',
                                 askedBefore: false,
@@ -145,7 +145,7 @@ let questions = {
                                     'Fiji',
                                     'Sri Lanka',
                                     'Vanuatu',
-                                    'Solomon Islands'
+                                    'Solomon Islands',
                                 ],
                                 correct: 'Sri Lanka',
                                 askedBefore: false,
@@ -156,7 +156,7 @@ let questions = {
                                     'Morrocco',
                                     'Greece',
                                     'Italy',
-                                    'France'
+                                    'France',
                                 ],
                                 correct: 'Italy',
                                 askedBefore: false,
@@ -167,7 +167,7 @@ let questions = {
                                     'South America',
                                     'Europe',
                                     'Africa',
-                                    'Asia'
+                                    'Asia',
                                 ],
                                 correct: 'South America',
                                 askedBefore: false,
@@ -183,7 +183,7 @@ let questions = {
                                     'India/Pakistan',
                                     'China/Nepal',
                                     'Nepal/Tibet',
-                                    'China/North Korea'
+                                    'China/North Korea',
                                 ],
                                 correct: 'China/Nepal',
                                 askedBefore: false,
@@ -194,7 +194,7 @@ let questions = {
                                     'Egypt',
                                     'Syria',
                                     'Iran',
-                                    'Sudan'
+                                    'Sudan',
                                 ],
                                 correct: 'Sudan',
                                 askedBefore: false,
@@ -205,7 +205,7 @@ let questions = {
                                     'Berlin',
                                     'Paris',
                                     'Milan',
-                                    'Madrid'
+                                    'Madrid',
                                 ],
                                 correct: 'Paris',
                                 askedBefore: false,
@@ -216,7 +216,7 @@ let questions = {
                                     'Canada',
                                     'Russia',
                                     'France',
-                                    'Pakistan'
+                                    'Pakistan',
                                 ],
                                 correct: 'Canada',
                                 askedBefore: false,
@@ -227,7 +227,7 @@ let questions = {
                                     'Venezuela',
                                     'Ecuador',
                                     'Panama',
-                                    'Guatemala'
+                                    'Guatemala',
                                 ],
                                 correct: 'Panama',
                                 askedBefore: false,
@@ -238,7 +238,7 @@ let questions = {
                                     'Dubai',
                                     'Abu Dhabi',
                                     'Muscat',
-                                    'Doha'
+                                    'Doha',
                                 ],
                                 correct: 'Dubai',
                                 askedBefore: false,
@@ -249,7 +249,7 @@ let questions = {
                                     'Slovakia and Ukraine',
                                     'Romania and Serbia',
                                     'Ukraine and Romania',
-                                    'Slovakia and Austria'
+                                    'Slovakia and Austria',
                                 ],
                                 correct: 'Slovakia and Ukraine',
                                 askedBefore: false,
@@ -260,7 +260,7 @@ let questions = {
                                     'Pacific',
                                     'Southern',
                                     'Indian',
-                                    'Atlantic'
+                                    'Atlantic',
                                 ],
                                 correct: 'Atlantic',
                                 askedBefore: false,
@@ -282,7 +282,7 @@ let questions = {
                                     'Barbados',
                                     'Socotra',
                                     'Greenland',
-                                    'Madagascar'
+                                    'Madagascar',
                                 ],
                                 correct: 'Greenland',
                                 askedBefore: false,
@@ -293,7 +293,7 @@ let questions = {
                                     'Pennsylvania and Quebec',
                                     'Pennsylvania and Ontario',
                                     'New York and Quebec',
-                                    'New York and Ontario'
+                                    'New York and Ontario',
                                 ],
                                 correct: 'New York and Ontario',
                                 askedBefore: false,
@@ -304,7 +304,7 @@ let questions = {
                                     'Australia',
                                     'New Zealand',
                                     'England',
-                                    'Ireland'
+                                    'Ireland',
                                 ],
                                 correct: 'New Zealand',
                                 askedBefore: false,
@@ -315,7 +315,7 @@ let questions = {
                                     'Yumbilla Falls',
                                     'Tres Hermanas Falls',
                                     'Victoria Falls',
-                                    'Angel Falls'
+                                    'Angel Falls',
                                 ],
                                 correct: 'Angel Falls',
                                 askedBefore: false,
@@ -326,7 +326,7 @@ let questions = {
                                     'Mt. Everest',
                                     'K2',
                                     'Lhotse',
-                                    'Kangchenjunga'
+                                    'Kangchenjunga',
                                 ],
                                 correct: 'K2',
                                 askedBefore: false,
@@ -337,7 +337,7 @@ let questions = {
                                     'Denmark',
                                     'Belgium',
                                     'Russia',
-                                    'The Netherlands'
+                                    'The Netherlands',
                                 ],
                                 correct: 'Denmark',
                                 askedBefore: false,
@@ -353,7 +353,7 @@ let questions = {
                                     'Ukraine',
                                     'Norway',
                                     'Finland',
-                                    'Russia'
+                                    'Russia',
                                 ],
                                 correct: 'Russia',
                                 askedBefore: false,
@@ -364,7 +364,7 @@ let questions = {
                                     '298m',
                                     '421m',
                                     '348m',
-                                    '564m'
+                                    '564m',
                                 ],
                                 correct: '348m',
                                 askedBefore: false,
@@ -375,7 +375,7 @@ let questions = {
                                     'Ethiopia',
                                     'Cameroon',
                                     'Somalia',
-                                    'Mozambique'
+                                    'Mozambique',
                                 ],
                                 correct: 'Ethiopia',
                                 askedBefore: false,
@@ -386,7 +386,7 @@ let questions = {
                                     'Asia',
                                     'Antarctica',
                                     'North America',
-                                    'Africa'
+                                    'Africa',
                                 ],
                                 correct: 'Asia',
                                 askedBefore: false,
@@ -397,7 +397,7 @@ let questions = {
                                     '9',
                                     '11',
                                     '13',
-                                    '15'
+                                    '15',
                                 ],
                                 correct: '13',
                                 askedBefore: false,
@@ -409,7 +409,7 @@ let questions = {
                                         'Ecuador and Peru',
                                         'Guyana and Venezuela',
                                         'Uruguay and Argentina',
-                                        'Chile and Ecuador'
+                                        'Chile and Ecuador',
                                     ],
                                 correct: 'Chile and Ecuador',
                                 askedBefore: false,
@@ -420,7 +420,7 @@ let questions = {
                                     'Sweden',
                                     'Phillippines',
                                     'Norway',
-                                    'Indonesia'
+                                    'Indonesia',
                                 ],
                                 correct: 'Sweden',
                                 askedBefore: false,
@@ -431,7 +431,7 @@ let questions = {
                                     'Madrid',
                                     'Porto',
                                     'Rome',
-                                    'Naples'
+                                    'Naples',
                                 ],
                                 correct: 'Rome',
                                 askedBefore: false,
@@ -442,7 +442,7 @@ let questions = {
                                     'Sydney',
                                     'Brisbane',
                                     'Melbourne',
-                                    'Perth'
+                                    'Perth',
                                 ],
                                 correct: 'Brisbane',
                                 askedBefore: false,
@@ -453,7 +453,7 @@ let questions = {
                                     'Barbados',
                                     'Kerguelen Plateau',
                                     'Greenland',
-                                    'Madagascar'
+                                    'Madagascar',
                                 ],
                                 correct: 'Madagascar',
                                 askedBefore: false,
@@ -464,7 +464,7 @@ let questions = {
                                     '54',
                                     '55',
                                     '56',
-                                    '57'
+                                    '57',
                                 ],
                                 correct: '54',
                                 askedBefore: false,
@@ -475,7 +475,7 @@ let questions = {
                                     'USA',
                                     'Japan',
                                     'Indonesia',
-                                    'Chile'
+                                    'Chile',
                                 ],
                                 correct: 'Indonesia',
                                 askedBefore: false,
@@ -486,7 +486,7 @@ let questions = {
                                     'Netherlands',
                                     'Belgium',
                                     'Denmark',
-                                    'Germany'
+                                    'Germany',
                                 ],
                                 correct: 'Belgium',
                                 askedBefore: false,
@@ -497,7 +497,7 @@ let questions = {
                                     'Tasman Sea',
                                     'Sargasso Sea',
                                     'Celebes Sea',
-                                    'Mediterranean Sea'
+                                    'Mediterranean Sea',
                                 ],
                                 correct: 'Sargasso Sea',
                                 askedBefore: false,
@@ -508,7 +508,7 @@ let questions = {
                                     'Atacama Desert',
                                     'Kufra, Libya',
                                     'McMurdo, Antactica',
-                                    'Sahara Desert'
+                                    'Sahara Desert',
                                 ],
                                 correct: 'McMurdo, Antactica',
                                 askedBefore: false,
@@ -527,7 +527,8 @@ let questions = {
                                     '2005',
                                     '2006',
                                     '2007',
-                                    '2009'],
+                                    '2009',
+                                ],
                                 correct: '2007',
                                 askedBefore: false,
                             },
@@ -537,7 +538,8 @@ let questions = {
                                     '1958',
                                     '1971',
                                     '1969',
-                                    '1959'],
+                                    '1959',
+                                ],
                                 correct: '1969',
                                 askedBefore: false,
                             },
@@ -547,7 +549,7 @@ let questions = {
                                     '1913',
                                     '1914',
                                     '1915',
-                                    '1916'
+                                    '1916',
                                 ],
                                 correct: '1914',
                                 askedBefore: false,
@@ -558,7 +560,7 @@ let questions = {
                                     'Adolf Eichmann',
                                     'Jean Racine',
                                     'Reinhard Heydrich',
-                                    'Adolf Hitler'
+                                    'Adolf Hitler',
                                 ],
                                 correct: 'Adolf Hitler',
                                 askedBefore: false,
@@ -569,7 +571,7 @@ let questions = {
                                     '1606',
                                     '1492',
                                     '1886',
-                                    '1642'
+                                    '1642',
                                 ],
                                 correct: '1606',
                                 askedBefore: false,
@@ -580,7 +582,7 @@ let questions = {
                                     '2002',
                                     '2003',
                                     '2004',
-                                    '2005'
+                                    '2005',
                                 ],
                                 correct: '2003',
                                 askedBefore: false,
@@ -591,9 +593,9 @@ let questions = {
                                     'St. Patrick',
                                     'St. Andrew',
                                     'St. Geroge',
-                                    'St. Peter'
+                                    'St. Peter',
                                 ],
-                                correct: ' St. Patrick ',
+                                correct: 'St. Patrick',
                                 askedBefore: false,
                             },
                             {
@@ -602,7 +604,7 @@ let questions = {
                                     'USS Arizona',
                                     'The Endeavour',
                                     'Santa Maria',
-                                    'Titanic'
+                                    'Titanic',
                                 ],
                                 correct: 'Titanic',
                                 askedBefore: false,
@@ -613,7 +615,7 @@ let questions = {
                                     '1910',
                                     '1912',
                                     '1914',
-                                    '1916'
+                                    '1916',
                                 ],
                                 correct: '1912',
                                 askedBefore: false,
@@ -624,7 +626,7 @@ let questions = {
                                     'HMS Discovery',
                                     'HMS Resolution',
                                     'HMS Endeavour',
-                                    'HMS Eagle'
+                                    'HMS Eagle',
                                 ],
                                 correct: 'HMS Endeavour',
                                 askedBefore: false,
@@ -635,7 +637,7 @@ let questions = {
                                     'Ireland',
                                     'United Kingdom',
                                     'Russia',
-                                    'USA'
+                                    'USA',
                                 ],
                                 correct: 'United Kingdom',
                                 askedBefore: false,
@@ -646,7 +648,7 @@ let questions = {
                                     'Navy Blue',
                                     'Grey',
                                     'Dark Green',
-                                    'Burgundy'
+                                    'Burgundy',
                                 ],
                                 correct: 'Navy Blue',
                                 askedBefore: false,
@@ -657,7 +659,7 @@ let questions = {
                                     'Hindu',
                                     'Islam',
                                     'Buddhism',
-                                    'Taoism'
+                                    'Taoism',
                                 ],
                                 correct: 'Islam',
                                 askedBefore: false,
@@ -668,7 +670,7 @@ let questions = {
                                     'Louis Braille',
                                     'Samuel Morse',
                                     'Alexander Graham Bell',
-                                    'Thomas Edison'
+                                    'Thomas Edison',
                                 ],
                                 correct: 'Alexander Graham Bell',
                                 askedBefore: false,
@@ -679,7 +681,7 @@ let questions = {
                                     'Asteroid Impact',
                                     'Food Shortage',
                                     'Hunted by other animals',
-                                    'Climate Change'
+                                    'Climate Change',
                                 ],
                                 correct: 'Hunted by other animals',
                                 askedBefore: false,
@@ -707,7 +709,7 @@ let questions = {
                                     'Ada Yonath',
                                     'Rosalyn Yalow',
                                     'Sigrid Undset',
-                                    'Marie Curie'
+                                    'Marie Curie',
                                 ],
                                 correct: 'Marie Curie',
                                 askedBefore: false,
@@ -718,7 +720,7 @@ let questions = {
                                     '1979',
                                     '1989',
                                     '1990',
-                                    '1982'
+                                    '1982',
                                 ],
                                 correct: '1989',
                                 askedBefore: false,
@@ -729,7 +731,7 @@ let questions = {
                                     'James Cook',
                                     'Willem Janszoon',
                                     'Christopher Columbus',
-                                    'Abel Tasman'
+                                    'Abel Tasman',
                                 ],
                                 correct: 'Willem Janszoon',
                                 askedBefore: false,
@@ -740,7 +742,7 @@ let questions = {
                                     'England',
                                     'France',
                                     'Hungary',
-                                    'Denmark'
+                                    'Denmark',
                                 ],
                                 correct: 'France',
                                 askedBefore: false,
@@ -751,7 +753,7 @@ let questions = {
                                     '1988',
                                     '1989',
                                     '1990',
-                                    '1991'
+                                    '1991',
                                 ],
                                 correct: '1990',
                                 askedBefore: false,
@@ -762,7 +764,7 @@ let questions = {
                                     'Jericho',
                                     'Bethlehem',
                                     'Damascus',
-                                    'Nineveh'
+                                    'Nineveh',
                                 ],
                                 correct: 'Bethlehem',
                                 askedBefore: false,
@@ -773,7 +775,7 @@ let questions = {
                                     '100 years',
                                     '115 years',
                                     '116 years',
-                                    '124 years'
+                                    '124 years',
                                 ],
                                 correct: '116 years ',
                                 askedBefore: false,
@@ -795,7 +797,7 @@ let questions = {
                                     'Norway',
                                     'Denmark',
                                     'Sweden',
-                                    'Iceland'
+                                    'Iceland',
                                 ],
                                 correct: 'Denmark',
                                 askedBefore: false,
@@ -866,7 +868,7 @@ let questions = {
                                     '2 September 1945',
                                     '1 July 1945',
                                     '23 December 1945',
-                                    '31 January 1945'
+                                    '31 January 1945',
                                 ],
                                 correct: '2 September 1945',
                                 askedBefore: false,
@@ -877,7 +879,7 @@ let questions = {
                                     'Edmund Barton',
                                     'Alfred Deakin',
                                     'Robert Menzies',
-                                    'John Curtin'
+                                    'John Curtin',
                                 ],
                                 correct: 'Edmund Barton',
                                 askedBefore: false,
@@ -888,7 +890,7 @@ let questions = {
                                     'End of Vietnam war',
                                     'Fall of the Berlin Wall',
                                     'Eruption of Mount Vesuvio',
-                                    'Assassination of John F. Kennedy'
+                                    'Assassination of John F. Kennedy',
                                 ],
                                 correct: 'Fall of the Berlin Wall',
                                 askedBefore: false,
@@ -899,7 +901,7 @@ let questions = {
                                     'Chthonia',
                                     'Xerces',
                                     'Pandora',
-                                    'Hypatia '
+                                    'Hypatia',
                                 ],
                                 correct: 'Pandora',
                                 askedBefore: false,
@@ -910,7 +912,7 @@ let questions = {
                                     'London',
                                     'Athens',
                                     'Beijing',
-                                    'Rome'
+                                    'Rome',
                                 ],
                                 correct: 'Rome',
                                 askedBefore: false,
@@ -921,7 +923,7 @@ let questions = {
                                     '1840',
                                     '1880',
                                     '1900',
-                                    '1910'
+                                    '1910',
                                 ],
                                 correct: '1840',
                                 askedBefore: false,
@@ -932,7 +934,7 @@ let questions = {
                                     '1884',
                                     '1914',
                                     '1895',
-                                    '1875'
+                                    '1875',
                                 ],
                                 correct: '1895',
                                 askedBefore: false,
@@ -1058,12 +1060,12 @@ let questions = {
                             {
                                 question: 'Who wrote the play Hamlet, A Midsummer Night\'s Dream and MacBeth?',
                                 answers: [
-                                    'WIlliam Shakespeare',
+                                    'William Shakespeare',
                                     'Jean Racine',
                                     'Aphra Behn',
                                     'Christopher Marlowe',
                                 ],
-                                correct: 'WIlliam Shakespeare',
+                                correct: 'William Shakespeare',
                                 askedBefore: false,
                             },
                             {
@@ -1138,7 +1140,7 @@ let questions = {
                                     'Play Me',
                                     'Stop Me',
                                     'Touch This',
-                                    'Break This'
+                                    'Break This',
                                 ],
                                 correct: 'Touch This',
                                 askedBefore: false,
@@ -1149,7 +1151,7 @@ let questions = {
                                     'Keith Haring',
                                     'Tom Wesselmann',
                                     'Roy Lichtenstein',
-                                    'Andy Warhol'
+                                    'Andy Warhol',
                                 ],
                                 correct: 'Andy Warhol',
                                 askedBefore: false,
@@ -1160,7 +1162,7 @@ let questions = {
                                     'Pablo Picasso',
                                     'Vincent van Gogh',
                                     'Claude Monet',
-                                    'Andy Warhol'
+                                    'Andy Warhol',
                                 ],
                                 correct: 'Vincent van Gogh',
                                 askedBefore: false,
@@ -1171,7 +1173,7 @@ let questions = {
                                     'One more time',
                                     'Just like that',
                                     'Like yo momma',
-                                    'Like no other'
+                                    'Like no other',
                                 ],
                                 correct: 'One more time',
                                 askedBefore: false,
@@ -1182,7 +1184,7 @@ let questions = {
                                     'The Cranberries',
                                     'Presidents of the United States of America',
                                     'Butthole Surfers',
-                                    'Weezer'
+                                    'Weezer',
                                 ],
                                 correct: 'Presidents of the United States of America',
                                 askedBefore: false,
@@ -1193,7 +1195,7 @@ let questions = {
                                     'Metallica',
                                     'Anthrax',
                                     'Iron maiden',
-                                    'Guns N Roses'
+                                    'Guns N Roses',
                                 ],
                                 correct: 'Guns N Roses',
                                 askedBefore: false,
@@ -1242,7 +1244,7 @@ let questions = {
                                     'Moby Dick',
                                     'The Catcher in the Rye',
                                     'The Great Gatsby',
-                                    'Ulysses'
+                                    'Ulysses',
                                 ],
                                 correct: 'Moby Dick',
                                 askedBefore: false,
@@ -1253,7 +1255,7 @@ let questions = {
                                     '1992',
                                     '1981',
                                     '1987',
-                                    '1989'
+                                    '1989',
                                 ],
                                 correct: '1987',
                                 askedBefore: false,
@@ -1264,7 +1266,7 @@ let questions = {
                                     'Midnight Sonata by Ludwig Beethoven',
                                     'Caprice No. 24 by Nicolo Paganini',
                                     'Johann Pachelbel’s Canon in D',
-                                    'Eine Kleine Nachtmusik, K. 525 by Wolfgang Amadeus Mozart'
+                                    'Eine Kleine Nachtmusik, K. 525 by Wolfgang Amadeus Mozart',
                                 ],
                                 correct: 'Johann Pachelbel’s Canon in D',
                                 askedBefore: false,
@@ -1275,7 +1277,7 @@ let questions = {
                                     'Joy Division',
                                     'XTC',
                                     'Public Image Ltd.',
-                                    'The Buzzcocks'
+                                    'The Buzzcocks',
                                 ],
                                 correct: 'Public Image Ltd.',
                                 askedBefore: false,
@@ -1286,7 +1288,7 @@ let questions = {
                                     'Alice in Chains',
                                     'Soundgarden',
                                     'Stone Temple Pilots',
-                                    'TAD'
+                                    'TAD',
                                 ],
                                 correct: 'Stone Temple Pilots',
                                 askedBefore: false,
@@ -1297,7 +1299,7 @@ let questions = {
                                     '3',
                                     '5',
                                     '7',
-                                    '9'
+                                    '9',
                                 ],
                                 correct: '7',
                                 askedBefore: false,
@@ -1387,7 +1389,7 @@ let questions = {
                                 askedBefore: false,
                             },
                             {
-                                question: ' In which year did AC/DC form?',
+                                question: 'In which year did AC/DC form?',
                                 answers: [
                                     '1973',
                                     '1979',
@@ -1553,7 +1555,7 @@ let questions = {
                                     'Spain',
                                     'France',
                                     'Italy',
-                                    'USA'
+                                    'USA',
                                 ],
                                 correct: 'Spain',
                                 askedBefore: false,
@@ -1564,7 +1566,7 @@ let questions = {
                                     'Rugby',
                                     'Swimming',
                                     'Soccer',
-                                    'Tennis'
+                                    'Tennis',
                                 ],
                                 correct: 'Soccer',
                                 askedBefore: false,
@@ -1575,7 +1577,7 @@ let questions = {
                                     'Toronro Canucks',
                                     'Toronto Oilers',
                                     'Toronto Maple Leafs',
-                                    'Toronto Flames'
+                                    'Toronto Flames',
                                 ],
                                 correct: 'Toronto Maple Leafs',
                                 askedBefore: false,
@@ -1586,7 +1588,7 @@ let questions = {
                                     '2',
                                     '3',
                                     '4',
-                                    'not divided'
+                                    'not divided',
                                 ],
                                 correct: '3',
                                 askedBefore: false,
@@ -1597,7 +1599,7 @@ let questions = {
                                     'Golf',
                                     'Baseball',
                                     'Softball',
-                                    'Croquet'
+                                    'Croquet',
                                 ],
                                 correct: 'Golf',
                                 askedBefore: false,
@@ -1608,7 +1610,7 @@ let questions = {
                                     '1',
                                     '2',
                                     '3',
-                                    '4'
+                                    '4',
                                 ],
                                 correct: '2',
                                 askedBefore: false,
@@ -1619,7 +1621,7 @@ let questions = {
                                     'Barry Bonds',
                                     'Ty Cobb',
                                     'Reggie White',
-                                    'Babe Ruth'
+                                    'Babe Ruth',
                                 ],
                                 correct: 'Reggie White',
                                 askedBefore: false,
@@ -1630,7 +1632,7 @@ let questions = {
                                     '1',
                                     '2',
                                     '3',
-                                    '4'
+                                    '4',
                                 ],
                                 correct: '1',
                                 askedBefore: false,
@@ -1641,7 +1643,7 @@ let questions = {
                                     'Beijing',
                                     'London',
                                     'Athens',
-                                    'Sydney'
+                                    'Sydney',
                                 ],
                                 correct: 'Athens',
                                 askedBefore: false,
@@ -1652,7 +1654,7 @@ let questions = {
                                     'Softball',
                                     'Tennis',
                                     'Golf',
-                                    'Cricket'
+                                    'Cricket',
                                 ],
                                 correct: 'Tennis',
                                 askedBefore: false,
@@ -1663,7 +1665,7 @@ let questions = {
                                     'Racquetball',
                                     'Squash',
                                     'Tennis',
-                                    'Badminton'
+                                    'Badminton',
                                 ],
                                 correct: 'Badminton',
                                 askedBefore: false,
@@ -1674,7 +1676,7 @@ let questions = {
                                     'Rowing',
                                     'Car',
                                     'Bicycle',
-                                    'Running'
+                                    'Running',
                                 ],
                                 correct: 'Bicycle',
                                 askedBefore: false,
@@ -1685,7 +1687,7 @@ let questions = {
                                     'Greece',
                                     'France',
                                     'USA',
-                                    'China'
+                                    'China',
                                 ],
                                 correct: 'Greece',
                                 askedBefore: false,
@@ -1696,7 +1698,7 @@ let questions = {
                                     'Blue',
                                     'Black',
                                     'Green',
-                                    'White'
+                                    'White',
                                 ],
                                 correct: 'White',
                                 askedBefore: false,
@@ -1707,7 +1709,7 @@ let questions = {
                                     '9',
                                     '12',
                                     '18',
-                                    '21'
+                                    '21',
                                 ],
                                 correct: '18',
                                 askedBefore: false,
@@ -2068,7 +2070,7 @@ let questions = {
                                     'Carbon-dioxide',
                                     'Carbon-monoxide',
                                     'Water',
-                                    'Hydrogen'
+                                    'Hydrogen',
                                 ],
                                 correct: 'Carbon-dioxide',
                                 askedBefore: false,
@@ -2079,7 +2081,7 @@ let questions = {
                                     'Mercury',
                                     'Iron',
                                     'Francium',
-                                    'Caesium'
+                                    'Caesium',
                                 ],
                                 correct: 'Mercury',
                                 askedBefore: false,
@@ -2090,7 +2092,7 @@ let questions = {
                                     'Weird Wonderful World',
                                     'World Wide Web',
                                     'Whole World Webserver',
-                                    'Western Web Webbing'
+                                    'Western Web Webbing',
                                 ],
                                 correct: 'World Wide Web',
                                 askedBefore: false,
@@ -2101,7 +2103,7 @@ let questions = {
                                     'Propane',
                                     'Ethane',
                                     'Methane',
-                                    'Water'
+                                    'Water',
                                 ],
                                 correct: 'Water',
                                 askedBefore: false,
@@ -2112,7 +2114,7 @@ let questions = {
                                     '200',
                                     '210',
                                     '212',
-                                    '220'
+                                    '220',
                                 ],
                                 correct: '212',
                                 askedBefore: false,
@@ -2123,7 +2125,7 @@ let questions = {
                                     'Megabyte',
                                     'Terabyte',
                                     'Kilobyte',
-                                    'Gigabyte'
+                                    'Gigabyte',
                                 ],
                                 correct: 'Terabyte',
                                 askedBefore: false,
@@ -2134,7 +2136,7 @@ let questions = {
                                     'Mars',
                                     'Ceres',
                                     'Pluto',
-                                    'Mercury'
+                                    'Mercury',
                                 ],
                                 correct: 'Mercury',
                                 askedBefore: false,
@@ -2145,7 +2147,7 @@ let questions = {
                                     'Steel',
                                     'Diamond',
                                     'Iron',
-                                    'Titanium'
+                                    'Titanium',
                                 ],
                                 correct: 'Diamond',
                                 askedBefore: false,
@@ -2156,7 +2158,7 @@ let questions = {
                                     'Oak',
                                     'Pine',
                                     'Redwood',
-                                    'Banksia'
+                                    'Banksia',
                                 ],
                                 correct: 'Oak',
                                 askedBefore: false,
@@ -2167,7 +2169,7 @@ let questions = {
                                     'Plasma',
                                     'Red Blood Cell',
                                     'Platelets',
-                                    'White Blood Cell'
+                                    'White Blood Cell',
                                 ],
                                 correct: 'White Blood Cell',
                                 askedBefore: false,
@@ -2178,7 +2180,7 @@ let questions = {
                                     '2',
                                     '2.45',
                                     '2.54',
-                                    '2.5'
+                                    '2.5',
                                 ],
                                 correct: '2.54',
                                 askedBefore: false,
@@ -2186,12 +2188,12 @@ let questions = {
                             {
                                 question: 'What is the boiling point of water?',
                                 answers: [
-                                    '100 degrees celcius',
-                                    '110 degrees celcius',
-                                    '95 degrees celcius',
-                                    '150 degrees celcius'
+                                    '100 degrees Celsius',
+                                    '110 degrees Celsius',
+                                    '95 degrees Celsius',
+                                    '150 degrees Celsius',
                                 ],
-                                correct: '100 degrees celcius',
+                                correct: '100 degrees Celsius',
                                 askedBefore: false,
                             },
                             {
@@ -2200,7 +2202,7 @@ let questions = {
                                     '13 x 13',
                                     '13 + 13 + 13',
                                     '13 x 13 x 13',
-                                    '13 squared squared'
+                                    '13 squared squared',
                                 ],
                                 correct: '13 x 13 x 13',
                                 askedBefore: false,
@@ -2211,7 +2213,7 @@ let questions = {
                                     'Apple',
                                     'Samsung',
                                     'Motorolla',
-                                    'Nokia'
+                                    'Nokia',
                                 ],
                                 correct: 'Samsung',
                                 askedBefore: false,
@@ -2222,7 +2224,7 @@ let questions = {
                                     'I',
                                     'Ir',
                                     'K',
-                                    'Fe'
+                                    'Fe',
                                 ],
                                 correct: 'Fe',
                                 askedBefore: false,
@@ -2238,7 +2240,7 @@ let questions = {
                                     'Y',
                                     'J',
                                     'H',
-                                    'P'
+                                    'P',
                                 ],
                                 correct: 'J',
                                 askedBefore: false,
@@ -2249,7 +2251,7 @@ let questions = {
                                     'Earth',
                                     'Venus',
                                     'Mercury',
-                                    'Mars'
+                                    'Mars',
                                 ],
                                 correct: 'Mars',
                                 askedBefore: false,
@@ -2260,7 +2262,7 @@ let questions = {
                                     'Earth’s moon',
                                     'Callisto',
                                     'Ganymede',
-                                    'Triton'
+                                    'Triton',
                                 ],
                                 correct: 'Ganymede',
                                 askedBefore: false,
@@ -2271,7 +2273,7 @@ let questions = {
                                     'Bernese Mountain Dog',
                                     'Black Russian Terrier',
                                     'The Great Dane',
-                                    'German Shepherd'
+                                    'German Shepherd',
                                 ],
                                 correct: 'The Great Dane',
                                 askedBefore: false,
@@ -2282,7 +2284,7 @@ let questions = {
                                     'three',
                                     'four',
                                     'five',
-                                    'six'
+                                    'six',
                                 ],
                                 correct: 'five',
                                 askedBefore: false,
@@ -2293,7 +2295,7 @@ let questions = {
                                     'Kilobyte',
                                     'Megabyte',
                                     'Microbyte',
-                                    'Gigabyte'
+                                    'Gigabyte',
                                 ],
                                 correct: 'Microbyte',
                                 askedBefore: false,
@@ -2304,7 +2306,7 @@ let questions = {
                                     '92',
                                     '104',
                                     '118',
-                                    '126'
+                                    '126',
                                 ],
                                 correct: '118',
                                 askedBefore: false,
@@ -2315,7 +2317,7 @@ let questions = {
                                     '0 degrees',
                                     '4 degrees',
                                     '20 degrees',
-                                    '100 degrees'
+                                    '100 degrees',
                                 ],
                                 correct: '4 degrees',
                                 askedBefore: false,
@@ -2326,7 +2328,7 @@ let questions = {
                                     '4.5',
                                     '7.0',
                                     '7.5',
-                                    '8.0'
+                                    '8.0',
                                 ],
                                 correct: '4.5',
                                 askedBefore: false,
@@ -2408,7 +2410,7 @@ let questions = {
                                     'Oxygen',
                                     'Ozone',
                                     'Water',
-                                    'Carbon-dioxide'
+                                    'Carbon-dioxide',
                                 ],
                                 correct: 'Ozone',
                                 askedBefore: false,
@@ -2419,7 +2421,7 @@ let questions = {
                                     'Mercury',
                                     'Venus',
                                     'Earth',
-                                    'Mars'
+                                    'Mars',
                                 ],
                                 correct: 'Venus',
                                 askedBefore: false,
@@ -2430,7 +2432,7 @@ let questions = {
                                     'Dwarf Planet',
                                     'Asteroid',
                                     'Comet',
-                                    'Planet'
+                                    'Planet',
                                 ],
                                 correct: 'Dwarf Planet',
                                 askedBefore: false,
@@ -2441,7 +2443,7 @@ let questions = {
                                     'Aadrvark',
                                     'Quokka',
                                     'Platypus',
-                                    'Jellyfish'
+                                    'Jellyfish',
                                 ],
                                 correct: 'Platypus',
                                 askedBefore: false,
@@ -2452,7 +2454,7 @@ let questions = {
                                     'Steve Jobs',
                                     'Pierre Omidyar',
                                     'Brian Chesky',
-                                    'Reed Hastings'
+                                    'Reed Hastings',
                                 ],
                                 correct: 'Pierre Omidyar',
                                 askedBefore: false,
@@ -2463,7 +2465,7 @@ let questions = {
                                     'AB Positive',
                                     'A Postitive',
                                     'AB Negative',
-                                    'O Negative'
+                                    'O Negative',
                                 ],
                                 correct: 'AB Negative',
                                 askedBefore: false,
@@ -2474,7 +2476,7 @@ let questions = {
                                     '60 Days',
                                     '80 Days',
                                     '100 Days',
-                                    '120 Days'
+                                    '120 Days',
                                 ],
                                 correct: '120 Days',
                                 askedBefore: false,
@@ -2485,7 +2487,7 @@ let questions = {
                                     'Subatomic Particle',
                                     'A Neutron',
                                     'A Proton',
-                                    'An Electron'
+                                    'An Electron',
                                 ],
                                 correct: 'Subatomic Particle',
                                 askedBefore: false,
@@ -2496,7 +2498,7 @@ let questions = {
                                     'positive',
                                     'negative',
                                     'no charge',
-                                    'both positive and negative'
+                                    'both positive and negative',
                                 ],
                                 correct: 'no charge',
                                 askedBefore: false,
@@ -2507,7 +2509,7 @@ let questions = {
                                     'p',
                                     'h',
                                     'x',
-                                    'v'
+                                    'v',
                                 ],
                                 correct: 'h',
                                 askedBefore: false,
@@ -2559,7 +2561,7 @@ let questions = {
                             {
                                 question: 'What element does not freeze by being cooled to absolute zero?',
                                 answers: [
-                                    'Helium ',
+                                    'Helium',
                                     'Hydrogen',
                                     'Oxygen',
                                     'Nitrogen',
