@@ -39,7 +39,7 @@ module.exports = {
       let theme = interaction.options.getString("theme");
       let difficulty = interaction.options.getString("difficulty");
 
-      await interaction.followUp(await initialise(interaction));
+      await initialise(interaction, theme, difficulty);
     } else if (interaction.options.getSubcommand() === "close") {
       await interaction.reply(
         `${interaction.user.username}, we are closing your trivia game, hope you had a good time!`
