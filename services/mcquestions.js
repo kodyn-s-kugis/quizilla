@@ -177,7 +177,8 @@ async function askQuestion(interaction, theme, difficulty) {
 
             // Add user data to pointsCollector array
             function addUserStats(user, score) {
-                pointsCollector.push({
+                pointsCollector.push(
+                    {
                         userid: user,
                         pointsCollected: score
                     }
@@ -276,7 +277,7 @@ module.exports = async function mcQuestions(interaction, theme, difficulty) {
     scores = await askQuestion(interaction, theme, difficulty).then(async () => {
         console.log('First question asked.');
         scores = await askQuestion(interaction, theme, difficulty)
-    }).then(async () => {
+    })/*.then(async () => {
         console.log('Second question asked.');
         scores = await askQuestion(interaction, theme, difficulty);
     }).then(async () => {
@@ -315,7 +316,7 @@ module.exports = async function mcQuestions(interaction, theme, difficulty) {
     }).then(async () => {
         console.log('Fourteenth question asked.');
         scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
+    })*/.then(async () => {
         console.log('End of game.');
         await interaction.channel.send('That\'s it! 15 questions asked.');
     }).catch(async (message) => {
@@ -323,8 +324,6 @@ module.exports = async function mcQuestions(interaction, theme, difficulty) {
         console.log(message);
     });
 
-    for (let index in scores) {
-        console.log(index + " => " + scores[index].userid + "\n" + index + " => " + scores[index].pointsCollected);
-    }
+
 
 };

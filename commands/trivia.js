@@ -15,22 +15,22 @@ module.exports = {
                             .setName('theme')
                             .setDescription('Set theme for questions')
                             .setRequired(true)
+                            .addChoice('Random', 'random')
                             .addChoice('History', 'history')
                             .addChoice('Geography', 'geography')
                             .addChoice('Science', 'science')
                             .addChoice('Music, Arts & Film', 'maf')
                             .addChoice('Sport', 'sport')
-                            .addChoice('Random', 'random')
                     )
                     .addStringOption((option) =>
                         option
                             .setName('difficulty')
                             .setDescription('Set game difficulty.')
                             .setRequired(true)
+                            .addChoice('Random', 'random')
                             .addChoice('Easy', 'easy')
                             .addChoice('Medium', 'medium')
                             .addChoice('Hard', 'hard')
-                            .addChoice('Random', 'random')
                     )
             /*.addStringOption((option) =>
                 option
@@ -68,7 +68,5 @@ module.exports = {
                 // Need a function that resets the game
             );
         }
-    }
-    ,
-}
-;
+    },
+};
