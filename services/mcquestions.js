@@ -176,7 +176,7 @@ async function askQuestion(interaction, theme, difficulty) {
                 chosenAnswer = click.customId;
 
                 if (chosenAnswer === correct) {
-                    let assignedPoints = points;
+                    assignedPoints = points;
                 } else {
                     assignedPoints = 0;
                 }
