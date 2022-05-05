@@ -16,6 +16,8 @@ const {time} = require("@discordjs/builders");
 
 async function askQuestion(interaction, theme, difficulty) {
 
+    // The askQuestion function returns a promise, so that the sequence of questions can be established. If the promise
+    // gets resolved, the next question can be asked, if it is rejected, the catch function displays an error message.
     return new Promise(async (resolve, reject) => {
             console.log('MCQuestions have started.');
 
@@ -28,8 +30,6 @@ async function askQuestion(interaction, theme, difficulty) {
             // Define two arrays that hold all theme and difficulty values for random selection
             let themes = ['history', 'geography', 'science', 'maf', 'sport'];
             let difficulties = ['easy', 'medium', 'hard'];
-            let randomIndex1;
-            let randomIndex2;
 
             // Declaring all necessary variables
             let timeLimit = 30;
@@ -80,6 +80,7 @@ async function askQuestion(interaction, theme, difficulty) {
                 newCorrect = correct;
             }
 
+            // Start display part -------------------------------------------------------------------------------------
 
             // Create buttons with A, B, C, D answer options and assign the values from the newAnswers array to each button's
             // custom ID attribute. This way, it is possible to check if the chosen answer was correct.
@@ -126,7 +127,9 @@ async function askQuestion(interaction, theme, difficulty) {
                 components: [row],
             })
 
-            // End display part -------------------------------------------------------------------------------------------
+            // End display part ---------------------------------------------------------------------------------------
+
+            // Start button interaction--------------------------------------------------------------------------------
 
             const filter = (btnInt) => {
                 return interaction.user.id === btnInt.user.id;
@@ -184,6 +187,8 @@ async function askQuestion(interaction, theme, difficulty) {
 
                 }*/
             }
+
+            // End button interaction----------------------------------------------------------------------------------
 
             // Call timer function
             timerResult = timerFunction();
@@ -252,6 +257,10 @@ async function askQuestion(interaction, theme, difficulty) {
             }
 
             console.log(askedBefore);
+
+            // The questions object gets updated here by setting the askedBefore value to true, so that the question
+            // won't be asked again during this round. This makes use of the modifyAskedBefore() function in the questions.js
+            // file.
             questions.modifyAskedBefore(true, theme, difficulty, randomIndex);
             let answeredBefore = questions.array.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
             console.log(answeredBefore);
