@@ -1,4 +1,5 @@
 const game = {
+  messages: {},
   channels: {},
   players: [],
 };

@@ -15,9 +15,11 @@ module.exports = {
             .setName("theme")
             .setDescription("Set trivia theme")
             .setRequired(true)
-            .addChoice("Science", "science")
             .addChoice("Geography", "geography")
             .addChoice("History", "history")
+            .addChoice("MAF", "maf")
+            .addChoice("Sport", "sport")
+            .addChoice("Science", "science")
             .addChoice("Random", "random")
         )
         .addStringOption((option) =>

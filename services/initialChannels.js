@@ -1,6 +1,6 @@
-const game = require("./data/gameData");
+module.exports = async function setupChannels(interaction, gameData) {
+  const game = gameData;
 
-module.exports = async function setupChannels(interaction) {
   const category = await interaction.guild.channels.create("Trivia Game", {
     type: "GUILD_CATEGORY",
   });

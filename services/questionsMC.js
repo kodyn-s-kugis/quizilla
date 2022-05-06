@@ -2,7 +2,7 @@ const { MessageActionRow, MessageButton, MessageEmbed } = require("discord.js");
 const questions = require("./data/questionsData.js");
 const random = require("../utils/randomNum.js");
 
-module.exports = function questionsMC(theme, difficulty) {
+module.exports = function questionsMC(game, theme, difficulty) {
   let { question, answers, correct, askedBefore } =
     questions.themes[random(0, 0)].history.easy.questions[random(0, 1)];
 

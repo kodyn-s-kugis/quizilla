@@ -1,7 +1,15 @@
 const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
+const blankGameData = require("./data/gameData");
+const channelCleanUp = require("./channelCleanUp");
+const gameStart = require("./gameStart");
 
-module.exports = async function playerSignUp(interaction, gameData) {
-  const game = gameData;
+module.exports = async function playerSignUp(
+  interaction,
+  gameData,
+  theme,
+  difficulty
+) {
+  let game = gameData;
 
   const channel = await interaction.guild.channels.fetch(
     `${game.channels.signUp}`
@@ -12,7 +20,14 @@ module.exports = async function playerSignUp(interaction, gameData) {
     .setColor("#0099ff")
     .setTitle(`Trivia Game`)
     .setDescription(`Created by ${interaction.user.tag}`)
-    .addFields({ name: `Queued Players`, value: `Empty` });
+    .addFields(
+      { name: `Queued Players`, value: `Empty` },
+      {
+        name: "Tips & Tricks",
+        value:
+          "```When the game is about to begin, keep an eye out for the Questions channel!```",
+      }
+    );
 
   const signUpComponents = new MessageActionRow()
     .addComponents(
@@ -35,7 +50,7 @@ module.exports = async function playerSignUp(interaction, gameData) {
 
   const collector = message.createMessageComponentCollector({
     componentType: "BUTTON",
-    time: 1000 * 120,
+    time: 1000 * 30,
   });
 
   collector.on("collect", (i) => {
@@ -58,13 +73,45 @@ module.exports = async function playerSignUp(interaction, gameData) {
     }
     if (i.customId === "unqueue") {
       // if user hasn't queued, but tries to unqueue
-      i.reply({ content: `You've unqueued from Trivia`, ephemeral: true });
+      if (game.players.length < 1) {
+        i.reply({ content: `You haven't queued for Trivia`, ephemeral: true });
+      } else if (!game.players.find((player) => player?.id !== i.user.i)) {
+        i.reply({ content: `You haven't queued for Trivia`, ephemeral: true });
+
+        // if user has queued, but tries to unqueue
+      } else {
+        unqueueButtonHandler(i.user.id);
+        i.reply({ content: `You've unqueued from Trivia`, ephemeral: true });
+      }
     }
   });
 
-  collector.on("end", (collected) =>
-    console.log(`Collected ${collected.size} items`)
-  );
+  collector.on("end", () => {
+    // if no one queues for the game
+    if (game.players.length < 1) {
+      channelCleanUp(interaction, game);
+
+      interaction.followUp({
+        content: `No one has queued for Trivia! Closing the game...`,
+        ephemeral: true,
+      });
+
+      game = blankGameData;
+      console.log(`---Final Game Object Here---`);
+      console.log(game);
+      console.log(`---Final Game Object Here---`);
+
+      return game;
+    }
+    // if at least one player has queued for the game
+    else {
+      console.log(`---Final Game Object Here---`);
+      console.log(game);
+      console.log(`---Final Game Object Here---`);
+
+      gameStart(interaction, game, theme, difficulty);
+    }
+  });
 
   async function queueButtonHandler(userID) {
     game.players.push({ id: userID, points: 0 });
@@ -73,7 +120,12 @@ module.exports = async function playerSignUp(interaction, gameData) {
     await updateSignUpEmbed();
   }
 
-  function unqueueButtonHandler(userID) {}
+  async function unqueueButtonHandler(userID) {
+    game.players = game.players.filter((player) => player.id !== userID);
+    console.log(game.players);
+
+    await updateSignUpEmbed();
+  }
 
   async function updateSignUpEmbed() {
     const queuedPlayers = game.players
@@ -85,7 +137,17 @@ module.exports = async function playerSignUp(interaction, gameData) {
       .setColor("#0099ff")
       .setTitle(`Trivia Game`)
       .setDescription(`Created by ${interaction.user.tag}`)
-      .addFields({ name: `Queued Players`, value: `${queuedPlayers}` });
+      .addFields(
+        {
+          name: `Queued Players`,
+          value: `${game.players.length < 1 ? "empty" : queuedPlayers}`,
+        },
+        {
+          name: "Tips & Tricks",
+          value:
+            "```When the game is about to begin, keep an eye out for the Questions channel!```",
+        }
+      );
 
     await message.edit({
       embeds: [upatedEmbed],
