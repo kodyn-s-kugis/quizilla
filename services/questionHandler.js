@@ -5,20 +5,32 @@ const updateLeaderboard = require("./updateLeaderboard");
 module.exports = async function questionHandler(
   interaction,
   gameData,
-  theme,
-  difficulty
+  themeData,
+  difficultyData,
+  rounds
 ) {
+  let theme = themeData;
+  let difficulty = difficultyData;
   let game = gameData;
   let questions = questionsData;
   let i = 0;
 
   const themes = ["geography", "history", "maf", "sport", "science"];
+  const difficulties = ["easy", "medium", "hard", "random"];
+
+  if (theme === "random") {
+    theme = themes[Math.floor(Math.random() * themes.length)];
+  }
+
+  if (difficulty === "random") {
+    difficulty = difficulties[Math.floor(Math.random() * difficulties.length)];
+  }
 
   const channel = await interaction.guild.channels.fetch(
     `${game.channels.questions}`
   );
 
-  while (i < 15) {
+  while (i < rounds) {
     const question = questionChooser(themes, theme, difficulty, questions);
     const message = await channel.send(questionFormatter(question));
 
@@ -90,21 +102,8 @@ module.exports = async function questionHandler(
   }
 
   function questionChooser(themes, themeData, difficultyData, questionsData) {
-    const difficulties = ["easy", "medium", "hard", "random"];
-
-    let theme = themeData;
-    let difficulty = difficultyData;
-
-    if (theme === "random") {
-      theme === themes[random(themes.length)];
-    }
-
-    if (difficulty === "random") {
-      difficulty === difficulties[random(difficulties.length)];
-    }
-
-    let question = questionsData.theme[themes.indexOf(theme)][theme][
-      difficulty
+    let question = questionsData.theme[themes.indexOf(themeData)][theme][
+      difficultyData
     ].questions.filter((question) => question.askedBefore !== true);
 
     const random = Math.floor(Math.random() * question.length);
@@ -112,10 +111,10 @@ module.exports = async function questionHandler(
     question = question[random];
 
     let questionIndex = questions.theme[themes.indexOf(theme)][theme][
-      difficulty
+      difficultyData
     ].questions.findIndex((q) => q.question === question.question);
 
-    questions.theme[themes.indexOf(theme)][theme][difficulty].questions[
+    questions.theme[themes.indexOf(theme)][theme][difficultyData].questions[
       questionIndex
     ].askedBefore = true;
 

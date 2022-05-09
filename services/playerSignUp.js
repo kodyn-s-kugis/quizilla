@@ -7,7 +7,8 @@ module.exports = async function playerSignUp(
   interaction,
   gameData,
   theme,
-  difficulty
+  difficulty,
+  rounds
 ) {
   let game = gameData;
 
@@ -50,7 +51,7 @@ module.exports = async function playerSignUp(
 
   const collector = message.createMessageComponentCollector({
     componentType: "BUTTON",
-    time: 1000 * 30,
+    time: 1000 * 15,
   });
 
   collector.on("collect", (i) => {
@@ -109,7 +110,7 @@ module.exports = async function playerSignUp(
       console.log(game);
       console.log(`---Final Game Object Here---`);
 
-      gameStart(interaction, game, theme, difficulty);
+      gameStart(interaction, game, theme, difficulty, rounds);
     }
   });
 

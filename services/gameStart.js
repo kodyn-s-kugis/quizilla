@@ -5,7 +5,8 @@ module.exports = async function gameStart(
   interaction,
   gameData,
   theme,
-  difficulty
+  difficulty,
+  rounds
 ) {
   let game = gameData;
 
@@ -19,7 +20,7 @@ module.exports = async function gameStart(
   game.messages.leaderboard = await createLeaderboard(interaction, game);
 
   // Send questions to channel
-  await questionHandler(interaction, game, theme, difficulty);
+  await questionHandler(interaction, game, theme, difficulty, rounds);
 };
 
 async function cleanUpSignUp(interaction, game) {

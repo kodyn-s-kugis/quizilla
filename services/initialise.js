@@ -2,7 +2,12 @@ const gameData = require("./data/gameData");
 const initialChannels = require("./initialChannels");
 const playerSignUp = require("./playerSignUp");
 
-module.exports = async function initialise(interaction, theme, difficulty) {
+module.exports = async function initialise(
+  interaction,
+  theme,
+  difficulty,
+  rounds
+) {
   let game = gameData;
   console.log(game);
 
@@ -16,5 +21,5 @@ module.exports = async function initialise(interaction, theme, difficulty) {
   });
 
   // Player Sign-up Message
-  game = await playerSignUp(interaction, game, theme, difficulty);
+  game = await playerSignUp(interaction, game, theme, difficulty, rounds);
 };
