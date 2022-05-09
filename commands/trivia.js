@@ -55,9 +55,16 @@ module.exports = {
             let difficulty = interaction.options.getString('difficulty');
             //let mode = interaction.options.getString('mode');
 
+            let game = {
+                channels: {},
+                players: [
+                    { id: '913227352601952287', points: 0 }
+                ],
+            };
+
             await interaction.reply(
                 `${interaction.user.username}, we are creating your trivia game with a ${theme} theme in ${difficulty} difficulty!`,
-                await mcQuestions(interaction, theme, difficulty),
+                await mcQuestions(interaction, game, theme, difficulty),
             );
 
 

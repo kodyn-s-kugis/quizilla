@@ -14,8 +14,7 @@ const questions = require("../data/questions.js");
 const random = require("../utils/randomNum");
 const {time} = require("@discordjs/builders");
 
-async function askQuestion(interaction, theme, difficulty) {
-    // eventually will be async function askQuestion(interaction, game, theme, difficulty) {}
+async function askQuestion(interaction, game, theme, difficulty) {
 
     // The askQuestion function returns a promise, so that the sequence of questions can be established. If the promise
     // gets resolved, the next question can be asked, if it is rejected, the catch function displays an error message.
@@ -36,6 +35,8 @@ async function askQuestion(interaction, theme, difficulty) {
         let newCorrect;
         let assignedPoints;
         let pointsCollector = [];
+        let playerIndex;
+        let playerScore;
 
         /*
         ************************************************************************************************************
@@ -180,7 +181,11 @@ async function askQuestion(interaction, theme, difficulty) {
                 } else {
                     assignedPoints = 0;
                 }
-                addUserStats(userID, assignedPoints);
+
+                playerIndex = game.players.findIndex(player => player.id === interaction.user.id);
+                console.log(playerIndex);
+                game.players[playerIndex].points += points;
+                //addUserStats(userID, assignedPoints);
 
 
                 console.log(`Chosen: ${chosenAnswer}, Correct: ${newCorrect}, by user: ${userID}`);
@@ -280,56 +285,21 @@ async function askQuestion(interaction, theme, difficulty) {
         let answeredBefore = questions.array.theme[0][theme][difficulty].questions[randomIndex].askedBefore;
         console.log(answeredBefore);
         //console.log(questions.array.theme[0][theme][difficulty].questions.valueOf());
-        return pointsCollector;
+
+        playerScore = game.players[playerIndex].points;
+        console.log(playerScore);
+        return playerScore;
     });
 }
 
-module.exports = async function mcQuestions(interaction, theme, difficulty) {
+module.exports = async function mcQuestions(interaction, game, theme, difficulty) {
     let scores;
 
-    scores = await askQuestion(interaction, theme, difficulty).then(async () => {
-        console.log('First question asked.');
-        scores = await askQuestion(interaction, theme, difficulty)
-    })/*.then(async () => {
-        console.log('Second question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
+    scores = await askQuestion(interaction, game, theme, difficulty).then(async () => {
+        scores = await askQuestion(interaction, game, theme, difficulty)
     }).then(async () => {
-        console.log('Third question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
+        scores = await askQuestion(interaction, game, theme, difficulty)
     }).then(async () => {
-        console.log('Fourth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Fifth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Sixth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Seventh question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Eighth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Ninth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Tenth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Eleventh question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Twelfth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Thirteenth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    }).then(async () => {
-        console.log('Fourteenth question asked.');
-        scores = await askQuestion(interaction, theme, difficulty);
-    })*/.then(async () => {
         console.log('End of game.');
         await interaction.channel.send('That\'s it! 15 questions asked.');
     }).catch(async (message) => {
