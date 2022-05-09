@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const questionHandler = require("./questionHandler");
 
 module.exports = async function gameStart(
   interaction,
@@ -56,7 +57,7 @@ async function createLeaderboard(interaction, game) {
   const embed = new MessageEmbed()
     .setColor("#0099ff")
     .setTitle(`Leaderboard`)
-    .setDescription(`Created by ${interaction.user.tag}`)
+    .setDescription(`Started by ${interaction.user.tag}`)
     .addFields(
       { name: `Players`, value: `${players}`, inline: true },
       {

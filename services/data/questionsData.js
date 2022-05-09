@@ -354,6 +354,8 @@ module.exports = {
           points: 30,
         }, // full no points in questions
       }, // full no points in questions
+    },
+    {
       history: {
         easy: {
           questions: [
@@ -725,6 +727,8 @@ module.exports = {
           points: 30,
         }, // full no points in questions
       }, // full no points in questions
+    },
+    {
       maf: {
         easy: {
           questions: [
@@ -1181,6 +1185,8 @@ module.exports = {
           points: 30,
         }, // full no points in questions
       }, // full no points in questions
+    },
+    {
       sport: {
         easy: {
           questions: [
@@ -1548,6 +1554,8 @@ module.exports = {
           points: 30,
         }, // full no points in questions
       }, // full no points in questions
+    },
+    {
       science: {
         easy: {
           questions: [

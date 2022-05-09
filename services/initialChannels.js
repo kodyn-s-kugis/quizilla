@@ -1,9 +1,12 @@
 module.exports = async function setupChannels(interaction, gameData) {
   const game = gameData;
 
-  const category = await interaction.guild.channels.create("Trivia Game", {
-    type: "GUILD_CATEGORY",
-  });
+  const category = await interaction.guild.channels.create(
+    "▬▬▬▬▬ Trivia Game",
+    {
+      type: "GUILD_CATEGORY",
+    }
+  );
 
   const signUp = await interaction.guild.channels.create("sign-up", {
     type: "GUILD_TEXT",
