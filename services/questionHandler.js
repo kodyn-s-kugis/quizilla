@@ -68,7 +68,7 @@ module.exports = async function questionHandler(
           await updateLeaderboard(interaction, game);
 
           i.reply({
-            content: `You've chosen the correct answer!.`,
+            content: `You've chosen the correct answer!`,
             ephemeral: true,
           });
         } else {

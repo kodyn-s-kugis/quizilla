@@ -1595,7 +1595,7 @@ module.exports = {
               askedBefore: false,
             },
             {
-              question: "100 degrees Celsius is what is Fahrenheit?",
+              question: "100 degrees Celsius is what in Fahrenheit?",
               answers: ["200", "210", "212", "220"],
               correct: "212",
               askedBefore: false,
