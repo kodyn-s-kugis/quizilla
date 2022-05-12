@@ -30,11 +30,20 @@ module.exports = function questionFormatter({
         .setStyle("SECONDARY")
     );
 
-  const embed = new MessageEmbed().setColor("#0099ff").setTitle(`${question}`)
-    .setDescription(`A: ${optA}
+  const embed = new MessageEmbed()
+    .setColor("#0099ff")
+    .setTitle(`${question}`)
+    .setDescription(
+      `A: ${optA}
     B: ${optB}
     C: ${optC}
-    D: ${optD}`);
+    D: ${optD}`
+    )
+    .addFields({
+      name: `Timer`,
+      value:
+        "```Don't worry, you have 30 seconds remaining! If you have your wits about you, you'll get this right.```",
+    });
 
   return {
     components: [components],

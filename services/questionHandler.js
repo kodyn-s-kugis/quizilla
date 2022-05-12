@@ -1,3 +1,4 @@
+const { MessageEmbed } = require("discord.js");
 const questionsData = require("./data/questionsData");
 const questionFormatter = require("./questionFormatter");
 const updateLeaderboard = require("./updateLeaderboard");
@@ -33,10 +34,11 @@ module.exports = async function questionHandler(
   while (i < rounds) {
     const question = questionChooser(themes, theme, difficulty, questions);
     const message = await channel.send(questionFormatter(question));
+    countDown(30, message, question);
 
     const collector = message.createMessageComponentCollector({
       componentType: "BUTTON",
-      time: 1000 * 30,
+      time: 1000 * 35,
     });
 
     const playerResponse = [...game.players];
@@ -119,5 +121,53 @@ module.exports = async function questionHandler(
     ].askedBefore = true;
 
     return question;
+  }
+
+  async function questionEmbedUpdater(
+    message,
+    time,
+    { question, answers: [optA, optB, optC, optD] }
+  ) {
+    let timeMessage;
+    let leftBuffer = "```";
+    let rightBuffer = "```";
+
+    if (time > 20) {
+      timeMessage = `Don't worry, you have ${time} seconds remaining! If you have your wits about you, you'll get this right.`;
+    } else if (time < 20 && time > 10) {
+      timeMessage = `The time is getting spicy now with ${time} seconds remaining! Be careful, otherwise you won't have enough time to press the button.`;
+    } else {
+      timeMessage = `Time is running out with ${time} seconds remaining! I understand slow and steady finishes the race, but you are making a turtle look slow.`;
+    }
+
+    const updatedEmbed = new MessageEmbed()
+      .setColor("#0099ff")
+      .setTitle(`${question}`)
+      .setDescription(
+        `A: ${optA}
+      B: ${optB}
+      C: ${optC}
+      D: ${optD}`
+      )
+      .addFields({
+        name: `Timer`,
+        value: `${leftBuffer}${timeMessage}${rightBuffer}`,
+      });
+
+    await message.edit({
+      embeds: [updatedEmbed],
+    });
+  }
+
+  function countDown(i, message, question) {
+    let interval = 5;
+    let timer = setInterval(() => {
+      questionEmbedUpdater(message, i, question);
+      if (i > 0) {
+        i -= interval;
+      } else {
+        clearInterval(timer);
+      }
+    }, 1000 * interval);
   }
 };
