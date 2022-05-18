@@ -1,7 +1,9 @@
 const { MessageEmbed } = require("discord.js");
 const questionsData = require("./data/questionsData");
+const blankQuestionsData = require("./data/questionsData");
 const questionFormatter = require("./questionFormatter");
 const updateLeaderboard = require("./updateLeaderboard");
+const gameEnd = require("./gameEnd");
 
 module.exports = async function questionHandler(
   interaction,
@@ -16,25 +18,34 @@ module.exports = async function questionHandler(
   let questions = questionsData;
   let i = 0;
 
+  const isThemeRandom = themeData;
+  const isDifficultyRandom = difficultyData;
   const themes = ["geography", "history", "maf", "sport", "science"];
-  const difficulties = ["easy", "medium", "hard", "random"];
-
-  if (theme === "random") {
-    theme = themes[Math.floor(Math.random() * themes.length)];
-  }
-
-  if (difficulty === "random") {
-    difficulty = difficulties[Math.floor(Math.random() * difficulties.length)];
-  }
+  const difficulties = ["easy", "medium", "hard"];
 
   const channel = await interaction.guild.channels.fetch(
     `${game.channels.questions}`
   );
 
   while (i < rounds) {
+    console.log(isThemeRandom);
+    console.log(isDifficultyRandom);
+
+    if (isThemeRandom === "random") {
+      theme = themes[Math.floor(Math.random() * themes.length)];
+    }
+
+    console.log(theme);
+
+    if (isDifficultyRandom === "random") {
+      difficulty =
+        difficulties[Math.floor(Math.random() * difficulties.length)];
+    }
+
+    console.log(difficulty);
     const question = questionChooser(themes, theme, difficulty, questions);
-    const message = await channel.send(questionFormatter(question));
-    countDown(30, message, question);
+    const message = await channel.send(questionFormatter(i, question));
+    countDown(i, 30, message, question);
 
     const collector = message.createMessageComponentCollector({
       componentType: "BUTTON",
@@ -103,6 +114,11 @@ module.exports = async function questionHandler(
     );
   }
 
+  // Game End Clean-up State
+  i = 0;
+  questions = blankQuestionsData;
+  await gameEnd(interaction, game);
+
   function questionChooser(themes, themeData, difficultyData, questionsData) {
     let question = questionsData.theme[themes.indexOf(themeData)][theme][
       difficultyData
@@ -124,25 +140,22 @@ module.exports = async function questionHandler(
   }
 
   async function questionEmbedUpdater(
+    qNum,
     message,
     time,
     { question, answers: [optA, optB, optC, optD] }
   ) {
     let timeMessage;
-    let leftBuffer = "```";
-    let rightBuffer = "```";
 
-    if (time > 20) {
-      timeMessage = `Don't worry, you have ${time} seconds remaining! If you have your wits about you, you'll get this right.`;
-    } else if (time < 20 && time > 10) {
-      timeMessage = `The time is getting spicy now with ${time} seconds remaining! Be careful, otherwise you won't have enough time to press the button.`;
+    if (time >= 5) {
+      timeMessage = `**${time}** seconds remaining...`;
     } else {
-      timeMessage = `Time is running out with ${time} seconds remaining! I understand slow and steady finishes the race, but you are making a turtle look slow.`;
+      timeMessage = `Times up...!`;
     }
 
     const updatedEmbed = new MessageEmbed()
       .setColor("#0099ff")
-      .setTitle(`${question}`)
+      .setTitle(`${qNum + 1}. ${question}`)
       .setDescription(
         `A: ${optA}
       B: ${optB}
@@ -151,7 +164,7 @@ module.exports = async function questionHandler(
       )
       .addFields({
         name: `Timer`,
-        value: `${leftBuffer}${timeMessage}${rightBuffer}`,
+        value: `${timeMessage}`,
       });
 
     await message.edit({
@@ -159,10 +172,10 @@ module.exports = async function questionHandler(
     });
   }
 
-  function countDown(i, message, question) {
+  function countDown(qNum, i, message, question) {
     let interval = 5;
     let timer = setInterval(() => {
-      questionEmbedUpdater(message, i, question);
+      questionEmbedUpdater(qNum, message, i, question);
       if (i > 0) {
         i -= interval;
       } else {

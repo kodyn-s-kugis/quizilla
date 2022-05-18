@@ -1,9 +1,9 @@
 const { MessageActionRow, MessageEmbed, MessageButton } = require("discord.js");
 
-module.exports = function questionFormatter({
-  question,
-  answers: [optA, optB, optC, optD],
-}) {
+module.exports = function questionFormatter(
+  qNum,
+  { question, answers: [optA, optB, optC, optD] }
+) {
   const components = new MessageActionRow()
     .addComponents(
       new MessageButton()
@@ -32,7 +32,7 @@ module.exports = function questionFormatter({
 
   const embed = new MessageEmbed()
     .setColor("#0099ff")
-    .setTitle(`${question}`)
+    .setTitle(`${qNum + 1}. ${question}`)
     .setDescription(
       `A: ${optA}
     B: ${optB}
@@ -41,8 +41,7 @@ module.exports = function questionFormatter({
     )
     .addFields({
       name: `Timer`,
-      value:
-        "```Don't worry, you have 30 seconds remaining! If you have your wits about you, you'll get this right.```",
+      value: "**30** seconds remaining...",
     });
 
   return {

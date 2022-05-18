@@ -20,7 +20,9 @@ module.exports = async function playerSignUp(
   const embed = new MessageEmbed()
     .setColor("#0099ff")
     .setTitle(`Trivia Game`)
-    .setDescription(`Created by ${interaction.user.tag}`)
+    .setDescription(
+      `The game is setup with a **${theme}** theme and question difficulty of **${difficulty}**. Just to keep in mind you will be committing to **${rounds}** rounds of trivia.`
+    )
     .addFields(
       { name: `Queued Players`, value: `Empty` },
       {
@@ -137,7 +139,9 @@ module.exports = async function playerSignUp(
     const upatedEmbed = new MessageEmbed()
       .setColor("#0099ff")
       .setTitle(`Trivia Game`)
-      .setDescription(`Created by ${interaction.user.tag}`)
+      .setDescription(
+        `The game is setup with a **${theme}** theme and question difficulty of **${difficulty}**. Just to keep in mind you will be committing to **${rounds}** rounds of trivia.`
+      )
       .addFields(
         {
           name: `Queued Players`,
