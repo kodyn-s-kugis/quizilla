@@ -25,8 +25,6 @@ module.exports = async function gameEnd(interaction, gameData) {
     i.reply(`Ending game...`);
 
     collector.stop();
-
-    game = blankGameData;
   });
 
   collector.on("end", async () => {
@@ -35,6 +33,8 @@ module.exports = async function gameEnd(interaction, gameData) {
     loungeChannel.delete();
 
     game = blankGameData;
+
+    return game;
   });
 
   function gameEndMessage(game) {

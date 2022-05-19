@@ -1,9 +1,27 @@
 const { MessageActionRow, MessageEmbed, MessageButton } = require("discord.js");
 
 module.exports = function questionFormatter(
+  difficulty,
   qNum,
   { question, answers: [optA, optB, optC, optD] }
 ) {
+  let setEmbedColour, setPoints;
+
+  switch (difficulty) {
+    case "easy":
+      setPoints = 10;
+      setEmbedColour = "#06D6A0";
+      break;
+    case "medium":
+      setPoints = 20;
+      setEmbedColour = "#E5A93F";
+      break;
+    case "hard":
+      setPoints = 30;
+      setEmbedColour = "#E2436F";
+      break;
+  }
+
   const components = new MessageActionRow()
     .addComponents(
       new MessageButton()
@@ -31,7 +49,7 @@ module.exports = function questionFormatter(
     );
 
   const embed = new MessageEmbed()
-    .setColor("#0099ff")
+    .setColor(`${setEmbedColour}`)
     .setTitle(`${qNum + 1}. ${question}`)
     .setDescription(
       `A: ${optA}
@@ -39,10 +57,23 @@ module.exports = function questionFormatter(
     C: ${optC}
     D: ${optD}`
     )
-    .addFields({
-      name: `Timer`,
-      value: "**30** seconds remaining...",
-    });
+    .addFields(
+      {
+        name: `Difficulty`,
+        value: `${difficulty}`,
+        inline: true,
+      },
+      {
+        name: `Points`,
+        value: `${setPoints}`,
+        inline: true,
+      },
+      {
+        name: `Timer`,
+        value: "**30** seconds remaining...",
+        inline: true,
+      }
+    );
 
   return {
     components: [components],

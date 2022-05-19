@@ -22,4 +22,5 @@ module.exports = async function initialise(
 
   // Player Sign-up Message
   game = await playerSignUp(interaction, game, theme, difficulty, rounds);
+  return game;
 };

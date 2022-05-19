@@ -112,7 +112,8 @@ module.exports = async function playerSignUp(
       console.log(game);
       console.log(`---Final Game Object Here---`);
 
-      gameStart(interaction, game, theme, difficulty, rounds);
+      game = gameStart(interaction, game, theme, difficulty, rounds);
+      return game;
     }
   });
 

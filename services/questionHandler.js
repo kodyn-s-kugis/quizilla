@@ -44,8 +44,10 @@ module.exports = async function questionHandler(
 
     console.log(difficulty);
     const question = questionChooser(themes, theme, difficulty, questions);
-    const message = await channel.send(questionFormatter(i, question));
-    countDown(i, 30, message, question);
+    const message = await channel.send(
+      questionFormatter(difficulty, i, question)
+    );
+    countDown(difficulty, i, 30, message, question);
 
     const collector = message.createMessageComponentCollector({
       componentType: "BUTTON",
@@ -93,12 +95,12 @@ module.exports = async function questionHandler(
           await updateLeaderboard(interaction, game);
 
           i.reply({
-            content: `You've chosen the correct answer!`,
+            content: `The answer you have chosen is ${i.customId} - it's correct!`,
             ephemeral: true,
           });
         } else {
           i.reply({
-            content: `Ohhh no, you've got it wrong! Maybe you should study harder.`,
+            content: `The answer you have chosen is ${i.customId} - unfortunately it's incorrect.`,
             ephemeral: true,
           });
         }
@@ -117,7 +119,8 @@ module.exports = async function questionHandler(
   // Game End Clean-up State
   i = 0;
   questions = blankQuestionsData;
-  await gameEnd(interaction, game);
+  game = await gameEnd(interaction, game);
+  return game;
 
   function questionChooser(themes, themeData, difficultyData, questionsData) {
     let question = questionsData.theme[themes.indexOf(themeData)][theme][
@@ -140,12 +143,13 @@ module.exports = async function questionHandler(
   }
 
   async function questionEmbedUpdater(
+    difficulty,
     qNum,
     message,
     time,
     { question, answers: [optA, optB, optC, optD] }
   ) {
-    let timeMessage;
+    let timeMessage, setPoints, setEmbedColour;
 
     if (time >= 5) {
       timeMessage = `**${time}** seconds remaining...`;
@@ -153,8 +157,23 @@ module.exports = async function questionHandler(
       timeMessage = `Times up...!`;
     }
 
+    switch (difficulty) {
+      case "easy":
+        setPoints = 10;
+        setEmbedColour = "#06D6A0";
+        break;
+      case "medium":
+        setPoints = 20;
+        setEmbedColour = "#E5A93F";
+        break;
+      case "hard":
+        setPoints = 30;
+        setEmbedColour = "#E2436F";
+        break;
+    }
+
     const updatedEmbed = new MessageEmbed()
-      .setColor("#0099ff")
+      .setColor(`${setEmbedColour}`)
       .setTitle(`${qNum + 1}. ${question}`)
       .setDescription(
         `A: ${optA}
@@ -162,20 +181,33 @@ module.exports = async function questionHandler(
       C: ${optC}
       D: ${optD}`
       )
-      .addFields({
-        name: `Timer`,
-        value: `${timeMessage}`,
-      });
+      .addFields(
+        {
+          name: `Difficulty`,
+          value: `${difficulty}`,
+          inline: true,
+        },
+        {
+          name: `Points`,
+          value: `${setPoints}`,
+          inline: true,
+        },
+        {
+          name: `Timer`,
+          value: `${timeMessage}`,
+          inline: true,
+        }
+      );
 
     await message.edit({
       embeds: [updatedEmbed],
     });
   }
 
-  function countDown(qNum, i, message, question) {
+  function countDown(difficulty, qNum, i, message, question) {
     let interval = 5;
     let timer = setInterval(() => {
-      questionEmbedUpdater(qNum, message, i, question);
+      questionEmbedUpdater(difficulty, qNum, message, i, question);
       if (i > 0) {
         i -= interval;
       } else {
