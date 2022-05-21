@@ -1309,7 +1309,7 @@ module.exports = {
               answers: [
                 "Greece and Australia",
                 "Greece and United Kingdom",
-                "Germany and United Kingdo",
+                "Germany and United Kingdom",
                 "Greece and Germany",
               ],
               correct: "Greece and Australia",
