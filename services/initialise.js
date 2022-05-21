@@ -8,7 +8,12 @@ module.exports = async function initialise(
   difficulty,
   rounds
 ) {
-  let game = gameData;
+  let game = {
+    messages: {},
+    channels: {},
+    players: [],
+  };
+
   console.log(game);
 
   // Create Category & Sign-up Channel
@@ -22,5 +27,7 @@ module.exports = async function initialise(
 
   // Player Sign-up Message
   game = await playerSignUp(interaction, game, theme, difficulty, rounds);
+  game = [];
+
   return game;
 };
