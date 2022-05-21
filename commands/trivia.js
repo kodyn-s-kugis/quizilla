@@ -16,7 +16,7 @@ module.exports = {
             .setRequired(true)
             .addChoice("Geography", "geography")
             .addChoice("History", "history")
-            .addChoice("MAF", "maf")
+            .addChoice("Music, Arts and Film", "maf")
             .addChoice("Sport", "sport")
             .addChoice("Science", "science")
             .addChoice("Random", "random")
